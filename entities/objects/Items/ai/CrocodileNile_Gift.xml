@@ -1,0 +1,30 @@
+<BFTypedBinder binderType="CrocodileNile_Gift">
+   <types>
+      <entity>
+         <item>
+            <CrocodileNile_Gift/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_CrocodileNile_Gift.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:CrocodileNile_Gift"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_CommonGift="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/Items/Gifts/CrocodileNile_Gift.nif" scale="1.0" switch="0 36"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

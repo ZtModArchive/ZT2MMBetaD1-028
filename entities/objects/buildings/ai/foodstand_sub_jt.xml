@@ -1,0 +1,82 @@
+<BFTypedBinder binderType="foodstand_sub_jt">
+   <types>
+      <entity>
+         <building>
+            <Foodstand>
+               <foodstand_sub>
+                  <foodstand_sub_jt/>
+               </foodstand_sub>
+            </Foodstand>
+         </building>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\buildings\Foodstand\foodstand_sub_jt_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:foodstand_sub_jt"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="foodstand_sub_jt"/>
+         </on>
+      </UIToggleButton>
+      <UIButton name="overviewicon">
+         <UIAspect>
+            <default image="ui/zoomap/icon_food.dds"/>
+         </UIAspect>
+      </UIButton>
+      <BFAIEntityDataShared s_uisort="he" s_ProfileLock="junglelock" s_ItemsSold="Sub" b_CommerceBuilding="true" b_DonationAcceptor="false" s_Zoopedia="zoopedia:zoopedia_substand:entry" s_Theme="jungle"/>
+      <ZTTriggeredEventsComponent>
+         <Buy_Item>
+            <nonbroadcast>
+               <event msg="BFSND_PLAY_FROM_ENTITY" data="BFString" string="cash_register"/>
+            </nonbroadcast>
+         </Buy_Item>
+      </ZTTriggeredEventsComponent>
+      <ZTItemFilter>
+      	<Include_OR b_Sub="true"/>
+      </ZTItemFilter>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/buildings/Foodstand/ColdStand_jt.nif" switch="0 30 50"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+               <BFForceUpdateWhenVisibleComponent/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="mist01">
+         <instance>
+            <BFPhysObj drawLast="true">
+               <BFSimpleLODComponent modelfile="entities/objects/fx/Mist.nif" scale="0.25"/>
+               <BFForceUpdateWhenVisibleComponent/>
+               <BFHasParticleComponent/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="mist02">
+         <instance>
+            <BFPhysObj drawLast="true">
+               <BFSimpleLODComponent modelfile="entities/objects/fx/Mist.nif" scale="0.25"/>
+               <BFForceUpdateWhenVisibleComponent/>
+               <BFHasParticleComponent/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="600" mergeKey="name">
+               <ZTTransaction name="build" costType="parent" type="debit" category="construction"/>
+               <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+               <ZTTransaction name="upkeep" cost="50" period="monthly" type="debit" category="upkeep"/>
+               <ZTTransaction name="Buy_Item" costIndex="1" costChoice="12 24 30" type="debit" category="concessions_food_drink" nextTransaction="add_user"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

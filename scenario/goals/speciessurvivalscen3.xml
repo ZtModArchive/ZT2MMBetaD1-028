@@ -1,0 +1,64 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="SpeciesSurvival:SecondGenerationintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="SecondGenerationbreeding" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="SpeciesSurvival:SecondGenerationoverview" />
+				<success locid="SpeciesSurvival:SecondGenerationresult" overview = "SpeciesSurvival:SecondGenerationSuccessoverview"/>
+				<failure overview = "SecondGenerationFailureoverview"/>
+			</info>			
+			<children>
+				<BFScenarioRule name="SecondGenerationbreeding" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreeding">
+						<neutral locid="SpeciesSurvival:SecondGenerationBreeding" />
+						<success locid="SpeciesSurvival:SecondGenerationBreedingOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evalsecondgenerationbreeding" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completesecondgenerationbreeding" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failsecondgenerationbreeding" />
+					</failure>					
+				</BFScenarioRule>
+				<BFScenarioRule name="zebrasfirstbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingZebraOne">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingZebraOne" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="zebrassecondbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingZebraTwo">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingZebraTwo" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="lemursfirstbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingLemurOne">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingLemurOne" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="lemurssecondbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingLemurTwo">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingLemurTwo" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="chimpsfirstbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingChimpOne">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingChimpOne" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="chimpssecondbreeding" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:SecondGenerationBreedingChimpTwo">
+						<success locid="SpeciesSurvival:SecondGenerationBreedingChimpTwo" />
+					</info>
+				</BFScenarioRule>				
+			</children>
+		</BFScenarioGroup>			
+	</children>
+</ZTScenarioMgr>

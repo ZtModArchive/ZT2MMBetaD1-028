@@ -1,0 +1,126 @@
+<BFTypedBinder binderType="Staff" abstract="true" version="2" versionReplace="true">
+   <types>
+      <entity>
+         <actor>
+            <people>
+               <Staff/>
+            </people>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <BFAIEntityDataShared s_WaitForPathBeh="WaitForPath" f_ViewSpeed="5" b_RespondToCursor="false" s_SpeciesSpecialization="" s_FamilySpecialization="">
+         <BFAIScriptData Name="doState" File="entities/units/guests/ai/dostate.lua" Entry="doState"/>
+      </BFAIEntityDataShared>
+      <ZTPlacementData iconObj="headObj" icon3Doffset="0 0.002026 0.487109" icon3Dscale="3.954455" displayFootprint="false" deletable="false" dockArrowStyle="none" gridSnap="false" placeable="false">
+         <stompData>
+            <allow>
+               <wildflowers/>
+               <watersurfacefoliage/>
+               <grass/>
+               <fungi/>
+               <bush/>
+               <Poop/>
+               <TrashGround/>
+               <RecyclableGround/>
+            </allow>
+            <prevent>
+               <log/>
+               <thicket/>
+               <flowerbed/>
+            </prevent>
+         </stompData>
+      </ZTPlacementData>
+      <ZTEntitySelector size="0.7"/>
+   </shared>
+   <binder>
+      <BFBinder required="1">
+         <instance>
+            <BFAICognitiveMgr>
+               <StateThinkers>
+                  <ZTAIStateThinker>
+                     <BFAIStateVar Name="work" Value="100" TriggerThreshold="0" CessationThreshold="-100" CriticalThreshold="101"/>
+                  </ZTAIStateThinker>
+               </StateThinkers>
+            </BFAICognitiveMgr>
+         </instance>
+      </BFBinder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj radiusOverride="0.40">
+               <BFActorComponent switch="0 7 14 23 34" minSwitch="0 0 0 7 14"/>
+               <BF2LegsGroundFitComponent frontBuoyancyNode="Node_Buoy"/>
+               <BFSwimComponent waterInDistance="0.1" waterOutDistance="0.250"/>
+               <BFDistanceCullComponent firstPersonOnly="true" cullDistance="100"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="headObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent switch="0 7 14 23 34" minSwitch="0 0 0 7 14"/>
+               <BFDistanceCullComponent firstPersonOnly="true" cullDistance="100"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFAIEntityDataInstance s_name="Staff"/>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFLocomotionMgr/>
+         </instance>
+         <binder>
+            <BFNamedBinder binderName="ground" required="1">
+               <instance>
+                  <BFLocoAnimate version="1">
+                     <stop name="Stand"/>
+                     <slow name="Walk" minAnimSpeed="1.0" maxAnimSpeed="1.4">
+                        <waggle name="Walk_Ahead" wag="0.1"/>
+                     </slow>
+                     <medium name="Walk" minAnimSpeed="1.4" maxAnimSpeed="1.6"/>
+                     <fast name="Run"/>
+                  </BFLocoAnimate>
+               </instance>
+            </BFNamedBinder>
+            <BFNamedBinder binderName="groundcarry" required="1">
+               <instance>
+                  <BFLocoAnimate version="1" stationaryAnim="StandItem_Idle">
+                     <stop name="StandItem"/>
+                     <slow name="WalkItem" minAnimSpeed="1.0" maxAnimSpeed="1.4">
+                        <waggle name="WalkItem_Ahead" wag="0.1"/>
+                     </slow>
+                     <med name="WalkItem" minAnimSpeed="1.4" maxAnimSpeed="1.6"/>
+                     <fast name="WalkItem" minAnimSpeed="1.6" maxAnimSpeed="1.8"/>
+                  </BFLocoAnimate>
+               </instance>
+            </BFNamedBinder>
+            <BFNamedBinder binderName="water" required="1">
+               <instance>
+                  <BFLocoAnimate version="1" stationaryAnim="TreadWater_Idle">
+                     <stop name="TreadWater"/>
+                     <slow name="Swim"/>
+                     <medium name="Swim"/>
+                     <fast name="Swim"/>
+                  </BFLocoAnimate>
+               </instance>
+            </BFNamedBinder>
+         </binder>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFGCollisionTester escapeBuffer="0.1" radius="0.1f" motionClass="staffMover" waterScore="10" useFastPathing="true"/>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <ZTPhotoAnalysisComponent/>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

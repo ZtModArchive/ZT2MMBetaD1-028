@@ -1,0 +1,131 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="SpeciesSurvival:EndangeredAnimalsintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="endangeredanimals" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="SpeciesSurvival:EndangeredAnimalsoverview" />
+				<success locid="SpeciesSurvival:EndangeredAnimalsoverviewshort" overview = "SpeciesSurvival:EndangeredAnimalsSuccessPart2overview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completeendangeredanimals" />
+			</success>			
+			<children>
+				<BFScenarioGroup hidden ="0" name="breedendangeredanimals" state="0" chain="false" allsuccess="true" sticky="true">
+				<children>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completebreedendangeredanimals" />
+					</success>
+					<BFScenarioRule name="breedgorilla" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsBreedGorilla">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsBreedGorilla" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsBreedGorillaOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evalbreedgorilla" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completebreedgorilla" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+					<BFScenarioRule name="breedredpanda" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsBreedRedPanda">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsBreedRedPanda" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsBreedRedPandaOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evalbreedredpanda" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completebreedredpanda" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+					<BFScenarioRule name="breedsnowleopard" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsBreedSnowLeopard">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsBreedSnowLeopard" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsBreedSnowLeopardOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evalbreedsnowleopard" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completebreedsnowleopard" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+				</children>
+				</BFScenarioGroup>
+				<BFScenarioGroup hidden ="0" name="endangeredanimalsdonations" state="0" chain="false" allsuccess="true" sticky="true">
+				<children>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completeendangeredanimals" />
+					</success>
+					<BFScenarioRule hidden ="0" name="gorilladonations" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsGorillaDonations">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsGorillaDonations" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsGorillaDonationsOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evaldonationsgorilla" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completedonationsgorilla" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+					<BFScenarioRule hidden ="0" name="redpandadonations" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsRedPandaDonations">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsRedPandaDonations" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsRedPandaDonationsOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evaldonationsredpanda" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completedonationsredpanda" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+					<BFScenarioRule hidden ="0" name="snowleoparddonations" state="0" sticky="true">
+						<info type="primary" locid="SpeciesSurvival:EndangeredAnimalsSnowLeopardDonations">
+							<neutral locid="SpeciesSurvival:EndangeredAnimalsSnowLeopardDonations" />
+							<success locid="SpeciesSurvival:EndangeredAnimalsSnowLeopardDonationsOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evaldonationssnowleopard" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completedonationssnowleopard" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failendangeredanimals" />
+						</failure>					
+					</BFScenarioRule>
+					<BFScenarioRule name="giveRandomAnimal" hidden="1" state="0" sticky="false">
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="giveRandomAnimalScen2" />
+						</evaluate>
+					</BFScenarioRule>
+				</children>
+				</BFScenarioGroup>
+			</children>
+		</BFScenarioGroup>							
+				
+	</children>
+</ZTScenarioMgr>

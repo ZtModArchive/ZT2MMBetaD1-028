@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="FruitCup">
+   <types>
+      <entity>
+         <item>
+            <FruitCup/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <BFGDetachInfo>
+         <detachActionTable>
+            <maketrash destination="kill">
+               <createList>
+                  <Trash destination="inventory"/>
+               </createList>
+            </maketrash>
+         </detachActionTable>
+      </BFGDetachInfo>      
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_FruitCup.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:FruitCup"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_FruitCup="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/items/FruitCup/FruitCup.nif" scale="1.0" switch="0 36"/>            
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

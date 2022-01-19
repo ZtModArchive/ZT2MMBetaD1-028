@@ -1,0 +1,3115 @@
+<BehaviorSets>
+<!-- Begin Default Behaviors Section -->
+<!-- Begin Default Behavior Branches -->
+   <Default_Happy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Pos_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="90"/>
+               <DefaultHappy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Happy>
+   <Default_VeryHappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="DPos_4">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="80"/>
+               <DefaultHappy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryHappy>
+   <Default_Happy_inWater>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Pos_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="90"/>
+               <Default_inWater_Happy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Happy_inWater>
+   <Default_VeryHappy_inWater>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="DPos_4">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="80"/>
+               <Default_inWater_Happy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryHappy_inWater>
+   <Default_Unhappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="90"/>
+               <DefaultUnhappy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Unhappy>
+   <Default_VeryUnhappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="80"/>
+               <DefaultUnhappy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryUnhappy>
+   <Default_Unhappy_inWater>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="90"/>
+               <Default_inWater_Unhappy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Unhappy_inWater>
+   <Default_VeryUnhappy_inWater>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="80"/>
+               <Default_inWater_Unhappy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryUnhappy_inWater>
+<!-- End Default Behavior Branches -->
+<!-- Begin Default Behavior Leaves -->
+   <DefaultStand>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Standing"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DefaultStand>
+   <DefaultSit>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sitting"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+      </behaviors>
+   </DefaultSit>
+   <DefaultStandBi>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Standing"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="StandBi_Idle"/>
+      </behaviors>
+   </DefaultStandBi>
+   <DefaultLie>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LyingDown"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Lie_Idle"/>
+      </behaviors>
+   </DefaultLie>
+   <DefaultLieBack>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LyingDown"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="LieBack_Idle"/>
+      </behaviors>
+   </DefaultLieBack>
+   <DefaultSleep>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sleeping"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sleep_Idle"/>
+      </behaviors>
+   </DefaultSleep>
+   <DefaultSleepBack>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sleeping"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SleepBack_Idle"/>
+      </behaviors>
+   </DefaultSleepBack>
+   <DefaultHappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:BeingCurious"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sit"/>
+         <BFBehPlaySet behSet="Ponder"/>
+      </behaviors>
+   </DefaultHappy>
+   <Default_inWater_Happy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:BeingCurious"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Stand"/>
+         <BFBehPlaySet behSet="Ponder"/>
+      </behaviors>
+   </Default_inWater_Happy>
+   <DefaultUnhappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Nervous"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </DefaultUnhappy>
+   <Default_inWater_Unhappy>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Nervous"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </Default_inWater_Unhappy>
+<!-- End Default Behavior Leaves -->
+<!-- End Default Behaviors Section -->
+   <Idle>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="DefaultStand"/>
+               <Sit behSet="DefaultSit"/>
+               <StandBi behSet="DefaultStandBi"/>
+               <Lie behSet="DefaultLie"/>
+               <LieBack behSet="DefaultLieBack"/>
+               <Sleep behSet="DefaultSleep"/>
+               <SleepBack behSet="DefaultSleepBack"/>
+               <default behSet="DefaultStand"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Idle>
+   <Think>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet loopFlag="true">
+            <behaviorTable>
+               <Stand behSet="Ponder"/>
+               <Sit behSet="Ponder"/>
+               <StandBi behSet="Ponder"/>
+               <default behSet="Idle"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Think>
+   <LookAt>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Idle weight="50"/>
+               <Investigate weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </LookAt>
+   <Investigate>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToLookAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehMove pathRadius="3"/>
+         <ZTBehViewEvent viewKey="Pos_2"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LookAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </Investigate>
+   <Die_OldAge>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dying"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sleep"/>
+         <ZTBehViewEvent viewKey="Neg_10">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalDiedBad" priority="-1" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTMessageInfo locID="zoomessages:AnimalDied" priority="-1" timeout="60" global="true" useEntityName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehKill killSubject="true" fadeOutPeriod="1"/>
+      </behaviors>
+   </Die_OldAge>
+   <Die_Sick>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dying_Sick"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sleep"/>
+         <ZTBehViewEvent viewKey="Neg_10">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalDiedSickBad" priority="-1" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTMessageInfo locID="zoomessages:AnimalDiedSick" priority="-1" timeout="60" global="true" useEntityName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehKill killSubject="true" fadeOutPeriod="1"/>
+      </behaviors>
+   </Die_Sick>
+   <Die_Fight>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+	 <ZTBehMorph morphEntity="subject" morphTargetEntityType="Carcass_Meat" NameIt="true"/>
+      </behaviors>
+   </Die_Fight>
+   <Stand>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </Stand>
+   <Sit>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+      </behaviors>
+   </Sit>
+   <Sit_Ponder>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Ponder"/>
+      </behaviors>
+   </Sit_Ponder>
+   <StandBi_Ponder>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandBi_Ponder"/>
+      </behaviors>
+   </StandBi_Ponder>
+   <Stand_Ponder>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Ponder"/>
+      </behaviors>
+   </Stand_Ponder>
+   <Ponder>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Ponder"/>
+               <Sit behSet="Sit_Ponder"/>
+               <StandBi behSet="StandBi_Ponder"/>
+               <default behSet="Stand_Ponder"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Ponder>
+   <StandBi>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandBi_Idle"/>
+      </behaviors>
+   </StandBi>
+   <StandBi_Nervous>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandBi_Nervous"/>
+      </behaviors>
+   </StandBi_Nervous>
+   <Stand_Nervous>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Nervous"/>
+      </behaviors>
+   </Stand_Nervous>
+   <Sit_Nervous>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Nervous"/>
+      </behaviors>
+   </Sit_Nervous>
+   <Nervous>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Nervous"/>
+               <Sit behSet="Sit_Nervous"/>
+               <StandBi behSet="StandBi_Nervous"/>
+               <default behSet="Stand_Nervous"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Nervous>
+   <Sit_Angry>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Sit weight="75"/>
+               <Sit_Nervous weight="25"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Sit_Angry>
+   <PointTail>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandPointTail_Idle"/>
+      </behaviors>
+   </PointTail>
+   <BatObject>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </BatObject>
+   <EnterBall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterBall> 
+   <UseBall_Whap>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBall_Whap>
+   <UseCarTire_Whap>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseCarTire_Whap>
+   <UseBarrel_Whap>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBarrel_Whap>
+   <UseBall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBall>
+   <ExitBall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitBall>
+   <MarkScent>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_MarkScent"/>
+      </behaviors>
+   </MarkScent>
+   <EnterRockMarkScent1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMarkScent" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDock targetAnim="Stand_Idle" subjectNode="Node_Mouth"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterRockMarkScent1>
+   <ScentMark>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MarkingScent" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalMarkScentGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="SitRubWrist_Idle"/>
+         <BFBehAnimate targetAnim="Stand_MarkScent"/>
+      </behaviors>
+   </ScentMark>
+   <ExitRockMarkScent1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAnimalSocialGood"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_TurnLeft90"/>
+      </behaviors>
+   </ExitRockMarkScent1>
+   <FailureSet>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Ponder"/>
+      </behaviors>
+   </FailureSet>
+   <ShakeTail>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ShakeTail"/>
+      </behaviors>
+   </ShakeTail>
+   <FlickTail>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_FlickTail"/>
+      </behaviors>
+   </FlickTail>
+   <GroomSelf>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Groom weight="50"/>
+               <RubWrist weight="30"/>
+               <WipeTail weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+         <BFBehRandomSet>
+            <randomSets>
+               <GroomSelf weight="50"/>
+               <Idle weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </GroomSelf>
+   <Groom>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitGroom_Idle"/>
+      </behaviors>
+   </Groom>
+   <RubWrist>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitRubWrist_Idle"/>
+      </behaviors>
+   </RubWrist>
+   <TailCurl>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitTailCurl_Idle"/>
+      </behaviors>
+   </TailCurl>
+   <SunBathe>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sunbathe_Idle"/>
+      </behaviors>
+   </SunBathe>
+   <WipeTail>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitWipeTail_Idle"/>
+      </behaviors>
+   </WipeTail>
+   <Poop>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Poop_Idle"/>
+      </behaviors>
+   </Poop>
+   <Pee>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Pee_Idle"/>
+      </behaviors>
+   </Pee>
+   <Lie>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Lie_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <Lie_Idle weight="80"/>
+               <Lie_A weight="10"/>
+               <Lie_B weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </Lie>
+   <LieBack>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="LieBack_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <LieBack_Idle weight="80"/>
+               <LieBack_A weight="10"/>
+               <LieBack_B weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </LieBack>
+   <Sleep>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <SleepFront weight="75"/>
+               <SleepBack weight="25"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Sleep>
+   <SleepFront>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sleep_Idle" playTime="20"/>
+      </behaviors>
+   </SleepFront>
+   <SleepBack>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SleepBack_Idle" playTime="20"/>
+      </behaviors>
+   </SleepBack>
+   <Stand_Eat>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandEat_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <StandEat_Idle weight="90"/>
+               <StandEat_A weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </Stand_Eat>
+   <Eat>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+      </behaviors>
+   </Eat>
+   <Graze>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+      </behaviors>
+   </Graze>
+   <EatFigs>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Eat_Idle" targetNode="Dock_Attach" detachAction="killitem" container="foodprop"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Eat_Idle" targetNode="Dock_Attach" detachAction="killitem" container="foodprop"/>
+      </behaviors>
+   </EatFigs>
+   <Drink>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Drink_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Drink_Idle"/>
+      </behaviors>
+   </Drink>
+   <EnterFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterFoodDish>
+   <EnterHollowLogLeft>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogLeft>
+   <EnterHollowLogRight>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogRight>
+   <EnterHollowLogMiddle>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogMiddle>
+   <UseFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+      </behaviors>
+   </UseFoodDish>
+   <DrinkFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Drink_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Drink_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DrinkFoodDish>
+   <ExitFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitFoodDish>
+   <EnterSubstratePile>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterSubstratePile> 
+   <UseSubstratePile>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+      </behaviors>
+   </UseSubstratePile>
+   <ExitSubstratePile>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitSubstratePile>
+   <TerritorialCall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TerritorialCall"/>
+      </behaviors>
+   </TerritorialCall>
+   <ContactCall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ContactCall"/>
+      </behaviors>
+   </ContactCall>
+   <RepulsionCall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_RepulsionCall"/>
+      </behaviors>
+   </RepulsionCall>
+   <AlarmCall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AlarmCall"/>
+      </behaviors>
+   </AlarmCall>
+   <EnterIceBlock>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterIceBlock>
+   <UseIceBlock>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Eat_Idle"/>
+      </behaviors>
+   </UseIceBlock>
+   <ExitIceBlock>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitIceBlock>
+   <DockGroom>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehDock subjectNode="Node_Groom" targetNode="Dock_Groom" targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DockGroom>
+   <GroomOther>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="GroomOther_Idle"/>
+      </behaviors>
+   </GroomOther>
+   <WaitGroom>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitGroom>
+   <DockAttacked>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehScript context="behavior" file="scripts/playparticle.lua" function="playParticle" params="{Floor} runps PlacementCloud"/>
+         <BFBehDockNow targetNode="p_PredatorOffset" subjectNode="p_PreyOffset" reserveSlotName="general"/>
+      </behaviors>
+   </DockAttacked>
+   <Attacked>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Lie_Idle"/>
+         <BFBehPlaySet behSet="Die_Fight"/>
+      </behaviors>
+   </Attacked>
+   <Sick>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+      </behaviors>
+   </Sick>
+   <VerySick>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Lie_Idle"/>
+      </behaviors>
+   </VerySick>
+   <EnterHeatedRock1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterA"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterA" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock1>
+   <EnterHeatedRock2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterB"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterB" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock2>
+   <EnterHeatedRock3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterC"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterC" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock3>
+   <EnterHeatedRock4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterD"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterD" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock4>
+   <EnterHeatedRock5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterE"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterE" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock5>
+   <EnterHeatedRock6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterF"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterF" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock6>
+   <EnterHeatedRock7>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterG"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterG" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock7>
+   <EnterHeatedRock8>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="EnterH"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterH" exitTAP="false"/>
+      </behaviors>
+   </EnterHeatedRock8>
+   <UseHeatedRock>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingOn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseHeatedRock>
+   <ExitHeatedRock1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock1>
+   <ExitHeatedRock2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitB" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock2>
+   <ExitHeatedRock3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitC" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock3>
+   <ExitHeatedRock4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitD" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock4>
+   <ExitHeatedRock5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitE" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock5>
+   <ExitHeatedRock6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitF" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock6>
+   <ExitHeatedRock7>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitG" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock7>
+   <ExitHeatedRock8>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitH" exitTAP="true"/>
+      </behaviors>
+   </ExitHeatedRock8>
+   <ClimbOnElevatedFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="DockNode01_BaseA2Branch1AEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="DockNode01_BaseA2Branch1AEnd" exitTap="false"/>
+      </behaviors>
+   </ClimbOnElevatedFoodDish> 
+   <EatElevatedFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehPlaySet behSet="Eat"/>
+      </behaviors>
+   </EatElevatedFoodDish>
+   <DrinkElevatedFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Drink_Idle"/>
+      </behaviors>
+   </DrinkElevatedFoodDish>
+   <ClimbOffElevatedFoodDish>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="DockNode02_Branch1AEnd2ExitA" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffElevatedFoodDish>
+   <EnterShelter1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter1>
+   <EnterShelter2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter2>
+   <EnterShelter3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter3>
+   <EnterShelter4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter4>
+   <EnterShelter5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter5>
+   <EnterShelter6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter6>
+   <UseShelter>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseShelter>
+   <ExitShelter1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode02_Branch1AEnd2ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter1>
+   <ExitShelter2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode04_Branch1BEnd2ExitB" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter2>
+   <ExitShelter3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode06_Branch1CEnd2ExitC" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter3>
+   <ExitShelter4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode08_Branch1DEnd2ExitD" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter4>
+   <ExitShelter5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode10_Branch1EEnd2ExitE" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter5>
+   <ExitShelter6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode12_Branch1FEnd2ExitF" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter6>
+   <EnterRock1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterA"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterA" exitTap="false"/>
+      </behaviors>
+   </EnterRock1>
+   <EnterRock2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterB"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterB" exitTap="false"/>
+      </behaviors>
+   </EnterRock2>
+   <EnterRock3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterC"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterC" exitTap="false"/>
+      </behaviors>
+   </EnterRock3>
+   <EnterRock4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterD"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterD" exitTap="false"/>
+      </behaviors>
+   </EnterRock4>
+   <EnterRock5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterE"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterE" exitTap="false"/>
+      </behaviors>
+   </EnterRock5>
+   <EnterRock6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterF"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterF" exitTap="false"/>
+      </behaviors>
+   </EnterRock6>
+   <EnterRock7>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterG"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterG" exitTap="false"/>
+      </behaviors>
+   </EnterRock7>
+   <EnterRock8>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterH"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterH" exitTap="false"/>
+      </behaviors>
+   </EnterRock8>
+   <EnterRock9>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterI"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterI" exitTap="false"/>
+      </behaviors>
+   </EnterRock9>
+   <EnterRock10>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterJ"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterJ" exitTap="false"/>
+      </behaviors>
+   </EnterRock10>
+   <EnterRock11>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterK"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterK" exitTap="false"/>
+      </behaviors>
+   </EnterRock11>
+   <EnterRock12>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterL"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterL" exitTap="false"/>
+      </behaviors>
+   </EnterRock12>
+   <EnterRock13>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterM"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterM" exitTap="false"/>
+      </behaviors>
+   </EnterRock13>
+   <EnterRock14>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterN"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterN" exitTap="false"/>
+      </behaviors>
+   </EnterRock14>
+   <EnterRock15>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterO"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterO" exitTap="false"/>
+      </behaviors>
+   </EnterRock15>
+   <EnterRock16>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterP"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterP" exitTap="false"/>
+      </behaviors>
+   </EnterRock16>
+   <EnterRock17>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterQ"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterQ" exitTap="false"/>
+      </behaviors>
+   </EnterRock17>
+   <EnterRock18>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterR"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterR" exitTap="false"/>
+      </behaviors>
+   </EnterRock18>
+   <EnterRock19>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterS"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterS" exitTap="false"/>
+      </behaviors>
+   </EnterRock19>
+   <EnterRock20>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterT"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterT" exitTap="false"/>
+      </behaviors>
+   </EnterRock20>
+   <EnterRock21>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterU"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterU" exitTap="false"/>
+      </behaviors>
+   </EnterRock21>
+   <UseRock>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingOn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseRock>
+   <ExitRock1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitRock1>
+   <ExitRock2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitB" exitTAP="true"/>
+      </behaviors>
+   </ExitRock2>
+   <ExitRock3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitC" exitTAP="true"/>
+      </behaviors>
+   </ExitRock3>
+   <ExitRock4>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitD" exitTAP="true"/>
+      </behaviors>
+   </ExitRock4>
+   <ExitRock5>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitE" exitTAP="true"/>
+      </behaviors>
+   </ExitRock5>
+   <ExitRock6>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitF" exitTAP="true"/>
+      </behaviors>
+   </ExitRock6>
+   <ExitRock7>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitG" exitTAP="true"/>
+      </behaviors>
+   </ExitRock7>
+   <ExitRock8>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitH" exitTAP="true"/>
+      </behaviors>
+   </ExitRock8>
+   <ExitRock9>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitI" exitTAP="true"/>
+      </behaviors>
+   </ExitRock9>
+   <ExitRock10>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitJ" exitTAP="true"/>
+      </behaviors>
+   </ExitRock10>
+   <ExitRock11>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitK" exitTAP="true"/>
+      </behaviors>
+   </ExitRock11>
+   <ExitRock12>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitL" exitTAP="true"/>
+      </behaviors>
+   </ExitRock12>
+   <ExitRock13>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitM" exitTAP="true"/>
+      </behaviors>
+   </ExitRock13>
+   <ExitRock14>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitN" exitTAP="true"/>
+      </behaviors>
+   </ExitRock14>
+   <ExitRock15>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitO" exitTAP="true"/>
+      </behaviors>
+   </ExitRock15>
+   <ExitRock16>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitP" exitTAP="true"/>
+      </behaviors>
+   </ExitRock16>
+   <ExitRock17>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitQ" exitTAP="true"/>
+      </behaviors>
+   </ExitRock17>
+   <ExitRock18>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitR" exitTAP="true"/>
+      </behaviors>
+   </ExitRock18>
+   <ExitRock19>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitS" exitTAP="true"/>
+      </behaviors>
+   </ExitRock19>
+   <ExitRock20>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitT" exitTAP="true"/>
+      </behaviors>
+   </ExitRock20>
+   <ExitRock21>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitU" exitTAP="true"/>
+      </behaviors>
+   </ExitRock21>
+   <ClimbOntoTree1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd" exitTap="false"/>
+      </behaviors>
+   </ClimbOntoTree1>
+   <ClimbOntoTree2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd" exitTap="false"/>
+      </behaviors>
+   </ClimbOntoTree2>
+   <ClimbOntoTree3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd" exitTap="false"/>
+      </behaviors>
+   </ClimbOntoTree3>
+   <InTree>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingIn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom minPlays="6" maxPlays="8">
+            <randomAnims>
+               <Climb_Idle weight="70"/>
+               <Climb_LookLeft weight="10"/>
+               <Climb_LookRight weight="10"/>
+               <Climb_Scratch weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </InTree>
+   <SitInTree>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingIn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </SitInTree>
+   <PickBanana>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:EatingFruitTree" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom minPlays="6" maxPlays="8">
+            <randomAnims>
+               <Climb_Idle weight="70"/>
+               <Climb_LookLeft weight="10"/>
+               <Climb_LookRight weight="10"/>
+               <Climb_Scratch weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAttachObject attachEntity="Banana_Prop" targetAnim="Climb_PickFruit" targetNode="Dock_Attach" detachAction="killitem"/>
+      </behaviors>
+   </PickBanana>
+   <PickFig>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:EatingFruitTree" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom minPlays="6" maxPlays="8">
+            <randomAnims>
+               <Climb_Idle weight="70"/>
+               <Climb_LookLeft weight="10"/>
+               <Climb_LookRight weight="10"/>
+               <Climb_Scratch weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAttachObject attachEntity="Fig_Prop" targetAnim="Climb_PickFruit" targetNode="Dock_Attach" detachAction="killitem"/>
+      </behaviors>
+   </PickFig>
+   <ClimbOffTree1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode02_Branch1AEnd2ExitA" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffTree1>
+   <ClimbOffTree2>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode04_Branch1BEnd2ExitB" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffTree2>
+   <ClimbOffTree3>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode06_Branch1CEnd2ExitC" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffTree3>
+   <ClimbOntoLog1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="EnterA"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="EnterA" exitTap="false"/>
+      </behaviors>
+   </ClimbOntoLog1>
+   <OnLog>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingOn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </OnLog>
+   <ClimbOffLog1>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="ExitA" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffLog1>
+   <Mate>
+      <subjects>
+         <LemurRingtailed_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Mating" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sleep_Idle" playTime="10"/>
+      </behaviors>
+   </Mate>
+   <Birth>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet minPlays="1" maxPlays="2">
+            <randomSets>
+               <SpawnF weight="50"/>
+               <SpawnM weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Birth>
+   <SpawnF>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehSpawn spawnEntity="LemurRingtailed_Young_F" spawnRelation="child" subjectNode="Floor" fadeInPeriod="1" randomPosOffset="3" randomRotOffset="180" spawnInTA="true"/>
+         <BFBehScript context="behavior" file="scripts/justgavebirth.lua" function="justgavebirth"/>
+      </behaviors>
+   </SpawnF>
+   <SpawnM>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehSpawn spawnEntity="LemurRingtailed_Young_M" spawnRelation="child" subjectNode="Floor" fadeInPeriod="1" randomPosOffset="3" randomRotOffset="180" spawnInTA="true"/>
+         <BFBehScript context="behavior" file="scripts/justgavebirth.lua" function="justgavebirth"/>
+      </behaviors>
+   </SpawnM>
+   <MatingCall_F>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_ContactCall"/>
+      </behaviors>
+   </MatingCall_F>
+   <MatingCall_M>
+      <subjects>
+         <LemurRingtailed_Adult_M/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAnswer" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_ContactCall"/>
+      </behaviors>
+   </MatingCall_M>
+   <EnterLookOutPost>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+            <BFBehHeadLook/>
+            <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="DockNode01_BaseA2Branch1AEnd"/>
+            <BFBehHeadLook disengage="true"/>
+            <BFBehAnimateTAP subjectNode="Floor" targetTAP="DockNode01_BaseA2Branch1AEnd" exitTAP="false"/>
+      </behaviors>
+   </EnterLookOutPost>
+   <UseLookOutPost>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingOn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sunbathe_Idle" playTime="20"/>
+      </behaviors>
+   </UseLookOutPost>
+   <ExitLookOutPost>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Lie_2Stand"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="DockNode02_Branch1AEnd2ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitLookOutPost>
+   <EnterGroundNest>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Floor" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterGroundNest> 
+   <UseGroundNest>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Lie_Idle" playTime="20"/>
+      </behaviors>
+   </UseGroundNest>
+   <ExitGroundNest>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitGroundNest>
+   <ChaseBall>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="p_PursuitBallNode" targetAnim="Stand_Idle" locoSpeed="fast"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPursuit hitRadius="5" locoSpeed="fast"/>
+         <BFBehFaceTarget/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="2" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayBallAgain weight="50"/>
+               <Idle weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </ChaseBall>
+   <PlayBallAgain>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehHeadLook/>
+         <BFBehPursuit hitRadius="5" locoSpeed="fast"/>
+         <BFBehFaceTarget/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="2" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </PlayBallAgain>
+   <EvadePlay>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Evade weight="80"/>
+               <Submit weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </EvadePlay>
+   <EvadeAngry>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Evade weight="20"/>
+               <Submit weight="80"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </EvadeAngry>
+   <Submit>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <SubmitBack weight="20"/>
+               <SubmitFaceDown weight="80"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Submit>
+   <SubmitBack>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Submitting" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="LieBack_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <LieBack_A weight="50"/>
+               <LieBack_B weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="LieFaceDown_Idle"/>
+      </behaviors>
+   </SubmitBack>
+   <SubmitFaceDown>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Submitting" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Lie_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <Lie_A weight="50"/>
+               <Lie_B weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="LieFaceDown_Idle"/>
+      </behaviors>
+   </SubmitFaceDown>
+   <Evade>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Fleeing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehEvasion evasionRadius="10" locoSpeed="fast"/>
+      </behaviors>
+   </Evade>
+   <Jump>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Jump"/>
+      </behaviors>
+   </Jump>
+   <ClimbFence_HighThin>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="ClimbFence_Up"/>
+         <BFBehAnimate targetAnim="ClimbFence_OverHigh_Narrow"/>
+         <BFBehAnimate targetAnim="ClimbFence_Down"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </ClimbFence_HighThin>
+   <ClimbFence_HighThick>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="ClimbFence_Up"/>
+         <BFBehAnimate targetAnim="ClimbFence_OverHigh_Wide"/>
+         <BFBehAnimate targetAnim="ClimbFence_Down"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </ClimbFence_HighThick>
+   <ClimbFence_LowThin>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="ClimbFence_Over_Narrow"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </ClimbFence_LowThin>
+   <ClimbFence_LowThick>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="ClimbFence_Over_Wide"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </ClimbFence_LowThick>
+   <AttackGuest>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AttackGuest"/>
+      </behaviors>
+   </AttackGuest>
+   <CallMother>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:CallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_ContactCall" playTime="20"/>
+      </behaviors>
+   </CallMother>
+   <DockPickup>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Carried" targetNode="Node_Back_Carry" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </DockPickup>
+   <WaitPickup>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitingToBeClimbed" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitPickup>
+   <MommaPickupBaby>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PickingUp" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAttachObject targetNode="Node_Carried" targetAnim="Stand_2StandBaby" locoMod="carryyoung" detachAction="dropitem" detachBehSet="DetachBaby" targetBehSet="BeingCarried"/>
+      </behaviors>
+   </MommaPickupBaby>
+   <BeingCarried>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:BeingCarried" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="OnMotherBack_Idle" loopFlag="true"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <OnMotherBack_Idle weight="80"/>
+               <GroomMother_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="OnMotherBack_Idle" loopFlag="true"/>
+      </behaviors>
+   </BeingCarried>
+   <BabyPickedUpByMomma>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_2OnMotherBack"/>
+      </behaviors>
+   </BabyPickedUpByMomma>
+   <MommaDropBaby>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dropping" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="StandBaby_2Stand"/>
+      </behaviors>
+   </MommaDropBaby>
+   <BabyDroppedByMomma>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="OnMotherBack_2Stand"/>
+      </behaviors>
+   </BabyDroppedByMomma>
+   <DetachBaby>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandBaby_Idle"/>
+         <BFBehSyncSet syncEntity="object" subjectBehSet="MommaDropBaby" targetBehSet="BabyDroppedByMomma"/>
+      </behaviors>
+   </DetachBaby>
+   <DockNurse>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToNurse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Nurse" targetNode="p_NursingNode" targetAnim="Stand_2OnMotherLap"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </DockNurse>
+   <WaitNurse>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitingToNurse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitNurse>
+   <Nurse>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:BeingNursed" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Nurse_Idle" playTime="10"/>
+      </behaviors>
+   </Nurse>
+   <MommaNurseYoung>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:NurseOther" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SitBaby_Idle" loopFlag="true"/>
+      </behaviors>
+   </MommaNurseYoung>
+   <DockGroomYoung>
+      <subjects>
+         <LemurRingtailed_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehDock subjectNode="Node_Nurse" targetNode="Floor" targetAnim="Stand_2OnMotherLap"/>
+      </behaviors>
+   </DockGroomYoung>
+   <WaitGroomYoung>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitBaby_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitGroomYoung>
+   <GroomYoung>
+      <subjects>
+         <LemurRingtailed_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="GroomBaby_Idle"/>
+      </behaviors>
+   </GroomYoung>
+   <GroomedYoung>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="OnMotherLap_Idle" loopFlag="true"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <OnMotherLap_Idle weight="80"/>
+               <OnMotherLap_Fidget weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="OnMotherLap_Idle" loopFlag="true"/>
+      </behaviors>
+   </GroomedYoung>
+   <ThrashWater>
+      <subjects>
+         <LemurRingtailed/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Drown_Idle" interruptFlag="true"/>
+      </behaviors>
+   </ThrashWater>
+</BehaviorSets>

@@ -1,0 +1,128 @@
+<BFTypedBinder binderType="RecyclingBin_df">
+   <types>
+      <entity>
+         <scenery>
+            <trashcontainer>
+               <RecyclingBin_df/>
+            </trashcontainer>
+         </scenery>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1">
+         <physObjParenting>
+            <parentObj parent="mainObj" child="shadowObj" rottype="use" postype="ignore" attachnode="link"/>
+         </physObjParenting>
+      </BFGEntity>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\scenery\RecyclingBin_df\RecyclingBin_df_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:RecyclingBin"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="RecyclingBin_df"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared f_FameReq="20" s_uisort="cb" s_Zoopedia="zoopedia:zoopedia_recyclebin:entry"/>
+      <ZTPlacementData icon3Doffset="0 0 0.271082" icon3Dscale="1.477581" terrainFlatten="false" autoFootprint="false" gridSnap="true" >
+         <cfootprint width="0" height="0"/>
+         <dfootprint width="1" height="1"/>
+      </ZTPlacementData>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="shadowObj">
+         <instance>
+            <BFPhysObj>
+               <BFMovingBlobShadowComponent shadowTexture="world\shadows\blob\square_blob.tga" baseNode="footprint" width="1.5" minLength="1.5" maxLength="3" minOffset="0" maxOffset=".5"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/RecyclingBin_df/RecyclingBin_df.nif" switch="0 18 36"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFAIEntityDataInstance f_TrashLevel="0"/>
+         </instance>
+      </BFBinder>
+      <BFNamedBinder binderName="empty" required="0">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/RecyclingBin_df/RecyclingBin_df.nif" switch="0 18 36"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="halffull" required="0">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/RecyclingBin_df/RecyclingBin_HalfFull_df.nif" switch="0 18 36"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="full" required="0">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/RecyclingBin_df/RecyclingBin_Full_df.nif" switch="0 18 36"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="overflow" required="0">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/RecyclingBin_df/RecyclingBin_Overflow_df.nif" switch="0 18 36"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFAIFadeController attribName="f_TrashLevel" currState="empty" fadePeriod="1">
+               <stateList>
+                  <empty minRange="-1000" maxRange="0"/>
+                  <halffull physObj="halffull" minRange="0" maxRange="50"/>
+                  <full physObj="full" minRange="50" maxRange="99"/>
+                  <overflow physObj="overflow" minRange="99" maxRange="1000"/>
+               </stateList>
+            </BFAIFadeController>
+         </instance>
+      </BFBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="150">
+               <ZTTransaction name="build" costType="parent" type="debit" category="construction"/>
+               <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+               <ZTTransaction name="recycle" cost="1" type="debit" category="recycling"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <ZTAIStaffRequestController attribName="f_TrashLevel" thresholdValue="50" testType="2" cancelThresholdValue="25" cancelTestType="1">
+               <ZTStaffRequestData tokenKey="t_EmptyTrash" subjectType="Worker" priority="1"/>
+            </ZTAIStaffRequestController>
+         </instance>
+      </BFBinder>
+      <BFNamedBinder binderName="Use_Can">
+         <instance>
+            <BFGEntityContainer>
+               <slots>
+                  <BFGEntityContainerSlot enterBehSet="DockTrashContainer" useBehSet="UseRecyclingBin" exitBehSet="ExitTrashContainer" targetNode="Dock_Adult_01"/>
+                  <BFGEntityContainerSlot enterBehSet="DockTrashContainer" useBehSet="UseRecyclingBin" exitBehSet="ExitTrashContainer" targetNode="Dock_Adult_02"/>
+                  <BFGEntityContainerSlot enterBehSet="DockTrashContainer" useBehSet="UseRecyclingBin" exitBehSet="ExitTrashContainer" targetNode="Dock_Adult_03"/>
+                  <BFGEntityContainerSlot enterBehSet="DockTrashContainer" useBehSet="UseRecyclingBin" exitBehSet="ExitTrashContainer" targetNode="Dock_Adult_04"/>
+               </slots>
+            </BFGEntityContainer>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

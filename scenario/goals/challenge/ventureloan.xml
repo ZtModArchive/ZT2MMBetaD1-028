@@ -1,0 +1,20 @@
+<BFScenarioGroup name="ventureloanrules" state="0" chain="false" allsuccess="true" sticky="true" optional="false">
+	<children>
+		<BFScenarioRule hidden="1" name="ventureloan" state="0" sticky="true">
+			<info type="primary">
+				<neutral locid="Challengetext:CHgrantmoney2Short" overview="Challengetext:CHgrantmoney2" />
+				<success locid="Challengetext:CHgrantmoney2SuccessShort" overview="Challengetext:CHgrantmoney2Success" />
+				<failure locid="Challengetext:CHgrantmoney2FailureShort" overview="Challengetext:CHgrantmoney2Failure" />				
+			</info>
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/ventureloan.lua" entry="evalventureloan" />
+			</evaluate>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/ventureloan.lua" entry="completeventureloan" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/ventureloan.lua" entry="failventureloan" />
+			</failure>		
+		</BFScenarioRule>
+	</children>
+</BFScenarioGroup>

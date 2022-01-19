@@ -1,0 +1,44 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="Pandas:Pandasintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="Pandas" state="0" chain="true" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success overview = "Pandas:PandasSuccessPart2overview" />
+			</info>		
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="completepandas" />
+			</success>		
+			<children>
+			<BFScenarioRule name="Pandasadopt" hidden = "0" state="0" sticky="true">
+				<info type="primary" locid="Pandas:PandasAdoptPanda">
+					<neutral locid="Pandas:PandasAdoptPanda" overview="Pandas:Pandasoverview" />
+					<success locid="Pandas:PandasAdoptPandaOK" overview="Pandas:Pandasoverview" />
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="evalpandasadopt" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="completepandasadopt" />
+				</success>
+			</BFScenarioRule>
+			<BFScenarioRule name="Pandasbreed" hidden = "1" state="0" sticky="true">
+				<info type="primary" locid="Pandas:Pandasoverallgoal">
+					<neutral locid="Pandas:PandasBreeding" overview = "Pandas:PandasSuccessPart1overview" />
+					<success locid="Pandas:PandasBreedingOK" />
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="evalpandasbreed" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/pandacampaign.lua" entry="completepandasbreed" />
+				</success>
+			</BFScenarioRule>		
+		</children>
+		</BFScenarioGroup>	
+	</children>
+</ZTScenarioMgr>

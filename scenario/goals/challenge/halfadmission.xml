@@ -1,0 +1,20 @@
+<BFScenarioGroup name="halfadmissionrules" state="0" chain="false" allsuccess="true" sticky="true" optional="false">
+	<children>
+		<BFScenarioRule hidden="1" name="halfadmission" state="0" sticky="true">
+			<info type="primary">
+				<neutral locid="Challengetext:CHgrantmoneyShort" overview="Challengetext:CHgrantmoney" />
+				<success locid="Challengetext:CHgrantmoneySuccessShort" overview="Challengetext:CHgrantmoneySuccess" />
+				<failure locid="Challengetext:CHgrantmoneyFailureShort" overview="Challengetext:CHgrantmoneyFailure" />
+			</info>			
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/halfadmission.lua" entry="evalhalfadmission" />
+			</evaluate>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/halfadmission.lua" entry="completehalfadmission" />
+			</success>	
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/challenge/money/halfadmission.lua" entry="failhalfadmission" />
+			</failure>	
+		</BFScenarioRule>
+	</children>
+</BFScenarioGroup>

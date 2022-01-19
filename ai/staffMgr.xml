@@ -1,0 +1,63 @@
+<ZTAIStaffMgr jobSafeDistance="6.0f" stealJobThreshold="10.0f" DisplacementX="0" DisplacementY="5" LogRequests="true" LogAssignments="false">
+   <typesThatStaffCareAbout>
+      <staffcenter_df/>
+      <bench/>
+   </typesThatStaffCareAbout>
+   <StaffTokens>
+      <t_FillFoodContainer>
+         <BFAITokenList>
+            <BFAIToken Name="t_FillFoodContainer" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_FillFoodContainer>
+      <t_RakePoo>
+         <BFAITokenList>
+            <BFAIToken Name="t_RakePoo" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_RakePoo>
+      <t_SweepTrash>
+         <BFAITokenList>
+            <BFAIToken Name="t_SweepTrash" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_SweepTrash>
+      <t_EmptyTrash>
+         <BFAITokenList>
+            <BFAIToken Name="t_EmptyTrash" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_EmptyTrash>
+      <t_EmptyRecyclingBin>
+         <BFAITokenList>
+            <BFAIToken Name="t_EmptyRecyclingBin" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_EmptyRecyclingBin>
+      <t_FeedAnimal>
+         <BFAITokenList>
+            <BFAIToken Name="t_FeedAnimal" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_FeedAnimal>
+      <t_WaterAnimal>
+         <BFAITokenList>
+            <BFAIToken Name="t_WaterAnimal" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_WaterAnimal>
+      <t_HealAnimal>
+         <BFAITokenList>
+            <BFAIToken Name="t_HealAnimal" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_HealAnimal>
+      <t_CleanAnimal>
+         <BFAITokenList>
+            <BFAIToken Name="t_CleanAnimal" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_CleanAnimal>
+      <t_CheckupBaby>
+         <BFAITokenList>
+            <BFAIToken Name="t_CheckupBaby" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_CheckupBaby>
+      <t_CrateAnimal>
+         <BFAITokenList>
+            <BFAIToken Name="t_CrateAnimal" GiveTo="subject" Payload="target" Force="1"/>
+         </BFAITokenList>
+      </t_CrateAnimal>
+   </StaffTokens>
+</ZTAIStaffMgr>

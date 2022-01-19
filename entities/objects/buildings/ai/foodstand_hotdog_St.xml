@@ -1,0 +1,63 @@
+<BFTypedBinder binderType="foodstand_hotdog_St">
+   <types>
+      <entity>
+         <building>
+            <Foodstand>
+               <foodstand_hotdog>
+                  <foodstand_hotdog_St/>
+               </foodstand_hotdog>
+            </Foodstand>
+         </building>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\buildings\Foodstand\foodstand_hotdog_St_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:foodstand_hotdog_St"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="foodstand_hotdog_St"/>
+         </on>
+      </UIToggleButton>
+      <UIButton name="overviewicon">
+         <UIAspect>
+            <default image="ui/zoomap/icon_food.dds"/>
+         </UIAspect>
+      </UIButton>
+      <BFAIEntityDataShared s_uisort="hc" s_ProfileLock="safarilock" s_ItemsSold="Hotdog" b_CommerceBuilding="true" b_DonationAcceptor="false" s_Zoopedia="zoopedia:zoopedia_hotdog:entry" s_Theme="safari"/>
+      <ZTTriggeredEventsComponent>
+         <Buy_Item>
+            <nonbroadcast>
+               <event msg="BFSND_PLAY_FROM_ENTITY" data="BFString" string="fryregister"/>
+            </nonbroadcast>
+         </Buy_Item>
+      </ZTTriggeredEventsComponent>
+      <ZTItemFilter>
+      	<Include_OR b_Hotdog="true"/>
+      </ZTItemFilter>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/buildings/Foodstand/Hotstand_St.nif" minSwitch="0 30 30 30 30"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="600" mergeKey="name">
+               <ZTTransaction name="build" costType="parent" type="debit" category="construction"/>
+               <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+               <ZTTransaction name="upkeep" cost="50" period="monthly" type="debit" category="upkeep"/>
+               <ZTTransaction name="Buy_Item" costIndex="1" costChoice="12 24 32" type="debit" category="concessions_food_drink" nextTransaction="add_user"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

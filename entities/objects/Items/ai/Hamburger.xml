@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="Hamburger">
+   <types>
+      <entity>
+         <item>
+            <Hamburger/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <BFGDetachInfo>
+         <detachActionTable>
+            <maketrash destination="kill">
+               <createList>
+                  <Trash destination="inventory"/>
+               </createList>
+            </maketrash>
+         </detachActionTable>
+      </BFGDetachInfo>      
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_burger.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:Hamburger"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Hamburger="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/items/Hamburger/Hamburger.nif" scale="1.0" switch="0 36"/>            
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

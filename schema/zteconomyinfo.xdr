@@ -1,0 +1,18 @@
+<Schema name="ZTEconomyInfo">
+	<ElementType name="ZTEconomyInfo">
+		<extends type="BFXMLObj"/>
+		<AttributeType name="PeriodEnum">
+			<datatype dt:type="enumeration" dt:values="monthly lifetime" />
+		</AttributeType> 
+		<AttributeType name="TypeEnum">
+			<datatype dt:type="enumeration" dt:values="cash income expenses profit users totalUsers" />
+		</AttributeType>
+		<AttributeType name="DateMonth">
+			<datatype dt:type="int" dt:min="1" dt:max="12" />
+		</AttributeType> 
+		<attribute name="period" type="PeriodEnum" required="yes" />
+		<attribute name="type" type="TypeEnum" required="yes" />
+		<attribute name="category" dt:type="string" required="no" />
+		<attribute name="month" dt:type="int" required="no" default="-1" />
+	</ElementType>
+</Schema>

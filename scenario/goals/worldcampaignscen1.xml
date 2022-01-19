@@ -1,0 +1,51 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="TheWorld:AmericanAnimalsintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="americananimals" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="TheWorld:AmericanAnimalsoverview" />
+				<success locid="TheWorld:AmericanAnimalsresult" overview = "TheWorld:AmericanAnimalsSuccessoverview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completeworldcampaignscen1" />
+			</success>			
+			<children>
+				<BFScenarioRule name="americananimalsoverall" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="TheWorld:AmericanAnimalsoverallgoal">
+						<neutral locid="TheWorld:AmericanAnimalsoverallgoal" />
+						<success locid="TheWorld:AmericanAnimalsoverallgoalOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalamericananimals" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completeamericananimals" />
+					</success>
+				</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>
+		
+				<!--BFScenarioRule name="animalone" hidden = "1" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:AmericanAnimalshave1">
+						<neutral locid="TheWorld:AmericanAnimalshave1" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animaltwo" hidden = "1" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:AmericanAnimalshave1">
+						<neutral locid="TheWorld:AmericanAnimalshave2" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animalthree" hidden = "1" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:AmericanAnimalshave1">
+						<neutral locid="TheWorld:AmericanAnimalshave3" />
+					</info>
+				</BFScenarioRule-->
+							
+				
+	</children>
+</ZTScenarioMgr>

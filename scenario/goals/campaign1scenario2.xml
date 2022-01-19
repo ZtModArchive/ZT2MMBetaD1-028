@@ -1,0 +1,26 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="C1scenariogoals:S3intro"/>
+	<success locid = "C1scenariogoals:S3result"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostatescenario2" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="setinitialzoostatescenario2" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioRule name="environmentneeds" state="0" sticky="true">
+			<info type="primary">
+				<neutral locid="C1scenariogoals:S3goalshort" overview="C1scenariogoals:S3overview" />
+				<success locid="C1scenariogoals:S3goalshortsuccess" overview="C1scenariogoals:S3success" />	
+			</info>
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="environmentneedmet" />
+			</evaluate>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="completeC1scen2" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1scen2" />
+			</failure>
+		</BFScenarioRule>
+	</children>
+</ZTScenarioMgr>

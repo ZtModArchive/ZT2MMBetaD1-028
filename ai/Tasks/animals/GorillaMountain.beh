@@ -1,0 +1,3651 @@
+<BehaviorSets>
+<!-- Begin Default Behaviors Section -->
+<!-- Begin Default Behavior Branches -->
+   <Default_Happy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Pos_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="90"/>
+               <DefaultHappy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Happy>
+   <Default_VeryHappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="DPos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="80"/>
+               <DefaultHappy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryHappy>
+   <Default_Happy_inWater>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Pos_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="90"/>
+               <Default_inWater_Happy weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Happy_inWater>
+   <Default_VeryHappy_inWater>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="DPos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryHappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="80"/>
+               <Default_inWater_Happy weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryHappy_inWater>
+   <Default_Unhappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="85"/>
+               <DefaultUnhappy weight="5"/>
+               <DefaultUnhappy2 weight="5"/>
+               <DefaultUnhappy3 weight="5"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Unhappy>
+   <Default_VeryUnhappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultSit weight="70"/>
+               <DefaultUnhappy weight="10"/>
+               <DefaultUnhappy2 weight="10"/>
+               <DefaultUnhappy3 weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryUnhappy>
+   <Default_Unhappy_inWater>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_2">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="84"/>
+               <Default_inWater_Unhappy weight="4"/>
+               <Default_inWater_Unhappy2 weight="4"/>
+               <Default_inWater_Unhappy3 weight="4"/>
+               <Default_inWater_Unhappy4 weight="4"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_Unhappy_inWater>
+   <Default_VeryUnhappy_inWater>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehViewEvent viewKey="Neg_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehRandomSet>
+            <randomSets>
+               <DefaultStand weight="60"/>
+               <Default_inWater_Unhappy weight="10"/>
+               <Default_inWater_Unhappy2 weight="10"/>
+               <Default_inWater_Unhappy3 weight="10"/>
+               <Default_inWater_Unhappy4 weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Default_VeryUnhappy_inWater>
+<!-- End Default Behavior Branches -->
+<!-- Begin Default Behavior Leaves -->
+   <DefaultStand>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Standing"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DefaultStand>
+   <DefaultSit>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sitting"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+      </behaviors>
+   </DefaultSit>
+   <DefaultLieBack>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LyingDown"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="LieBack_Idle"/>
+      </behaviors>
+   </DefaultLieBack>
+   <DefaultLieFront>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LyingDown"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="LieFront_Idle"/>
+      </behaviors>
+   </DefaultLieFront>
+   <DefaultSleep>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sleeping"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sleep_Idle"/>
+      </behaviors>
+   </DefaultSleep>
+   <DefaultSleepFront>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Sleeping"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SleepFront_Idle"/>
+      </behaviors>
+   </DefaultSleepFront>
+   <DefaultHappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Laughing"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sit"/>
+         <BFBehPlaySet behSet="Chuckle"/>
+      </behaviors>
+   </DefaultHappy>
+   <Default_inWater_Happy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Laughing"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Stand"/>
+         <BFBehPlaySet behSet="Chuckle"/>
+      </behaviors>
+   </Default_inWater_Happy>
+   <DefaultUnhappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Roaring"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Roar"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </DefaultUnhappy>
+   <DefaultUnhappy2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Growling"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Growl"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </DefaultUnhappy2>
+   <DefaultUnhappy3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ShakingHead"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="HeadShake"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </DefaultUnhappy3>
+   <Default_inWater_Unhappy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Roaring"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Roar"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </Default_inWater_Unhappy>
+   <Default_inWater_Unhappy2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Growling"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Growl"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </Default_inWater_Unhappy2>
+   <Default_inWater_Unhappy3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ShakingHead"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="HeadShake"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </Default_inWater_Unhappy3>
+   <Default_inWater_Unhappy4>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Drum"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Drum"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </Default_inWater_Unhappy4>
+<!-- End Default Behavior Leaves -->
+<!-- End Default Behaviors Section -->
+   <Idle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="DefaultStand"/>
+               <Sit behSet="DefaultSit"/>
+               <LieBack behSet="DefaultLieBack"/>
+               <LieFront behSet="DefaultLieFront"/>
+               <Sleep behSet="DefaultSleep"/>
+               <SleepFront behSet="DefaultSleepFront"/>
+               <default behSet="DefaultStand"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Idle>
+   <Think>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet loopFlag="true">
+            <behaviorTable>
+               <Stand behSet="Ponder"/>
+               <default behSet="Idle"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Think>
+   <LookAt>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Idle weight="50"/>
+               <Investigate weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </LookAt>
+   <Investigate>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToLookAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehMove pathRadius="3"/>
+         <ZTBehViewEvent viewKey="Pos_2"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LookAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </Investigate>
+   <Die_OldAge>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dying"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sleep"/>
+         <ZTBehViewEvent viewKey="Neg_10">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalDiedBad" priority="-1" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTMessageInfo locID="zoomessages:AnimalDied" priority="-1" timeout="60" global="true" useEntityName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehKill killSubject="true" fadeOutPeriod="1"/>
+      </behaviors>
+   </Die_OldAge>
+   <Die_Sick>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dying_Sick"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPlaySet behSet="Sleep"/>
+         <ZTBehViewEvent viewKey="Neg_10">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalDiedSickBad" priority="-1" timeout="60" global="false" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTMessageInfo locID="zoomessages:AnimalDiedSick" priority="-1" timeout="60" global="true" useEntityName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehKill killSubject="true" fadeOutPeriod="1"/>
+      </behaviors>
+   </Die_Sick>
+   <Die_Fight>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+	 <ZTBehMorph morphEntity="subject" morphTargetEntityType="Carcass_Meat" NameIt="true"/>
+      </behaviors>
+   </Die_Fight>
+   <Stand>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </Stand>
+   <Sit>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+      </behaviors>
+   </Sit>
+   <Sit_Angry>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <Sit_Idle weight="50"/>
+               <Sit_Growl weight="25"/>
+               <Sit_Grunt weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </Sit_Angry>
+   <LieBack>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="LieBack_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <LieBack_Idle weight="75"/>
+               <LieBack_A weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </LieBack>
+   <LieFront>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="LieFront_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <LieFront_Idle weight="50"/>
+               <LieFront_A weight="25"/>
+               <LieFront_B weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </LieFront>
+   <Lie>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <LieBack weight="50"/>
+               <LieFront weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Lie>
+   <SleepBack>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sleep_Idle" playTime="20"/>
+      </behaviors>
+   </SleepBack>
+   <SleepFront>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SleepFront_Idle" playTime="20"/>
+      </behaviors>
+   </SleepFront>
+   <Sleep>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <SleepBack weight="50"/>
+               <SleepFront weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Sleep>
+   <LieBack_Stretch>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="LieBack_Stretch"/>
+      </behaviors>
+   </LieBack_Stretch>
+   <Poop>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Poop_Idle"/>
+      </behaviors>
+   </Poop>
+   <Eat>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locomod="carry" detachAction="killitem" container="foodprop"/>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_StripLeaves"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="SitObject_2Sit"/>
+      </behaviors>
+   </Eat>
+   <EatApple>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="target" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locomod="carry" detachAction="killitem"/>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="SitObject_2Sit"/>
+      </behaviors>
+   </EatApple>
+   <EatCarrot>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="target" targetAnim="Stand_2StandObject" targetNode="Dock_PickUp" locomod="carry" detachAction="killitem"/>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="SitObject_2Sit"/>
+      </behaviors>
+   </EatCarrot>
+   <EatFigs>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locomod="carry" detachAction="killitem" container="foodprop"/>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="SitObject_2Sit"/>
+      </behaviors>
+   </EatFigs>
+   <Drink>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Drink"/>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+         <BFBehAnimate targetAnim="Sit_Drink"/>
+      </behaviors>
+   </Drink>
+   <EnterFoodDish>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterFoodDish>
+   <EnterHollowLogLeft>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogLeft>
+   <EnterHollowLogRight>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogRight>
+   <EnterHollowLogMiddle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterHollowLogMiddle>
+   <UseFoodDish>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locomod="carry" detachAction="killitem" container="foodprop"/>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="SitObject_2Sit"/>
+      </behaviors>
+   </UseFoodDish>
+   <DrinkFoodDish>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Drink"/>
+         <BFBehAnimate targetAnim="Sit_Idle"/>
+         <BFBehAnimate targetAnim="Sit_Drink"/>
+      </behaviors>
+   </DrinkFoodDish>
+   <ExitFoodDish>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitFoodDish>
+   <SpitFood>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_SpitFood"/>
+      </behaviors>
+   </SpitFood>
+   <HandGroundToMouth>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_HandGroundToMouth"/>
+      </behaviors>
+   </HandGroundToMouth>
+   <Browse>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehPlaySet behSet="ExtendHand"/>
+         <BFBehPlaySet behSet="SearchGround"/>
+         <BFBehPlaySet behSet="HandGroundToMouth"/>
+         <BFBehPlaySet behSet="Eat"/>
+      </behaviors>
+   </Browse>
+   <BrowseBush>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehPlaySet behSet="ExtendHand"/>
+         <BFBehPlaySet behSet="SearchGround"/>
+         <BFBehPlaySet behSet="HandGroundToMouth"/>
+         <BFBehPlaySet behSet="Eat"/>
+      </behaviors>
+   </BrowseBush>
+   <ExtendHand>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ExtendHand"/>
+      </behaviors>
+   </ExtendHand>
+   <Ponder>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <Stand_PonderA weight="50"/>
+               <Stand_Ponder weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </Ponder>
+   <ScratchSelf>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Scratch"/>
+      </behaviors>
+   </ScratchSelf>
+   <RubBack>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_RubBack"/>
+      </behaviors>
+   </RubBack>
+   <Groom>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <ScratchSelf weight="50"/>
+               <RubBack weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Groom>
+   <DigFood>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Dig weight="30"/>
+               <Dig_Eat weight="40"/>
+               <SearchGround weight="30"/>
+            </randomSets>
+         </BFBehRandomSet>
+       	<BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <Dig weight="30"/>
+               <Dig_Eat weight="40"/>
+               <SearchGround weight="30"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </DigFood>
+   <Dig>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Dig"/>
+      </behaviors>
+   </Dig>
+   <Dig_Eat>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_DigEat"/>
+         <BFBehAttachObject attachEntity="Grass_Prop" targetAnim="Stand_DigEat" targetNode="Dock_Attach" detachAction="killitem" container="foodprop"/>
+      </behaviors>
+   </Dig_Eat>
+   <SearchGround>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_SearchGround"/>
+      </behaviors>
+   </SearchGround>
+   <Drum>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Drum"/>
+      </behaviors>
+   </Drum>
+   <LookLeft>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_LookLeft"/>
+      </behaviors>
+   </LookLeft>
+   <LookRight>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_LookRight"/>
+      </behaviors>
+   </LookRight>
+   <LookLeftRight>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <LookLeft weight="50"/>
+               <LookRight weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </LookLeftRight>
+   <LieBack_Yawn>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="LieBack_Yawn"/>
+      </behaviors>
+   </LieBack_Yawn>
+   <Sit_Yawn>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Yawn"/>
+      </behaviors>
+   </Sit_Yawn>
+   <Stand_Yawn>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Yawn"/>
+      </behaviors>
+   </Stand_Yawn>
+   <Yawn>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Yawn"/>
+               <Sit behSet="Sit_Yawn"/>
+               <LieBack behSet="LieBack_Yawn"/>
+               <default behSet="Stand_Yawn"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Yawn>
+   <FailureSet>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Grunt"/>
+      </behaviors>
+   </FailureSet>
+   <Stand_Growl>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Growl"/>
+      </behaviors>
+   </Stand_Growl>
+   <Sit_Growl>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Growl"/>
+      </behaviors>
+   </Sit_Growl>
+   <Growl>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Growl"/>
+               <Sit behSet="Sit_Growl"/>
+               <default behSet="Stand_Growl"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Growl>
+   <Stand_Chuckle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Chuckle"/>
+      </behaviors>
+   </Stand_Chuckle>
+   <Sit_Chuckle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Chuckle"/>
+      </behaviors>
+   </Sit_Chuckle>
+   <Chuckle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Chuckle"/>
+               <Sit behSet="Sit_Chuckle"/>
+               <default behSet="Stand_Chuckle"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Chuckle>
+   <ChuckleLong>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Chuckle" playTime="10"/>
+      </behaviors>
+   </ChuckleLong>
+   <Sneeze>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Sneeze"/>
+      </behaviors>
+   </Sneeze>
+   <Sick>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Sneeze"/>
+      </behaviors>
+   </Sick>
+   <VerySick>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SleepFront_Idle" playTime="30"/>
+      </behaviors>
+   </VerySick>
+   <Roar>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Roar"/>
+      </behaviors>
+   </Roar>
+   <Scream>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Scream"/>
+      </behaviors>
+   </Scream>
+   <HootBark>
+      <subjects>
+         <GorillaMountain_Adult_M/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_HootBark"/>
+      </behaviors>
+   </HootBark>
+   <TroopCall>
+      <subjects>
+         <GorillaMountain_Adult_M/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_HootBark" playTime="10"/>
+      </behaviors>
+   </TroopCall>
+   <HeadShake>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_HeadShake"/>
+      </behaviors>
+   </HeadShake>
+   <BatObject>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </BatObject>
+   <EnterBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="BatObject" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterBall> 
+   <UseBall_Whap>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBall_Whap>
+   <UsePursuitBall_Whap>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UsePursuitBall_Whap>
+   <UsePursuitBall_Whap>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="JumpOnBall_Idle"/>
+      </behaviors>
+   </UsePursuitBall_Whap>
+   <UseCarTire_Whap>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseCarTire_Whap>
+   <UseBarrel_Whap>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBarrel_Whap>
+   <UseBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </UseBall>
+   <ExitBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitBall>
+   <Stand_Grunt>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Grunt"/>
+      </behaviors>
+   </Stand_Grunt>
+   <Sit_Grunt>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Grunt"/>
+      </behaviors>
+   </Sit_Grunt>
+   <Grunt>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimSwitchSet>
+            <behaviorTable>
+               <Stand behSet="Stand_Grunt"/>
+               <Sit behSet="Sit_Grunt"/>
+               <default behSet="Stand_Grunt"/>
+            </behaviorTable>
+         </BFBehAnimSwitchSet>
+      </behaviors>
+   </Grunt>
+   <QuestionBark>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_QuestionBark"/>
+      </behaviors>
+   </QuestionBark>
+   <WaitAttackGuest>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitAttackGuest>
+   <AttackGuest>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AttackGuest" interruptFlag="true"/>
+      </behaviors>
+   </AttackGuest>
+   <DockAttacked>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehScript context="behavior" file="scripts/playparticle.lua" function="playParticle" params="{Floor} runps PlacementCloud"/>
+         <BFBehDockNow targetNode="p_PredatorOffset" subjectNode="p_PreyOffset" reserveSlotName="general"/>
+      </behaviors>
+   </DockAttacked>
+   <Attacked>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_2LieBack_KnockedDown"/>
+         <BFBehPlaySet behSet="Die_Fight"/>
+      </behaviors>
+   </Attacked>
+   <WaitKiss>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitKiss>
+   <DockKiss>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehDock subjectNode="Node_Mouth" targetNode="Node_Kiss" targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DockKiss>
+   <Kiss>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Kiss"/>
+      </behaviors>
+   </Kiss>
+   <AttackMedium>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AttackMed"/>
+      </behaviors>
+   </AttackMedium>
+   <AttackLow>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AttackLow"/>
+      </behaviors>
+   </AttackLow>
+   <AttackHigh>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_AttackHigh"/>
+      </behaviors>
+   </AttackHigh>
+   <WaveObject>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandObject_Wave"/>
+      </behaviors>
+   </WaveObject>
+   <GroomOther>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_2Sit_Forward"/>
+         <BFBehAnimate targetAnim="GroomOther_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <GroomOther_Idle weight="25"/>
+               <GroomOther_A weight="25"/>
+               <GroomOther_B weight="25"/>
+               <GroomOther_C weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </GroomOther>
+   <WaitGroomOther>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitGroomOther>
+   <DockGroomOther>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehDock subjectNode="Node_Groom" targetNode="Bip01" targetAnim="Stand_Idle"/>
+      </behaviors>
+   </DockGroomOther>
+   <EnterIceBlock>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterIceBlock> 
+   <UseIceBlock>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="SitObject_Idle"/>
+         <BFBehAnimate targetAnim="SitObject_Eat"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="75"/>
+               <SitObject_Belch weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitObject_Eat weight="50"/>
+               <SitObject_Belch weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </UseIceBlock>
+   <ExitIceBlock>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitIceBlock>
+   <EnterSubstratePile>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Node_Mouth" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterSubstratePile> 
+   <UseSubstratePile>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Dig"/>
+         <BFBehAttachObject attachEntity="s_prop" targetAnim="Stand_DigEat" targetNode="Dock_Attach" detachAction="killitem" container="foodprop"/>
+      </behaviors>
+   </UseSubstratePile>
+   <ExitSubstratePile>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitSubstratePile>
+   <EnterShadeStructure>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestUnder" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="Floor" targetRadius="3" rotError="180"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterShadeStructure> 
+   <UseShadeStructure>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingUnder" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseShadeStructure>
+   <ExitShadeStructure>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitShadeStructure>
+   <EnterTermiteMound>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="p_TouchDock" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterTermiteMound> 
+   <UseTermiteMound>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ExtendHand"/>
+         <BFBehAnimate targetAnim="StandObject_LookHand"/>
+         <BFBehAnimate targetAnim="StandObject_LickStick"/>
+      </behaviors>
+   </UseTermiteMound>
+   <ExitTermiteMound>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitTermiteMound>
+   <EnterShelter1>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter1>
+   <EnterShelter2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter2>
+   <EnterShelter3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter3>
+   <EnterShelter4>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter4>
+   <EnterShelter5>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter5>
+   <EnterShelter6>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd" exitTap="false"/>
+      </behaviors>
+   </EnterShelter6>
+   <UseShelter>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseShelter>
+   <ExitShelter1>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode02_Branch1AEnd2ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter1>
+   <ExitShelter2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode04_Branch1BEnd2ExitB" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter2>
+   <ExitShelter3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode06_Branch1CEnd2ExitC" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter3>
+   <ExitShelter4>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode08_Branch1DEnd2ExitD" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter4>
+   <ExitShelter5>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode10_Branch1EEnd2ExitE" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter5>
+   <ExitShelter6>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNode12_Branch1FEnd2ExitF" exitTAP="true"/>
+      </behaviors>
+   </ExitShelter6>
+   <EnterRock1>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterA"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterA" exitTap="false"/>
+      </behaviors>
+   </EnterRock1>
+   <EnterRock2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterB"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterB" exitTap="false"/>
+      </behaviors>
+   </EnterRock2>
+   <EnterRock3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterC"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterC" exitTap="false"/>
+      </behaviors>
+   </EnterRock3>
+   <EnterRock4>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterD"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterD" exitTap="false"/>
+      </behaviors>
+   </EnterRock4>
+   <EnterRock5>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterE"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterE" exitTap="false"/>
+      </behaviors>
+   </EnterRock5>
+   <EnterRock6>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterF"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterF" exitTap="false"/>
+      </behaviors>
+   </EnterRock6>
+   <EnterRock7>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterG"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterG" exitTap="false"/>
+      </behaviors>
+   </EnterRock7>
+   <EnterRock8>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+          <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+        <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterH"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterH" exitTap="false"/>
+      </behaviors>
+   </EnterRock8>
+   <EnterRock9>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+          <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+        <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterI"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterI" exitTap="false"/>
+      </behaviors>
+   </EnterRock9>
+   <EnterRock10>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterJ"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterJ" exitTap="false"/>
+      </behaviors>
+   </EnterRock10>
+   <EnterRock11>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterK"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterK" exitTap="false"/>
+      </behaviors>
+   </EnterRock11>
+   <EnterRock12>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterL"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterL" exitTap="false"/>
+      </behaviors>
+   </EnterRock12>
+   <EnterRock13>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterM"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterM" exitTap="false"/>
+      </behaviors>
+   </EnterRock13>
+   <EnterRock14>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+          <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+        <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterN"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterN" exitTap="false"/>
+      </behaviors>
+   </EnterRock14>
+   <EnterRock15>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+           <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+       <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterO"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterO" exitTap="false"/>
+      </behaviors>
+   </EnterRock15>
+   <EnterRock16>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterP"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterP" exitTap="false"/>
+      </behaviors>
+   </EnterRock16>
+   <EnterRock17>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterQ"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterQ" exitTap="false"/>
+      </behaviors>
+   </EnterRock17>
+   <EnterRock18>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterR"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterR" exitTap="false"/>
+      </behaviors>
+   </EnterRock18>
+   <EnterRock19>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterS"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterS" exitTap="false"/>
+      </behaviors>
+   </EnterRock19>
+   <EnterRock20>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterT"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterT" exitTap="false"/>
+      </behaviors>
+   </EnterRock20>
+   <EnterRock21>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Stand_Idle" subjectNode="Floor" targetTAP="Rock_EnterU"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_EnterU" exitTap="false"/>
+      </behaviors>
+   </EnterRock21>
+   <UseRock>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingOn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="20"/>
+      </behaviors>
+   </UseRock>
+   <ExitRock1>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitA" exitTAP="true"/>
+      </behaviors>
+   </ExitRock1>
+   <ExitRock2>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitB" exitTAP="true"/>
+      </behaviors>
+   </ExitRock2>
+   <ExitRock3>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitC" exitTAP="true"/>
+      </behaviors>
+   </ExitRock3>
+   <ExitRock4>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitD" exitTAP="true"/>
+      </behaviors>
+   </ExitRock4>
+   <ExitRock5>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitE" exitTAP="true"/>
+      </behaviors>
+   </ExitRock5>
+   <ExitRock6>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitF" exitTAP="true"/>
+      </behaviors>
+   </ExitRock6>
+   <ExitRock7>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitG" exitTAP="true"/>
+      </behaviors>
+   </ExitRock7>
+   <ExitRock8>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitH" exitTAP="true"/>
+      </behaviors>
+   </ExitRock8>
+   <ExitRock9>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitI" exitTAP="true"/>
+      </behaviors>
+   </ExitRock9>
+   <ExitRock10>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitJ" exitTAP="true"/>
+      </behaviors>
+   </ExitRock10>
+   <ExitRock11>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitK" exitTAP="true"/>
+      </behaviors>
+   </ExitRock11>
+   <ExitRock12>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitL" exitTAP="true"/>
+      </behaviors>
+   </ExitRock12>
+   <ExitRock13>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+          <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+        <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitM" exitTAP="true"/>
+      </behaviors>
+   </ExitRock13>
+   <ExitRock14>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitN" exitTAP="true"/>
+      </behaviors>
+   </ExitRock14>
+   <ExitRock15>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitO" exitTAP="true"/>
+      </behaviors>
+   </ExitRock15>
+   <ExitRock16>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitP" exitTAP="true"/>
+      </behaviors>
+   </ExitRock16>
+   <ExitRock17>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitQ" exitTAP="true"/>
+      </behaviors>
+   </ExitRock17>
+   <ExitRock18>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitR" exitTAP="true"/>
+      </behaviors>
+   </ExitRock18>
+   <ExitRock19>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitS" exitTAP="true"/>
+      </behaviors>
+   </ExitRock19>
+   <ExitRock20>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitT" exitTAP="true"/>
+      </behaviors>
+   </ExitRock20>
+   <ExitRock21>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Rock_ExitU" exitTAP="true"/>
+      </behaviors>
+   </ExitRock21>
+   <ClimbOntoTree1>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockTAP targetAnim="Walk_Ahead" subjectNode="Floor" targetTAP="Bip01_DockNodeGorilla1_BaseGorilla2Branch1GorillaEnd"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Climbing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNodeGorilla1_BaseGorilla2Branch1GorillaEnd" exitTap="false"/>
+      </behaviors>
+   </ClimbOntoTree1>
+   <InTree>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingIn" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom minPlays="6" maxPlays="8">
+            <randomAnims>
+               <Climb_Idle weight="80"/>
+               <Climb_LookLeft weight="10"/>
+               <Climb_LookRight weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </InTree>
+   <ClimbOffTree1>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateTAP subjectNode="Floor" targetTAP="Bip01_DockNodeGorilla2_Branch1GorillaEnd2ExitGorilla" exitTAP="true"/>
+      </behaviors>
+   </ClimbOffTree1>
+   <Mate>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Mating" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Sleep_Idle" playTime="10"/>
+      </behaviors>
+   </Mate>
+   <Birth>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet minPlays="1" maxPlays="2">
+            <randomSets>
+               <SpawnF weight="50"/>
+               <SpawnM weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Birth>
+   <SpawnF>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehSpawn spawnEntity="GorillaMountain_Young_F" spawnRelation="child" subjectNode="Floor" fadeInPeriod="1" randomPosOffset="3" randomRotOffset="180" spawnInTA="true"/>
+         <BFBehScript context="behavior" file="scripts/justgavebirth.lua" function="justgavebirth"/>
+      </behaviors>
+   </SpawnF>
+   <SpawnM>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+      </subjects>
+      <behaviors>
+         <BFBehSpawn spawnEntity="GorillaMountain_Young_M" spawnRelation="child" subjectNode="Floor" fadeInPeriod="1" randomPosOffset="3" randomRotOffset="180" spawnInTA="true"/>
+         <BFBehScript context="behavior" file="scripts/justgavebirth.lua" function="justgavebirth"/>
+      </behaviors>
+   </SpawnM>
+   <MatingCall_F>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Grunt"/>
+      </behaviors>
+   </MatingCall_F>
+   <MatingCall_M>
+      <subjects>
+         <GorillaMountain_Adult_M/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAnswer" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Grunt"/>
+      </behaviors>
+   </MatingCall_M>
+   <ApproachShelterMaterials>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPickUpFrom" useTargetContents="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Bip01 R Hand" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </ApproachShelterMaterials>
+   <PickUpLeaves>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PickingUpFrom" useTargetContents="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAttachObject attachEntity="Leaf" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locoMod="carry" detachAction="killitem"/>
+         <ZTBehViewEvent viewKey="Pos_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPickUpObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+      </behaviors>
+   </PickUpLeaves>
+   <PickUpBranch>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PickingUpFrom" useTargetContents="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAttachObject attachEntity="Branch" targetAnim="Stand_2StandObject" targetNode="Dock_Attach" locoMod="carry" detachAction="killitem"/>
+         <ZTBehViewEvent viewKey="Pos_3">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPickUpObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+      </behaviors>
+   </PickUpBranch>
+   <CreateGroundNest>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:CreatingGroundNest" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCarryObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehDetachObject targetAnim="StandObject_2Stand" detachEntity="object" detachAction="killitem"/>
+         <BFBehSpawn spawnEntity="GroundNest_Shelter" fadeInPeriod="1"/>
+      </behaviors>
+   </CreateGroundNest>
+   <ApproachGroundNest>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToBuild" useObjectName="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Floor" targetAnim="StandObject_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </ApproachGroundNest>
+   <BuildGroundNest>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Building" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCarryObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehDetachObject targetAnim="StandObject_2Stand" detachEntity="object" detachAction="killitem"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_ConstructionLevel="34"/>
+         </BFBehSetAttribute>
+      </behaviors>
+   </BuildGroundNest>
+   <EnterGroundNest>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="Floor" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </EnterGroundNest> 
+   <UseGroundNest>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:RestingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SleepFront_Idle" playTime="20"/>
+      </behaviors>
+   </UseGroundNest>
+   <ExitGroundNest>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitGroundNest>
+   <ChaseBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="p_PursuitBallNode" targetAnim="Stand_Idle" locoSpeed="fast"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehPursuit hitRadius="3" locoSpeed="fast"/>
+         <BFBehFaceTarget/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="2" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayBallAgain weight="50"/>
+               <Idle weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </ChaseBall>
+   <PlayBallAgain>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+         <BFBehHeadLook/>
+         <BFBehPursuit hitRadius="3" locoSpeed="fast"/>
+         <BFBehFaceTarget/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="2" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehWhap targetAnim="Stand_BatObject"/>
+      </behaviors>
+   </PlayBallAgain>
+   <EvadePlay>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Evade weight="80"/>
+               <Submit weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </EvadePlay>
+   <EvadeAngry>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <Evade weight="20"/>
+               <Submit weight="80"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </EvadeAngry>
+   <Evade>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Fleeing" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehEvasion evasionRadius="10" locoSpeed="fast"/>
+      </behaviors>
+   </Evade>
+   <Submit>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Submitting" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="LieFront_Idle"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <LieFront_A weight="50"/>
+               <LieFront_B weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehAnimate targetAnim="LieFront_Idle"/>
+      </behaviors>
+   </Submit>
+   <BeatChest>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_BeatChest"/>
+      </behaviors>
+   </BeatChest>
+   <GrabBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <BFBehDockRadial subjectNode="p_GrabBall" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </GrabBall>
+   <PickUpBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject targetNode="Dock_04" targetAnim="Stand_2StandObject" locoMod="carry" detachAction="dropitem"/>
+      </behaviors>
+   </PickUpBall>
+   <PickUpRattleBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject targetNode="Dock_04" targetAnim="Stand_2StandObject" locoMod="carry" detachAction="dropitem"/>
+      </behaviors>
+   </PickUpRattleBall>
+   <PickUpRubberToy>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject targetNode="Dock_Pickup01" targetAnim="Stand_2StandObject" locoMod="carry" detachAction="dropitem"/>
+      </behaviors>
+   </PickUpRubberToy>
+   <PickUpBone>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAttachObject targetNode="Dock_Pickup_Chimp" targetAnim="Stand_2StandObject" locoMod="carry" detachAction="dropitem"/>
+      </behaviors>
+   </PickUpBone>
+   <DropObject>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandObject_2Stand"/>
+      </behaviors>
+   </DropObject>
+   <PlayBall>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <PlayObjectSit weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayBall>
+   <PlayBone>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayBoneStand weight="50"/>
+               <PlayObjectSit weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayBone>
+   <PlayObjectSit>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectSit_Idle weight="10"/>
+               <PlayObjectSit_Smash weight="30"/>
+               <PlayObjectSit_SwingUpDown weight="30"/>
+               <PlayObjectSit_Wave weight="30"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectSit>
+   <PlayBoneStand>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand_Idle weight="10"/>
+               <PlayObjectStand_Smash weight="20"/>
+               <PlayObjectStand_SwingAcross weight="10"/>
+               <PlayObjectStand_SwingUpDown weight="10"/>
+               <PlayObjectStand_LickStick weight="20"/>
+               <PlayObjectStand_LookAt weight="20"/>
+               <PlayObjectStand_Shake weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayBoneStand>
+   <PlayObjectSit_Idle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Holding" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_4">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHoldObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="SitObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectSit weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectSit_Idle>
+   <PlayObjectSit_Smash>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="SitObject_Smash" playTime="2"/>
+         <BFBehAnimate targetAnim="SitObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectSit weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectSit_Smash>
+   <PlayObjectSit_Wave>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="SitObject_Wave" playTime="2"/>
+         <BFBehAnimate targetAnim="SitObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectSit weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectSit_Wave>
+   <PlayObjectSit_SwingUpDown>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="SitObject_SwingUpDown" playTime="2"/>
+         <BFBehAnimate targetAnim="SitObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectSit weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectSit_SwingUpDown>
+   <PlayObjectStand_LickStick>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_LickStick" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_LickStick>
+   <PlayObjectStand>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand_A weight="50"/>
+               <PlayObjectStand_B weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand>
+   <PlayObjectStand_A>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand_Idle weight="10"/>
+               <PlayObjectStand_LookAt weight="20"/>
+               <PlayObjectStand_Shake weight="40"/>
+               <PlayObjectStand_Wave weight="30"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_A>
+   <PlayObjectStand_B>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand_Idle weight="10"/>
+               <PlayObjectStand_LookAt weight="30"/>
+               <PlayObjectStand_Smash weight="20"/>
+               <PlayObjectStand_SwingAcross weight="20"/>
+               <PlayObjectStand_SwingUpDown weight="20"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_B>
+   <PlayObjectStand_Idle>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Holding" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_4">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalHoldObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="3"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_Idle>
+   <PlayObjectStand_LookAt>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:LookAt" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_4">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_LookHand" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_LookAt>
+   <PlayObjectStand_Shake>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:ShakingObject" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_Shake" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_Shake>
+   <PlayObjectStand_Smash>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_Smash" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_Smash>
+   <PlayObjectStand_SwingAcross>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_SwingAcross" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_SwingAcross>
+   <PlayObjectStand_SwingUpDown>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_SwingUpDown" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_SwingUpDown>
+   <PlayObjectStand_Wave>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PlayingWith" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_6">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalPlayObjectGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="StandObject_Wave" playTime="2"/>
+         <BFBehAnimate targetAnim="StandObject_Idle" playTime="2"/>
+         <BFBehRandomSet>
+            <randomSets>
+               <PlayObjectStand weight="50"/>
+               <DropObject weight="50"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </PlayObjectStand_Wave>
+   <Somersault>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Sit_Somersault"/>
+      </behaviors>
+   </Somersault>
+   <CallMother_Wait>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:CallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_QuestionBark" playTime="20"/>
+      </behaviors>
+   </CallMother_Wait>
+   <CallMother>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:CallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_QuestionBark"/>
+      </behaviors>
+   </CallMother>
+   <DockPickup>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDock subjectNode="Node_Carried" targetNode="p_BackDockingNode" targetAnim="Stand_2OnMotherBack"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </DockPickup>
+   <WaitPickup>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitingToBeClimbed" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="Stand_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitPickup>
+   <MommaPickupBaby>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:PickingUp" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAttachObject targetNode="Node_Carried" targetAnim="Stand_2StandBaby" locoMod="carryyoung" detachAction="dropitem" detachBehSet="DetachBaby" targetBehSet="BeingCarried"/>
+      </behaviors>
+   </MommaPickupBaby>
+   <BeingCarried>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="OnMotherBack_Idle" loopFlag="true"/>
+      </behaviors>
+   </BeingCarried>
+   <BabyPickedUpByMomma>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_2OnMotherBack"/>
+      </behaviors>
+   </BabyPickedUpByMomma>
+   <MommaDropBaby>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Dropping" useObjectName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="StandBaby_2Stand"/>
+      </behaviors>
+   </MommaDropBaby>
+   <BabyDroppedByMomma>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="OnMotherBack_2Stand"/>
+      </behaviors>
+   </BabyDroppedByMomma>
+   <DetachBaby>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="StandBaby_Idle"/>
+         <BFBehSyncSet syncEntity="object" subjectBehSet="MommaDropBaby" targetBehSet="BabyDroppedByMomma"/>
+      </behaviors>
+   </DetachBaby>
+   <EnterEasel>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook/>
+         <BFBehDock targetNode="Dock_Paint_0" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="0">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+      </behaviors>
+   </EnterEasel>
+   <Paint>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehRandomSet>
+            <randomSets>
+               <PaintRegular weight="90"/>
+               <PaintVariant weight="10"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Paint>
+   <PaintRegular>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Painting" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_7">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUseEaselGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="Stand_FingerPaint"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="35">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+         <BFBehAnimate targetAnim="Stand_FingerPaint"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="45">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+         <BFBehAnimate targetAnim="Stand_FingerPaint"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="50">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+         <BFBehAnimate targetAnim="Stand_FingerPaint"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="60">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAnimalStimulationVeryGood"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </PaintRegular>
+   <PaintVariant>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:Painting" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_7">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalUseEaselGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehAnimate targetAnim="Stand_FingerPaint"/>
+         <BFBehSetAttribute>
+            <BFAITargetData f_PaintLevel="32">
+               <Options Reset="true"/>
+            </BFAITargetData>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAnimalStimulationVeryGood"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </behaviors>
+   </PaintVariant>
+   <ExitEasel>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+         <BFBehAnimate targetAnim="Stand_TurnRight90"/>
+      </behaviors>
+   </ExitEasel>
+   <DockNurse>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToNurse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDock subjectNode="Node_Mouth" targetNode="p_NursingNode" targetAnim="Stand_2OnMotherLap"/>
+         <BFBehHeadLook disengage="true"/>
+      </behaviors>
+   </DockNurse>
+   <WaitNurse>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitingToNurse" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SitBaby_Idle" loopFlag="true"/>
+      </behaviors>
+   </WaitNurse>
+   <Nurse>
+      <subjects>
+         <GorillaMountain_Young/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:BeingNursed" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="OnMotherLap_Nurse"/>
+         <BFBehAnimate targetAnim="OnMotherLap_2Stand"/>
+      </behaviors>
+   </Nurse>
+   <MommaNurseYoung>
+      <subjects>
+         <GorillaMountain_Adult_F/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:NurseOther" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SitBaby_Feed"/>
+         <BFBehAnimate targetAnim="SitBaby_2Sit"/>
+      </behaviors>
+   </MommaNurseYoung>
+   <ClimbFence_High>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ClimbOverHighFence"/>
+      </behaviors>
+   </ClimbFence_High>
+   <ClimbFence_Low>
+      <subjects>
+         <GorillaMountain_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_ClimbOverLowFence"/>
+      </behaviors>
+   </ClimbFence_Low>
+   <ThrashWater>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Drown_Idle" interruptFlag="true"/>
+      </behaviors>
+   </ThrashWater>
+   <Pee>
+      <subjects>
+         <GorillaMountain/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Pee_Idle"/>
+      </behaviors>
+   </Pee>
+</BehaviorSets>

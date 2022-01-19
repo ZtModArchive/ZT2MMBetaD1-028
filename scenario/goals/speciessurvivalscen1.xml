@@ -1,0 +1,67 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="SpeciesSurvival:VulnerableAnimalsintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="vulnerableanimalsbreeding" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="SpeciesSurvival:VulnerableAnimalsoverview" />
+				<success overview = "SpeciesSurvival:VulnerableAnimalsSuccessoverview"/>
+				<failure overview = "SpeciesSurvival:VulnerableAnimalsFailureoverview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completevulnerableanimalsbreeding" />
+			</success>			
+			<children>
+				<BFScenarioRule name="vulnerableanimalsbreeding" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreeding">
+						<neutral locid="SpeciesSurvival:VulnerableAnimalsBreeding" />
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="evalvulnerableanimalsbreeding" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="completevulnerableanimalsbreeding" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/speciessurvival.lua" entry="failvulnerableanimalsbreeding" />
+					</failure>					
+
+				</BFScenarioRule>
+
+		
+				<BFScenarioRule name="animaloneadopted" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreedingone">
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingone" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animaltwoadopted" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreedingtwo">
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingtwo" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animalthreeadopted" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreedingthree">
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingthree" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animalfouradopted" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreedingfour">
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingfour" />
+					</info>
+				</BFScenarioRule>
+				<BFScenarioRule name="animalfiveadopted" hidden = "1" state="1" sticky="true">
+					<info type="primary" locid="SpeciesSurvival:VulnerableAnimalsBreedingfive">
+						<success locid="SpeciesSurvival:VulnerableAnimalsBreedingfive" />
+					</info>
+				</BFScenarioRule>
+				
+			</children>
+		</BFScenarioGroup>							
+				
+	</children>
+</ZTScenarioMgr>

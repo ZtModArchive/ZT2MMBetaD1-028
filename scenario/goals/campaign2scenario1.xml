@@ -1,0 +1,96 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="ElephantHerdScenarioGoals:intro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup name="ElephantHerdScenario" state="0" chain="true" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success locid="ElephantHerdScenarioGoals:result" overview="ElephantHerdScenarioGoals:finishmeetneedsoverview" />
+			</info>
+			<!--success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completeelephantherd" />
+			</success-->
+			<children>
+				<BFScenarioRule name="adoptelephant" state="0" sticky="true">
+					<info type="primary" locid="ElephantHerdScenarioGoals:adoptelephant">
+						<neutral locid="ElephantHerdScenarioGoals:adoptelephant" overview="ElephantHerdScenarioGoals:overview" />
+						<success locid="ElephantHerdScenarioGoals:finishadoptelephant" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalcratedelephant" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completecratedelephant" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioRule name="meetelephantneeds" hidden="1" state="0" sticky="true">
+					<info type="primary" locid="ElephantHerdScenarioGoals:meetneeds">
+						<neutral locid="ElephantHerdScenarioGoals:meetneeds" overview="ElephantHerdScenarioGoals:overview" />
+						<success locid="ElephantHerdScenarioGoals:finishmeetneeds" overview="ElephantHerdScenarioGoals:overview" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalmeetbasicneeds" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completemeetbasicneeds" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioGroup hidden ="1" name="fourelephants" state="0" chain="true" allsuccess="true" sticky="true">
+					<info type="primary">
+						<neutral overview="ElephantHerdScenarioGoals:elephantpart1successoverview" />
+						<success overview="ElephantHerdScenarioGoals:elephantpart1successoverview" />
+					</info>					
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completethreemoreelephants" />
+					</success>					
+					<children>				
+						<BFScenarioRule name="getthreemoreelephants" hidden="1" state="0" sticky="true">
+							<info type="primary" locid="ElephantHerdScenarioGoals:adoptfourelephants">
+								<neutral locid="ElephantHerdScenarioGoals:adoptfourelephants" />
+								<success locid="ElephantHerdScenarioGoals:finishadoptfourelephants" />
+							</info>
+							<evaluate>
+								<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalthreemoreelephants" />
+							</evaluate>
+							<success>
+								<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="showprimarygoals" />
+							</success>							
+						</BFScenarioRule>
+
+						<BFScenarioRule name="meetenvironment" hidden="1" state="0" sticky="true">
+							<info type="primary" locid="ElephantHerdScenarioGoals:meetenvironmentfourelephants">
+								<neutral locid="ElephantHerdScenarioGoals:meetenvironmentfourelephants" />
+								<success locid="ElephantHerdScenarioGoals:finishmeetneedsoverview" />
+							</info>
+							<evaluate>
+								<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalmeetenvironmentfourelephants" />
+							</evaluate>
+							<success>
+								<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="showprimarygoals" />
+							</success>							
+						</BFScenarioRule>
+						<BFScenarioRule name="happyelephants" hidden="1" state="0" sticky="true">
+							<info type="primary" locid="ElephantHerdScenarioGoals:meetallneeds">
+								<neutral locid="ElephantHerdScenarioGoals:meetallneeds" />
+								<success locid="ElephantHerdScenarioGoals:finishmeetallneeds" />
+								<failure locid="ElephantHerdScenarioGoals:failedmeetneeds" />
+							</info>
+							<evaluate>
+								<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalhappyelephants" />
+							</evaluate>
+							<success>
+								<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completethreemoreelephants" />
+							</success>
+							<failure>
+								<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failthreemoreelephants" />
+							</failure>
+						</BFScenarioRule>						
+					</children>
+				</BFScenarioGroup>
+			</children>
+		</BFScenarioGroup>
+	</children>
+</ZTScenarioMgr>

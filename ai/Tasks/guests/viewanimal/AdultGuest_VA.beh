@@ -1,0 +1,1246 @@
+<BehaviorSets>
+   <Educator_Path_Event>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehRandomSet minPlays="1" maxPlays="1">
+            <randomSets>
+               <EducatorEventFace weight="25"/>
+               <EducatorEventNoFace weight="75"/>
+            </randomSets>
+         </BFBehRandomSet>
+      </behaviors>
+   </Educator_Path_Event>
+   <EducatorEventFace>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEducation"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <StandListen_A weight="20"/>
+               <StandListen_Idle weight="20"/>
+               <Stand_PointCasual weight="20"/>
+               <Stand_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </EducatorEventFace>
+   <EducatorEventNoFace>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehAnimate targetAnim="Stand_Idle"/>
+      </behaviors>
+   </EducatorEventNoFace>
+   <VA_Path_Neg_10>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-100" happiness="5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2"> 
+            <randomAnims>
+             	<CoverEyes_Idle weight="40"/>
+	        <Stand_CoverEars weight="40"/>
+	        <Stand_Cry weight="40"/>
+	        <Standbored_ShakeHead weight="5"/>
+	        <Standbored_Cry weight="25"/>
+            </randomAnims>
+          </BFBehAnimateRandom>  
+          <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_10>
+   <VA_Path_Neg_9>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-75" happiness="4.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <CoverEyes_Idle weight="40"/>
+               <Stand_CoverEars weight="40"/>
+               <Stand_Cry weight="40"/>
+               <Stand_Grumble weight="15"/>
+               <Stand_Dismissive weight="5"/>
+               <Standbored_ShakeHead weight="5"/>
+               <Standbored_Cry weight="25"/>
+               <Standbored_Dismissive weight="5"/>
+               <Standbored_Grumble weight="5"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_9>
+   <VA_Path_Neg_8>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-70" happiness="4"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <CoverEyes_Idle weight="40"/>
+               <Stand_Cry weight="20"/>
+               <Stand_CoverEars weight="40"/>
+               <Stand_Grumble weight="25"/>
+               <Stand_Dismissive weight="25"/>
+               <Stand_ShakeHead weight="15"/>
+               <Standbored_Grumble weight="15"/>
+               <Stand_ArmsUp weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_8>
+   <VA_Path_Neg_7>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-60" happiness="3.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <CoverEyes_Idle weight="25"/>
+               <Stand_ArmsUp weight="10"/>
+               <Stand_CoverEars weight="5"/>
+               <Stand_ScratchHead weight="15"/>
+               <Stand_Grumble weight="35"/>
+               <Stand_PinchNose weight="5"/>
+               <Stand_Dismissive weight="15"/>
+               <Standbored_Idle weight="20"/>
+               <Stand_ShakeHead weight="75"/>
+               <Stand_ShakeFist weight="20"/>
+               <ReadMap_Idle weight="5"/>
+               <Standbored_Grumble weight="15"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_7>
+   <VA_Path_Neg_6>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-50" happiness="3"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ShakeFist weight="35"/>
+               <Stand_ArmsUp weight="15"/>
+               <Stand_CheckWatch weight="15"/>
+               <Stand_Grumble weight="25"/>
+               <Stand_Dismissive weight="5"/>
+               <Stand_PinchNose weight="15"/>
+               <Standbored_Idle weight="5"/>
+               <Stand_ShakeHead weight="65"/>
+               <ReadMap_Idle weight="5"/>
+               <Standbored_Grumble weight="45"/>
+               <Standbored_Yawn weight="5"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_6>
+   <VA_Path_Neg_5>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-25" happiness="2.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ShakeFist weight="20"/>
+               <Stand_ArmsUp weight="20"/>
+               <Stand_CheckWatch weight="5"/>
+               <Stand_Grumble weight="25"/>
+               <Stand_PinchNose weight="5"/>
+               <Stand_Dismissive weight="5"/>
+               <Stand_CombHair weight="5"/>
+               <Standbored_Idle weight="5"/>
+               <Stand_ShakeHead weight="70"/>
+               <ReadMap_Idle weight="5"/>
+               <Standbored_Grumble weight="5"/>
+               <Standbored_Yawn weight="2"/>
+               <Stand_Idle weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_5>
+   <VA_Path_Neg_4>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-20" happiness="2"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ScratchHead weight="5"/>
+               <Stand_CheckWatch weight="5"/>
+               <Stand_Grumble weight="15"/>
+               <Stand_PinchNose weight="5"/>
+               <Stand_Dismissive weight="5"/>
+               <Standbored_Idle weight="60"/>
+               <Stand_ShakeHead weight="45"/>
+               <ReadMap_Idle weight="5"/>
+               <Standbored_Grumble weight="15"/>
+               <Standbored_Yawn weight="2"/>
+               <Stand_Idle weight="40"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_4>
+   <VA_Path_Neg_3>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-10" happiness="5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ScratchHead weight="15"/>
+               <Stand_CheckWatch weight="5"/>
+               <Stand_Grumble weight="15"/>
+               <Stand_PinchNose weight="3"/>
+               <Stand_Dismissive weight="5"/>
+               <Standbored_Idle weight="60"/>
+               <Stand_RubHip weight="5"/>
+               <Stand_ShakeHead weight="15"/>
+               <ReadMap_Idle weight="5"/>
+               <Standbored_Grumble weight="5"/>
+               <Standbored_Yawn weight="2"/>
+               <Stand_Idle weight="40"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_3>
+   <VA_Path_Neg_2>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-5" happiness="1"/>
+         </BFBehSetAttribute>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ScratchHead weight="15"/>
+               <Stand_CheckWatch weight="15"/>
+               <Stand_Grumble weight="15"/>
+               <Stand_Dismissive weight="5"/>
+               <Stand_CombHair weight="5"/>
+               <Standbored_Idle weight="80"/>
+               <Stand_RubBack weight="1"/>
+               <Stand_RubHip weight="1"/>
+               <Stand_ShakeHead weight="15"/>
+               <ReadMap_Idle weight="25"/>
+               <Standbored_Grumble weight="5"/>
+               <Standbored_Yawn weight="5"/>
+               <Stand_Idle weight="25"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_2>
+   <VA_Path_Neg_1>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-2" happiness=".5"/>
+         </BFBehSetAttribute>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ScratchHead weight="15"/>
+               <Stand_CheckWatch weight="15"/>
+               <Stand_Yawn weight="5"/>
+               <Stand_Grumble weight="5"/>
+               <Stand_Dismissive weight="5"/>
+               <Stand_CombHair weight="5"/>
+               <Standbored_Idle weight="75"/>
+               <Stand_RubBack weight="1"/>
+               <Stand_RubHip weight="2"/>
+               <Stand_ShakeHead weight="15"/>
+               <ReadMap_Idle weight="15"/>
+               <Standbored_Grumble weight="5"/>
+               <Standbored_Yawn weight="3"/>
+               <Stand_Idle weight="20"/>
+               <StandCellPhone_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Neg_1>
+   <VA_Path_Midpoint>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_ScratchHead weight="5"/>
+               <Stand_CheckWatch weight="10"/>
+               <Stand_CombHair weight="5"/>
+               <Stand_Yawn weight="4"/>
+               <StandListen_Idle weight="150"/>
+               <Standbored_Idle weight="150"/>
+               <Stand_Whistle weight="1"/>
+               <Stand_RubBack weight="1"/>
+               <Stand_PointCasual weight="1"/>
+               <Standbored_Yawn weight="2"/>
+               <Stand_RubHip weight="1"/>
+               <ReadMap_Idle weight="10"/> 
+               <StandItem_LookAtPhoto weight="10"/>
+               <Stand_Idle weight="150"/>
+               <StandCellPhone_Idle weight="15"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Midpoint>
+   <VA_Path_Pos_1>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-.5"/>
+         </BFBehSetAttribute>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+	       <Stand_ScratchHead weight="10"/>
+	       <Stand_Applaud weight="1"/>
+	       <StandListen_Idle weight="100"/>
+               <Stand_PointCasual weight="15"/>
+               <Stand_Whistle weight="2"/>
+               <Stand_Idle weight="80"/>
+               <Stand_Wave weight="2"/>
+               <Camera_TakePhoto weight="2"/>
+               <Stand_Read weight="10"/>
+               <Stand_RubBack weight="1"/>
+               <Stand_RubHip weight="1"/>
+               <StandCellPhone_Idle weight="5"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Pos_1>
+   <VA_Path_Pos_2>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-1"/>
+         </BFBehSetAttribute>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="10"/>
+	       <Stand_ScratchHead weight="5"/>
+	       <StandListen_Idle weight="90"/>
+               <Stand_PointCasual weight="10"/>
+               <Stand_Wave weight="10"/>
+               <Camera_TakePhoto weight="2"/>
+               <Stand_Idle weight="60"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+     </behaviors>
+   </VA_Path_Pos_2>
+   <VA_Path_Pos_3>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-1.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="20"/>
+               <Stand_PointCasual weight="20"/>
+               <Stand_Wave weight="5"/>
+               <Stand_OohAhh weight="15"/>
+               <Camera_TakePhoto weight="5"/>
+               <Stand_Idle weight="40"/>
+               <StandListen_Idle weight="40"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+      </behaviors>
+   </VA_Path_Pos_3>
+   <VA_Path_Pos_4>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-2"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="50"/>
+               <Camera_TakePhoto weight="10"/>
+               <Stand_OohAhh weight="25"/>
+               <Stand_Point weight="10"/>
+               <Stand_PointCasual weight="10"/>
+               <Stand_Wave weight="10"/>
+               <Stand_Idle weight="30"/>
+               <StandListen_Idle weight="60"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_4>
+   <VA_Path_Pos_5>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-2.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="45"/>
+               <Stand_Cheer weight="15"/>
+               <Stand_OohAhh weight="15"/>
+               <Camera_TakePhoto weight="25"/>
+               <Stand_PointCasual weight="10"/>
+               <Stand_Point weight="10"/>
+               <Stand_Wave weight="10"/>
+               <StandListen_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_5>
+   <VA_Path_Pos_6>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-3"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="100"/>
+               <Stand_Cheer weight="15"/>
+               <Stand_Yell weight="5"/>
+               <Stand_OohAhh weight="10"/>
+               <Camera_TakePhoto weight="20"/>
+               <Stand_PointCasual weight="10"/>
+               <Stand_Point weight="10"/>
+               <StandListen_Idle weight="20"/>
+               <Stand_Wave weight="5"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_6>
+   <VA_Path_Pos_7>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-3.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2"> 
+            <randomAnims>
+               <Stand_Applaud weight="100"/>
+               <Stand_Cheer weight="30"/>
+               <Stand_OohAhh weight="30"/>
+               <Stand_Yell weight="2"/>
+               <Camera_TakePhoto weight="25"/>
+               <Stand_PointCasual weight="10"/>
+               <Stand_Point weight="10"/>
+               <Stand_Wave weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_7>
+   <VA_Path_Pos_8>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-4"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="100"/>
+               <Stand_Cheer weight="40"/>
+               <Stand_OohAhh weight="40"/>
+               <Stand_Laugh weight="5"/>
+               <Camera_TakePhoto weight="35"/>
+               <Stand_Point weight="10"/>
+               <Stand_Yell weight="20"/>
+               <Stand_JumpUp weight="10"/>
+               <Stand_Wave weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_8>
+   <VA_Path_Pos_9>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-4.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+            <randomAnims>
+               <Stand_Applaud weight="100"/>
+               <Stand_Cheer weight="60"/>
+               <Stand_OohAhh weight="30"/>
+               <Stand_Laugh weight="20"/>
+               <Stand_Point weight="10"/>
+               <Stand_Yell weight="20"/>
+               <Camera_TakePhoto weight="50"/>
+               <Stand_JumpUp weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_9>
+   <VA_Path_Pos_10>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+      	 <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehFaceTarget allowShuffle="false"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimateRandom minPlays="1" maxPlays="2">
+	    <randomAnims>
+	       <Stand_Applaud weight="100"/>
+	       <Stand_Cheer weight="60"/>
+	       <Stand_OohAhh weight="30"/>
+	       <Stand_Point weight="10"/>
+	       <Stand_Laugh weight="20"/>
+	       <Stand_Yell weight="10"/>
+	       <Camera_TakePhoto weight="85"/>
+	       <Stand_JumpUp weight="10"/>
+	    </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Path_Pos_10>
+   <Educator_Bench_Event>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEducation"/>
+               <ZTThoughtInfo locID="guestthoughts:GotEducated" priority="1" timeout="30" global="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimate targetAnim="SitBench_Idle"/>
+      </behaviors>
+   </Educator_Bench_Event>
+   <VA_Bench_Neg_10>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-100" happiness="5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="40"/>
+               <SitBench_ArmsUp weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_10>
+   <VA_Bench_Neg_9>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-75" happiness="4.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="40"/>
+               <SitBench_ArmsUp weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_9>
+   <VA_Bench_Neg_8>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-70" happiness="4"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="30"/>
+               <SitBench_ArmsUp weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_8>
+   <VA_Bench_Neg_7>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-60" happiness="3.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="30"/>
+               <SitBench_ArmsUp weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_7>
+   <VA_Bench_Neg_6>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-50" happiness="3"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="30"/>
+               <SitBench_ShakeHead weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_6>
+   <VA_Bench_Neg_5>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-25" happiness="2.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Dismissive weight="30"/>
+               <SitBench_ShakeHead weight="30"/>
+               <SitBench_Grumble weight="30"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_5>
+   <VA_Bench_Neg_4>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-20" happiness="2"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_ShakeHead weight="40"/>
+               <SitBench_Grumble weight="40"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_4>
+   <VA_Bench_Neg_3>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-10" happiness="1.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAngry"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_ShakeHead weight="40"/>
+               <SitBench_Grumble weight="40"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_3>
+   <VA_Bench_Neg_2>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-5" happiness="1"/>
+         </BFBehSetAttribute>
+
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Yawn weight="40"/>
+               <SitBench_Grumble weight="40"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_2>
+   <VA_Bench_Neg_1>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData f_departurePoints="-2" happiness=".5"/>
+         </BFBehSetAttribute>
+
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Yawn weight="30"/>
+               <SitBench_CheckWatch weight="30"/>
+               <SitBench_Idle weight="40"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Neg_1>
+   <VA_Bench_Midpoint>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Yawn weight="30"/>
+               <SitBench_CheckWatch weight="30"/>
+               <SitBench_Idle weight="40"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Midpoint>
+   <VA_Bench_Pos_1>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-.5"/>
+         </BFBehSetAttribute>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Applaud weight="25"/>
+               <SitBench_Point weight="25"/>
+               <SitBench_Idle weight="50"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Pos_1>
+   <VA_Bench_Pos_2>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-1"/>
+         </BFBehSetAttribute>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="15"/>
+               <SitBench_Applaud weight="15"/>
+               <SitBench_Point weight="50"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Pos_2>
+   <VA_Bench_Pos_3>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-1.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="25"/>
+               <SitBench_Applaud weight="25"/>
+               <SitBench_Point weight="30"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Pos_3>
+   <VA_Bench_Pos_4>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-2"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="30"/>
+               <SitBench_Applaud weight="30"/>
+               <SitBench_Point weight="20"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_4>
+   <VA_Bench_Pos_5>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-2.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteAmuse"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="40"/>
+               <SitBench_Applaud weight="20"/>
+               <SitBench_Point weight="20"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_5>
+   <VA_Bench_Pos_6>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-3"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="30"/>
+               <SitBench_Applaud weight="30"/>
+               <SitBench_OohAhh weight="20"/>
+               <SitBench_Idle weight="20"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_6>
+   <VA_Bench_Pos_7>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-3.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="25"/>
+               <SitBench_Applaud weight="40"/>
+               <SitBench_OohAhh weight="25"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_7>
+   <VA_Bench_Pos_8>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-4"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="25"/>
+               <SitBench_Applaud weight="25"/>
+               <SitBench_OohAhh weight="40"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+      </behaviors>
+   </VA_Bench_Pos_8>
+   <VA_Bench_Pos_9>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-4.5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="20"/>
+               <SitBench_Applaud weight="20"/>
+               <SitBench_OohAhh weight="50"/>
+               <SitBench_Idle weight="10"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_9>
+   <VA_Bench_Pos_10>
+      <subjects>
+         <Guest_Adult/>
+      </subjects>
+      <behaviors>
+         <BFBehHeadLook targetNode="Bip01 Head"/>
+         <BFBehSetAttribute>
+            <BFAITargetData privacy=".2"/>
+            <BFAISubjectData happiness="-5"/>
+         </BFBehSetAttribute>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteGuestEntertainment"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehAnimateRandom>
+            <randomAnims>
+               <SitBench_Cheer weight="10"/>
+               <SitBench_Applaud weight="10"/>
+               <SitBench_OohAhh weight="80"/>
+            </randomAnims>
+         </BFBehAnimateRandom>
+         <BFBehScript file="scripts/GiftCheck.lua" context="behavior" function="GiftCheck"/>
+      </behaviors>
+   </VA_Bench_Pos_10>
+</BehaviorSets>

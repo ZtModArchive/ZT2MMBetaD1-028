@@ -1,0 +1,117 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="ZookeeperTraining:StartUpintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		
+		<BFScenarioGroup hidden ="0" name="startup" state="0" chain="true" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success locid="ZookeeperTraining:StartUpresult" overview = "ZookeeperTraining:StartUpSuccessFiveoverview"/>
+			</info>		
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completestartup" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="failedstartup" />
+			</failure>			
+			<children>
+			<BFScenarioGroup hidden ="0" name="zebras" state="0" chain="false" allsuccess="true" sticky="true">
+				<info type="primary">
+					<neutral overview="ZookeeperTraining:StartUpoverview" />
+					<success overview="ZookeeperTraining:StartUpoverview" />
+				</info>	
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completezebragoals" />
+				</success>			
+				<children>
+					<BFScenarioRule name="goalone" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="StartUp:StartUpGoalOne">
+							<neutral locid="ZookeeperTraining:StartUpGoalOne" />
+							<success locid="ZookeeperTraining:StartUpGoalOneOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalzebrabiome" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completezebrabiome" />
+						</success>
+					</BFScenarioRule>
+					<BFScenarioRule name="goaloneA" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="ZookeeperTraining:StartUpGoalOneA">
+							<neutral locid="ZookeeperTraining:StartUpGoalOneA" />
+							<success locid="ZookeeperTraining:StartUpGoalOneAOK" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalzebrafoodwater" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completezebrafoodwater" />
+						</success>
+					</BFScenarioRule>				
+
+				</children>
+			</BFScenarioGroup>
+			<BFScenarioRule name="goaltwo" hidden="1" chain="true" state="0" sticky="true">
+				<info type="primary" locid="ZookeeperTraining:StartUpGoalTwo">
+					<neutral locid="ZookeeperTraining:StartUpGoalTwo" overview = "ZookeeperTraining:StartUpSuccessoverview" />
+					<success locid="ZookeeperTraining:StartUpGoalTwoOK" overview = "ZookeeperTraining:StartUpSuccessoverview" />
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalresearchstands" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completeresearchstands" />
+				</success>
+			</BFScenarioRule>
+			<BFScenarioRule name="goalthree" hidden = "1" state="0" sticky="true">
+				<info type="primary" locid="ZookeeperTraining:StartUpGoalThree">
+					<neutral locid="ZookeeperTraining:StartUpGoalThree" overview = "ZookeeperTraining:StartUpSuccessTwooverview" />
+					<success locid="ZookeeperTraining:StartUpGoalThreeOK" overview = "ZookeeperTraining:StartUpSuccessTwooverview" />
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalzebrapictures" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completezebrapictures" />
+				</success>
+			</BFScenarioRule>
+			<BFScenarioRule name="goalfour" hidden = "1" state="0" sticky="true">
+				<info type="primary" locid="StartUp:StartUpGoalFour">
+					<neutral locid="ZookeeperTraining:StartUpGoalFour" overview = "ZookeeperTraining:StartUpSuccessThreeoverview" />
+					<success locid="ZookeeperTraining:StartUpGoalFourOK" overview = "ZookeeperTraining:StartUpSuccessThreeoverview" />
+					<failure locid="ZookeeperTraining:StartUpGoalFourFailed" overview = "ZookeeperTraining:StartUpFailedoverview"/>
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evaljaguarbasicneeds" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completejaguarbasicneeds" />
+				</success>
+				<failure>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="failjaguarbasicneeds" />
+				</failure>				
+			</BFScenarioRule>
+			<BFScenarioRule name="goalfive" hidden = "1" state="0" sticky="true">
+				<info type="primary" locid="StartUp:StartUpGoalFive">
+					<neutral locid="ZookeeperTraining:StartUpGoalFive" overview = "ZookeeperTraining:StartUpSuccessFouroverview"/>
+					<success locid="ZookeeperTraining:StartUpGoalFiveOK" overview = "ZookeeperTraining:StartUpSuccessFiveoverview"/>
+					<failure locid="ZookeeperTraining:StartUpGoalFiveFailed" overview = "ZookeeperTraining:StartUpFailedoverview"/>
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evaljaguaradvancedneeds" />
+				</evaluate>
+				<success>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completejaguaradvancedneeds" />
+				</success>
+				<failure>
+					<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="failjaguaradvancedneeds" />
+				</failure>				
+			</BFScenarioRule>			
+		</children>
+		</BFScenarioGroup>
+				
+	</children>
+</ZTScenarioMgr>

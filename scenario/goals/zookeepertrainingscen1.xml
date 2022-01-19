@@ -1,0 +1,54 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="ZookeeperTraining:ZookeeperTrainingintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="setinitialzoostatedisable" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="zookeepertraining" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="ZookeeperTraining:ZookeeperTrainingoverview" />
+				<success locid="ZookeeperTraining:ZookeeperTrainingresult" overview = "ZookeeperTraining:ZookeeperTrainingSuccessoverview"/>
+				<failure overview = "ZookeeperTrainingFailureoverview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completebiomeplacement" />
+			</success>			
+			<children>
+				<BFScenarioRule name="biomeplacement" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="ZookeeperTraining:ZookeeperTraininggoal">
+						<neutral locid="ZookeeperTraining:ZookeeperTraininggoal" />
+						<success locid="ZookeeperTraining:ZookeeperTraininggoalOK" />
+						<failure locid="ZookeeperTraining:ZookeeperTraininggoalFailed" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalbiomeplacement" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completebiomeplacement" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="failbiomeplacement" />
+					</failure>					
+
+				</BFScenarioRule>
+				<BFScenarioRule name="stayopenonemonth" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="ZookeeperTraining:ZookeeperTrainingstayopengoal">
+						<neutral locid="ZookeeperTraining:ZookeeperTrainingstayopengoal" />
+						<success locid="ZookeeperTraining:ZookeeperTrainingstayopengoalOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evalstayopen" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completestayopen" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="failstayopen" />
+					</failure>
+				</BFScenarioRule>				
+			</children>
+		</BFScenarioGroup>							
+	</children>
+</ZTScenarioMgr>

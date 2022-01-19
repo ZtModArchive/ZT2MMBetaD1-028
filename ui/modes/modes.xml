@@ -1,0 +1,834 @@
+<ZTMainMode name="mode_main" camera="world/cameras/simplecam.xml" startingCash="30000">
+   <layout>
+      <gui>ui/layout/mainmenu.xml</gui>
+      <gui>ui/layout/freeformselection.xml</gui>
+      <!--ui/layout/credits.xml-->
+      <gui>ui/layout/credits.xml</gui>
+      <gui>ui/layout/zoopedia.xml</gui>
+      <gui>ui/layout/confirm.xml</gui>
+      <gui>ui/layout/profiledialog.xml</gui>
+   </layout>
+   <on>
+      <event msg="UI_CHILD" data="UIChildData" name="continue_button">
+         <child msg="UI_ACTIVATE"/>
+      </event>
+   </on>
+   <children>
+      <ZTGameMode name="mode_game" firstRunLoadCount="2756" loadCount="2000">
+         <layout>
+            <gui>ui/layout/message.xml</gui>
+            <gui>ui/layout/cameraset.xml</gui>
+            <gui>ui/layout/overview.xml</gui>
+            <gui>ui/layout/photoalbum.xml</gui>
+            <gui>ui/layout/zoostatus.xml</gui>
+            <gui>ui/layout/alert.xml</gui>
+            <gui>ui/layout/ingameoptions.xml</gui>
+            <gui>ui/layout/goals.xml</gui>
+            <gui>ui/layout/challenge.xml</gui>
+            <gui>ui/layout/tutorial.xml</gui>
+         </layout>
+         <children>
+            <ZTOverheadMode name="mode_overhead" camera="world/cameras/overheadcam.xml" cursor="game.cur">
+               <layout>
+                  <gui>ui/layout/sort.xml</gui>
+                  <gui>ui/layout/shell.xml</gui>
+                  <gui>ui/layout/buyinfo.xml</gui>
+                  <gui>ui/layout/cursormoneylayout.xml</gui>
+                  <gui>ui/layout/multilist.xml</gui>
+               </layout>
+               <children>
+                  <ZTPlacementMode name="mode_placement" defaultCursor="game.cur" pickupCursor="blank.cur" rotateCursor="rotateobj.cur" footprintplace_yes="ui/fx/footprint/footprint.tga" footprintplace_yes_small="ui/fx/footprint/footprint_tri.tga" footprintplace_no="ui/fx/footprint/footprint_no.tga" footprintplace_no_small="ui/fx/footprint/footprint_no_tri.tga" effect="ui/fx/Dustpuff_Medium.xml">
+                     <colors>
+                        <place_yes r="0" g="0" b="0" a="255"/>
+                        <place_no r="200" g="20" b="10" a="90"/>
+                        <footprintplace_yes r="0" g="250" b="0"/>
+                        <footprintplace_no r="250" g="10" b="20"/>
+                        <grid r="0" g="255" b="0"/>
+                     </colors>
+                     <grid>
+                        <large cardinalImage="ui/fx/footprint/cardinal_grid_large.tga" diagonalImage="ui/fx/footprint/diagonal_grid_large.tga" radius="7.5295"/>
+                        <medium cardinalImage="ui/fx/footprint/cardinal_grid_med.tga" diagonalImage="ui/fx/footprint/diagonal_grid_med.tga" radius="3.76475"/>
+                        <small cardinalImage="ui/fx/footprint/diag_card_grid_small.tga" diagonalImage="ui/fx/footprint/diagonal_grid_med.tga" radius="3.76475"/>
+                     </grid>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW_CHILD_EX" data="BFString" string="Buy Object Panel"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="gender toggleset">
+                           <child msg="UI_REPRESS"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="Rock Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Rock Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Tree Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Tree Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Plant Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Plant Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Staff Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Animal Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Enrichment Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Enrichment Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Food Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Food Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Shelters Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Shelters Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Building Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Scenery Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                     </off>
+                     <noplacement OBJECT_COLLISION="messages:object_collision" FENCE_COLLISION="messages:fence_collision" OUT_OF_WORLD_BOUNDS="messages:out_of_zoo" OUT_OF_ZOO="messages:out_of_zoo" WATER_COLLISION="messages:water_collision" LAND_COLLISION="messages:land_collision" CANNOT_AFFORD="messages:cannot_afford" UNRESEARCHED="messages:unresearched"/>
+                  </ZTPlacementMode>
+                  <ZTFenceMode name="mode_fence_placement" cursor="blank.cur" gateCursor="gate.cur" fenceCursor="blank.cur" minRectSize="3" minOctagonSize="3" defaultGate="staffgate" anchor="ui/fx/anchor.xml" lock="ui/fx/lock.xml" grid="ui/fx/fencegrid.xml" fenceSteepSlope="1.7">
+                     <colors>
+                        <place_yes r="0" g="250" b="0"/>
+                        <place_no r="250" g="10" b="20"/>
+                        <replace r="255" g="128" b="64"/>
+                        <fence_steep r="255" g="255" b="0"/>
+                     </colors>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW_CHILD_EX" data="BFString" string="Buy Object Panel"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="Fence Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Fence Typelist Rec">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                     </off>
+                     <wizard>
+                        <!--data about the exhibit wizard-->
+                        <gate>
+                           <event msg="ZT_SETMODE" data="BFString" string="mode_placement"/>
+                           <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="DonationBox_df"/>
+                           <event msg="ZT_SETSINGLEOBJECTPLACEMENT"/>
+                        </gate>
+                     </wizard>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="fencemode"/>
+                     </UIHotKeys>
+                  </ZTFenceMode>
+                  <ZTPathMode name="mode_path_placement" pathSteepSlope="0.8" cursor="blank.cur">
+                     <colors>
+                        <path_steep r="255" g="255" b="0"/>
+                     </colors>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW_CHILD_EX" data="BFString" string="Buy Object Panel"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="Path Typelist">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                     </off>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="pathmode"/>
+                     </UIHotKeys>
+                  </ZTPathMode>
+                  <ZTBiomeMode name="mode_biome" cursor="blank.cur" paintCursor="blank.cur" invalidCursor="game.cur">
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="biome">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW_CHILD_EX" data="BFString" string="Terraform Brush Info Panel"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="BiomeFilterList">
+                           <child msg="UI_REPRESS"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Biome">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                     </off>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="biomemode"/>
+                     </UIHotKeys>
+                  </ZTBiomeMode>
+                  <ZTTerrainCommandReader name="mode_deformation" cursor="blank.cur">
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="terrain deformation">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_SHOW_CHILD_EX" data="BFString" string="Terraform Brush Info Panel"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Terrain Deformation">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                     </off>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="terraincommands"/>
+                     </UIHotKeys>
+                  </ZTTerrainCommandReader>
+                  <ZTSelectionMode name="mode_selection" defaultCursor="game.cur" pickupCursor="pickup.cur" rotateCursor="rotateobj.cur" selectionTexture="ui/cursor/selected.tga" infoPanelUpdate="1." mouseOverCheck=".05">
+                     <layout>
+                        <gui>ui/layout/entityinfo.xml</gui>
+                     </layout>
+                     <colors>
+                        <mouseover r="255" g="255" b="50"/>
+                        <selection r="0" g="0" b="0"/>
+                     </colors>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="select">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="select">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                     </off>
+                     <rightmousedown>
+                        <event msg="UI_CHILD" data="UIChildData" name="construction">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="animals">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="structures">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="terraform">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="staff">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                     </rightmousedown>
+                     <thoughtItems>
+                        <template priority="-1" file="ui/layout/guestthoughtitembad.xml"/>
+                        <template priority="0" file="ui/layout/guestthoughtitemnormal.xml"/>
+                        <template priority="1" file="ui/layout/guestthoughtitemgood.xml"/>
+                        <template priority="2" file="ui/layout/guestthoughtitemgreat.xml"/>
+                     </thoughtItems>
+                     <children>
+                        <ZTStaffAssignMode name="mode_staff_assign" active_cursor="blank.cur" waiting_cursor="wait.cur" marker="ui/fx/staffAssignCursor.xml" effect="PlacementCloud" preventMultipleFlags="true">
+                           <on/>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="Add Assignment">
+                                 <child msg="UI_ACTIVATE_OFF"/>
+                              </event>
+                           </off>
+                           <rightmousedown>
+                              <event msg="UI_CHILD" data="UIChildData" name="Add Assignment">
+                                 <child msg="UI_ACTIVATE_OFF"/>
+                              </event>
+                           </rightmousedown>
+                           <BFGCollisionTester noBinder="true" radius="1" motionClass="displayer" maxSlope=".75"/>
+                        </ZTStaffAssignMode>
+                     </children>
+                  </ZTSelectionMode>
+                  <ZTDeleteMode name="mode_deletion" cursor="delete.cur" colorAnimationCycle=".5" groundCursorRotationCycle="-2.5" groundCursorGrowTime=".3" groundCursorRadius="2.5" groundCursorEffectRadius="2.65" cursorTexture="ui/cursor_texture/recycle.dds" defaultDeleteSound="recycle_rock" multiDeleteSound="recycle_multi">
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="delete">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="delete">
+                           <child msg="UI_ACTIVATE_OFF"/>
+                        </event>
+                     </off>
+                     <colors>
+                        <alternate r="255" g="128" b="0"/>
+                        <mouseover r="255" g="0" b="0"/>
+                     </colors>
+                     <deletegroups>
+                        <fences>
+                           <fence/>
+                        </fences>
+                        <paths>
+                           <path/>
+                        </paths>
+                        <manmade>
+                           <building/>
+                           <scenery/>
+                           <enrichment/>
+                           <shelters/>
+                           <food/>
+                        </manmade>
+                        <natural>
+                           <foliage/>
+                           <rock/>
+                        </natural>
+                     </deletegroups>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="deletemode"/>
+                     </UIHotKeys>
+                  </ZTDeleteMode>
+                  <ZTSaveMode name="mode_save" cursor="ui/edit/game.cur">
+                     <layout>
+                        <gui>ui/layout/save.xml</gui>
+                     </layout>
+                  </ZTSaveMode>
+                  <ZTLoadMode name="mode_load">
+                     <layout>
+                        <gui>ui/layout/load.xml</gui>
+                     </layout>
+                  </ZTLoadMode>
+                  <ZTCameraCommandReader name="mode_camera" edgeScroll="true">
+                     <layout>
+                        <gui>ui/layout/edgescroll.xml</gui>
+                     </layout>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="overheadcamera"/>
+                     </UIHotKeys>
+                  </ZTCameraCommandReader>
+               </children>
+               <on>
+                  <event msg="UI_CHILD" data="UIChildData" name="overhead">
+                     <child msg="UI_ACTIVATE_ON"/>
+                  </event>
+                  <event msg="UI_CHILD" data="UIChildData" name="overhead">
+                     <child msg="UI_SHOW"/>
+                  </event>
+                  <event msg="UI_CHILD" data="UIChildData" name="Message bar layout">
+                     <child msg="UI_SHOW"/>
+                  </event>
+               </on>
+               <rightmousedown>
+                  <event msg="ZT_SETMODE" data="BFString" string="mode_selection"/>
+               </rightmousedown>
+               <ZTStarsDisplay animationDelay=".1" appear="starappear" disappear="stardisappear">
+                  <star>
+                     <BFPhysObj>
+                        <BFSceneGraphComponent modelfile="UI\fx\zoofame\star_full.nif" scale="0.12"/>
+                        <BFForceUpdateWhenVisibleComponent controllersOnly="false"/>
+                        <BFAnimatedObjectControllerComponent autoStart="true" duration="5.0" loop="true"/>
+                     </BFPhysObj>
+                  </star>
+                  <halfstar>
+                     <BFPhysObj>
+                        <BFSceneGraphComponent modelfile="UI\fx\zoofame\star_half_full.nif" scale="0.12"/>
+                        <BFForceUpdateWhenVisibleComponent controllersOnly="false"/>
+                        <BFAnimatedObjectControllerComponent autoStart="true" duration="5.0" loop="true"/>
+                     </BFPhysObj>
+                  </halfstar>
+                  <appear>
+                     <BFPhysObj>
+                        <BFSceneGraphComponent modelfile="UI\fx\zoofame\star_appear.nif" scale="0.12"/>
+                        <BFForceUpdateWhenVisibleComponent controllersOnly="false"/>
+                        <BFAnimatedObjectControllerComponent autoStart="true" duration="3.16" loop="false"/>
+                     </BFPhysObj>
+                  </appear>
+                  <disappear>
+                     <BFPhysObj>
+                        <BFSceneGraphComponent modelfile="UI\fx\zoofame\star_disappear.nif" scale="0.12"/>
+                        <BFForceUpdateWhenVisibleComponent controllersOnly="false"/>
+                        <BFAnimatedObjectControllerComponent autoStart="true" duration="2.0" loop="false"/>
+                     </BFPhysObj>
+                  </disappear>
+               </ZTStarsDisplay>
+               <UIHotKeys>
+                  <file name="UI/hotkeys/hotkeys.xml" node="overheadmode"/>
+               </UIHotKeys>
+            </ZTOverheadMode>
+            <ZTFirstPersonMode name="mode_first_person" camera="world/cameras/fpscam.xml" keyboardRotateSpeed="3.0f" moveSpeed="5.0" turnSpeed=".4" centerMouseOnHide="true">
+               <layout>
+                  <gui>ui/layout/fpm.xml</gui>
+               </layout>
+               <on>
+                  <event msg="UI_CHILD" data="UIChildData" name="firstperson">
+                     <child msg="UI_ACTIVATE_ON"/>
+                  </event>
+                  <event msg="UI_CHILD" data="UIChildData" name="overhead">
+                     <child msg="UI_SHOW"/>
+                  </event>
+                  <event msg="UI_CHILD" data="UIChildData" name="photo">
+                     <child msg="UI_SHOW"/>
+                  </event>
+                  <event msg="ZT_SETMODE" data="BFString" string="mode_super_staff"/>
+               </on>
+               <leftmousedown>
+                  <event msg="ZT_CAMERA_PAN" data="BFString" string="north"/>
+               </leftmousedown>
+               <leftmouseup>
+                  <event msg="ZT_CAMERA_PAN" data="BFString" string="stop"/>
+               </leftmouseup>
+               <children>
+                  <ZTPhotoMode name="mode_photo_safari" zoomSpeed="0.03" moveSpeed="3.0" turnSpeedOut=".1" turnSpeedIn=".02">
+                     <layout>
+                        <gui>ui/layout/photom.xml</gui>
+                     </layout>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="photo">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="photo">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="cursor_mode_screen">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Message bar layout">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                     </on>
+                     <off>
+                        <event msg="UI_CHILD" data="UIChildData" name="cursor_mode_screen">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                     </off>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="photomode"/>
+                     </UIHotKeys>
+                  </ZTPhotoMode>
+                  <ZTSuperStaffMode name="mode_super_staff">
+                     <layout>
+                        <gui>ui/layout/superstaff.xml</gui>
+                     </layout>
+                     <on>
+                        <event msg="UI_CHILD" data="UIChildData" name="firstperson">
+                           <child msg="UI_ACTIVATE_ON"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="overhead">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="photo">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Message bar layout">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                     </on>
+                     <UIHotKeys>
+                        <file name="UI/hotkeys/hotkeys.xml" node="superstaffmode"/>
+                     </UIHotKeys>
+                  </ZTSuperStaffMode>
+               </children>
+               <UIHotKeys>
+                  <file name="UI/hotkeys/hotkeys.xml" node="firstpersonmode"/>
+               </UIHotKeys>
+            </ZTFirstPersonMode>
+         </children>
+         <UIHotKeys>
+            <file name="UI/hotkeys/hotkeys.xml" node="gamemode"/>
+         </UIHotKeys>
+         <on>
+            <!--Peanut-->
+            <event msg="UI_CHILD" data="UIChildData" name="Camera Set">
+               <child msg="UI_SHOW"/>
+            </event>
+         </on>
+         <off>
+            <!--Hiding all panels that might have been leftover from a scenario or open ones from last game-->
+            <!--Peanut-->
+            <event msg="UI_CHILD" data="UIChildData" name="Camera Set">
+               <child msg="UI_HIDE"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Camera Set">
+               <child msg="UI_WIND_ANIMATION"/>
+            </event>
+            <!--Tutorial Layout (Set it to not be modal)-->
+            <event msg="UI_CHILD" data="UIChildData" name="tutorial layout">
+               <child msg="UI_SET_MODAL" data="bool" value="false"/>
+            </event>
+            <!--Tutorial info-->
+            <event msg="UI_CHILD" data="UIChildData" name="tutorial info">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Tutorial Ring-->
+            <event msg="UI_CHILD" data="UIChildData" name="tutorial ring">
+               <child msg="UI_HIDE"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="tutorial ring">
+               <child msg="UI_WIND_ANIMATION"/>
+            </event>
+            <!--Tutorial Scroll Arrows-->
+            <event msg="UI_CHILD" data="UIChildData" name="Edge Arrow Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Edge Arrow Layout">
+               <child msg="UI_WIND_ANIMATION"/>
+            </event>
+            <!--Quick Stats-->
+            <event msg="UI_CHILD" data="UIChildData" name="multilist layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Keeper Recommendations-->
+            <event msg="UI_CHILD" data="UIChildData" name="in game sort button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="sort button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <!--Photo Challenges Tab-->
+            <event msg="UI_CHILD" data="UIChildData" name="photo challenges tab">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Filter list-->
+            <event msg="UI_CHILD" data="UIChildData" name="Terrain Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Biome Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Animal Objects Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Buy Animal Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Construction Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <!--Enable components which might have been disabled due to a tutorial-->
+            <!--Overview Map-->
+            <event msg="UI_CHILD" data="UIChildData" name="overviewmap">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Overhead View Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="overhead">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--First person Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="firstperson">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Camera Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="photo">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Zoom and Rotate-->
+            <event msg="UI_CHILD" data="UIChildData" name="Zoom and Rotate">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Minimize UI-->
+            <event msg="UI_CHILD" data="UIChildData" name="minimize">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Main Game Buttons-->
+            <event msg="UI_CHILD" data="UIChildData" name="Main Game Buttons">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Quick Stats-->
+            <event msg="UI_CHILD" data="UIChildData" name="multinfo button">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Zoo Panel Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="Zoofinance">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Goal Panel-->
+            <event msg="UI_CHILD" data="UIChildData" name="scenariogoals">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Fame Panel-->
+            <event msg="UI_CHILD" data="UIChildData" name="awards">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Photo Album-->
+            <event msg="UI_CHILD" data="UIChildData" name="Photo Album">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Recycle Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Save Game Buttons-->
+            <event msg="UI_CHILD" data="UIChildData" name="TextButton Save">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="TextButton Save Hover">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="exit with save option">
+               <child msg="UI_SHOW"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="exit no save option">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Buy Area-->
+            <event msg="UI_CHILD" data="UIChildData" name="Buy Area Container">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Open Zoo Button-->
+            <event msg="UI_CHILD" data="UIChildData" name="open zoo toggle button">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--Put animal up for adoption-->
+            <event msg="UI_CHILD" data="UIChildData" name="put up for adoption">
+               <child msg="UI_ENABLE"/>
+            </event>
+            <!--View Filter Buttons-->
+            <event msg="UI_CHILD" data="UIChildData" name="guest button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="building button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="fence button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="foliage button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+         </off>
+         <exit_prompt>
+            <!--challenge layout-->
+            <event msg="UI_CHILD" data="UIChildData" name="challenge layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--scenario win-->
+            <event msg="UI_CHILD" data="UIChildData" name="Scenario Win  Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Scenario Failed Layout-->
+            <event msg="UI_CHILD" data="UIChildData" name="Scenario Failed Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Challenge Failed Layout-->
+            <event msg="UI_CHILD" data="UIChildData" name="Challenge Failed Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Challenge Won Layout-->
+            <event msg="UI_CHILD" data="UIChildData" name="Challenge Won Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Grant Layout-->
+            <event msg="UI_CHILD" data="UIChildData" name="Grant Layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--return_mainmenu-->
+            <event msg="UI_CHILD" data="UIChildData" name="return_mainmenu">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--delete_object_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete_object_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--fire_staff_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="fire_staff_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--delete_savegame_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete_savegame_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--decline_photochallenge_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="decline_photochallenge_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Alert Box-->
+            <event msg="UI_CHILD" data="UIChildData" name="Alert Box">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--overwrite save-->
+            <event msg="UI_CHILD" data="UIChildData" name="overwrite save">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Save Game Shell-->
+            <event msg="UI_CHILD" data="UIChildData" name="Save Game Shell">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--save current game-->
+            <event msg="UI_CHILD" data="UIChildData" name="save current game">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Load Game Shell-->
+            <event msg="UI_CHILD" data="UIChildData" name="Load Game Shell">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--In Game Options-->
+            <event msg="UI_CHILD" data="UIChildData" name="In Game Options">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--delete_camera_pics-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete_camera_pics">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--delete_pic-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete_pic">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--add _new_album_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="add _new_album_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--delete_album_confirmation-->
+            <event msg="UI_CHILD" data="UIChildData" name="delete_album_confirmation">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--photoalbum_manager_dialog-->
+            <event msg="UI_CHILD" data="UIChildData" name="photoalbum_manager_dialog">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--help2 screen text-->
+            <event msg="UI_CHILD" data="UIChildData" name="help2 screen text">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--help2 screen-->
+            <event msg="UI_CHILD" data="UIChildData" name="help2 screen">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--overview map-->
+            <event msg="UI_CHILD" data="UIChildData" name="overview_screen">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Goals and Challenges panel-->
+            <event msg="UI_CHILD" data="UIChildData" name="goals layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Photo Album-->
+            <event msg="UI_CHILD" data="UIChildData" name="photoalbum_layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Zoopedia-->
+            <event msg="UI_CHILD" data="UIChildData" name="ztzoopedia">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Zoo Status Panel-->
+            <event msg="UI_CHILD" data="UIChildData" name="zoo status layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Quick Stats-->
+            <event msg="UI_CHILD" data="UIChildData" name="multilist layout">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Keeper Recommendations-->
+            <event msg="UI_CHILD" data="UIChildData" name="in game sort button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="sort button">
+               <child msg="UI_ACTIVATE_OFF"/>
+            </event>
+            <!--Photo Challenges Tab-->
+            <event msg="UI_CHILD" data="UIChildData" name="photo challenges tab">
+               <child msg="UI_HIDE"/>
+            </event>
+            <!--Filter list-->
+            <event msg="UI_CHILD" data="UIChildData" name="Terrain Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Biome Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Animal Objects Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Buy Animal Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+            <event msg="UI_CHILD" data="UIChildData" name="Construction Droplist Layout">
+               <child msg="UI_CHILD" data="UIChildData" name="opener">
+                  <child msg="UI_ACTIVATE_OFF"/>
+               </child>
+            </event>
+         </exit_prompt>
+      </ZTGameMode>
+      <ZTDownloadMode name="mode_download">
+         <layout>
+            <gui>ui/layout/downloads.xml</gui>
+         </layout>
+      </ZTDownloadMode>
+      <ZTGfxOptionsMode name="mode_options">
+         <layout>
+            <gui>ui/layout/options.xml</gui>
+         </layout>
+         <sliders file="ui/options/settings.xml"/>
+      </ZTGfxOptionsMode>
+      <ZTUILayoutMode name="mode_ui_layout">
+         <layout>
+            <gui>ui/tool/commandconsole.xml</gui>
+         </layout>
+         <UIHotKeys>
+            <file name="UI/hotkeys/hotkeys.xml" node="layoutmode"/>
+         </UIHotKeys>
+      </ZTUILayoutMode>
+      <ZTLoadMode name="mode_mainload">
+         <layout>
+            <gui>ui/layout/load.xml</gui>
+         </layout>
+      </ZTLoadMode>
+   </children>
+   <UIHotKeys>
+      <file name="UI/hotkeys/hotkeys.xml" node="mainmode"/>
+   </UIHotKeys>
+</ZTMainMode>

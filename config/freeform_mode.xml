@@ -1,0 +1,30 @@
+<BFContext>
+	<!--Elements can have initData or not-->
+	<ZTMapData name="" size="" biome="" location="" />
+	<ZTUndoMgr saveable="false" />
+	<ZTStatus configData="config/status.xml" />
+	<!--ZTEconomyMgr must come after ZTStatus and before the BFGManager-->
+	<ZTEconomyMgr configData="config/economy_freeform.xml" initialCash="10000" />
+	<ZTWorldMgr configData="config/worldmgr.xml" defaultWorldSize="288.0f" />
+	<ZTWorldSndMgr saveable="1" ambientSound="ambient" kQuietCrowdHighTrigger="2" kSmallCrowdLowTrigger="5"
+		kSmallCrowdHighTrigger="75" kMediumCrowdLowTrigger="85" kMediumCrowdHighTrigger="150" kLargeCrowdLowTrigger="160"
+		crowdSounds="crowd_quiet crowd_small crowd_medium crowd_large">
+		<ambients>
+			<snds />
+		</ambients>
+	</ZTWorldSndMgr>
+	<BFGPlacementGrid saveable="false" />
+	<BFGInfluenceMgr saveable="false" configData="config/influence.xml" />
+	<BFGCollisionMgr saveable="false" />
+	<BFGTraversabilityMgr configData="config/traversability.xml" />
+	<BFGManager initData="config/gameConfig.xml" />
+	<BFGPathFinderMgr saveable="false" />
+	<ZTFeedbackMgr configData="config/feedback.xml" />
+	<ZTAIStaffMgr configData="AI/staffmgr.xml" cleanupInterval="10.0f" />
+	<ZTAIGuestMgr configData="AI/guestMgr.xml" />
+	<ZTAdoptionMgr saveable="true" configData="config/buyanimal.xml" />
+	<ZTPhotoChallengesComponent />
+	<ZTFavoriteAnimalMgr configData="config/favorite.xml" />
+	<ZTAwardMgr uipanel="ZTAwardPanel" />
+	<ZTScenarioMgr />
+</BFContext>

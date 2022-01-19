@@ -1,0 +1,2831 @@
+<UILayout name="zoo status">
+   <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len"/>
+   <UIAspect>
+      <default/>
+   </UIAspect>
+   <children>
+      <ZTZooStatusComponent name="zoo status layout" alwayshit="true" modal="true">
+         <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len"/>
+         <UIState active="normal" visible="hidden"/>
+         <UIHotKeys>
+            <file name="UI/hotkeys/hotkeys.xml" node="escclose"/>
+         </UIHotKeys>
+         <econcategories>
+            <category measurement="totalUsers" name="admissions" format="ui/layout/econlistnonmoneyitem.xml"/>
+            <category measurement="profit" name="admissions_income"/>
+            <category measurement="profit" name="cash_grants"/>
+            <category measurement="profit" name="donations_income"/>
+            <category measurement="profit" name="concessions_food_drink"/>
+            <category measurement="profit" name="recycling"/>
+            <category measurement="profit" name="concessions_gifts"/>
+            <category measurement="profit" name="animal"/>
+            <category measurement="profit" name="animal_upkeep"/>
+            <category measurement="profit" name="construction"/>
+            <category measurement="profit" name="research"/>
+            <category measurement="profit" name="staff_salaries"/>
+            <category measurement="profit" name="upkeep"/>
+            <category measurement="profit" name="Zoo"/>
+         </econcategories>
+         <show>
+            <event msg="UI_SEND_NAMED_EVENTS" data="BFString" string="pause"/>
+         </show>
+         <hide>
+            <event msg="UI_SEND_NAMED_EVENTS" data="BFString" string="unpause"/>
+         </hide>
+         <children>
+            <UILayout name="dither">
+               <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len"/>
+               <UIAspect alwayshit="true">
+                  <default image="ui/shared/white1x1.dds">
+                     <BFColor r="0" g="0" b="0" a="128"/>
+                  </default>
+               </UIAspect>
+            </UILayout>
+            <UILayout>
+               <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len"/>
+               <UIAspect>
+                  <default/>
+               </UIAspect>
+               <children>
+                  <UILayout name="keeperbody  no hand">
+                     <UIRegion x="105" y="57" w="172" h="256" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIAspect alwayshit="true">
+                        <default image="ui\fx\decor\staff_keeper.dds">
+                           <BFRect x="0" y="0" w="172" h="256"/>
+                        </default>
+                     </UIAspect>
+                  </UILayout>
+               </children>
+            </UILayout>
+            <UILayout name="zoo status">
+               <UIRegion x="192" y="80" w="640" h="590" xalign="min" yalign="min" walign="len" halign="len"/>
+               <UIAspect>
+                  <default image="">
+                     <BFRect x="0" y="0" w="640" h="579"/>
+                  </default>
+               </UIAspect>
+               <children>
+                  <UILayout name="background layout">
+                     <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                     <UIState active="normal" visible="normal"/>
+                     <UIAspect>
+                        <default/>
+                     </UIAspect>
+                     <children>
+                        <UILayout name="background template" template="blank">
+                           <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                        </UILayout>
+                        <UILayout name="header template" template="header">
+                           <UIRegion x="0" y="0" w="0" h="30" xalign="min" yalign="min" walign="max" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                        </UILayout>
+                        <UILayout name="secondary header template" template="header">
+                           <UIRegion x="20" y="66" w="600" h="33" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                        </UILayout>
+                     </children>
+                  </UILayout>
+                  <UIText name="zoo status label">
+                     <UIRegion x="20" y="3" w="600" h="30" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="normal"/>
+                     <UIAspect locid="zoostatus:zoo_status_label">
+                        <default image="" sound="">
+                           <BFRect x="0" y="25" w="200" h="40"/>
+                           <BFFont align="left">
+                              <BFColor r="255" g="255" b="255" a="255"/>
+                           </BFFont>
+                        </default>
+                        <standard>
+                           <normal/>
+                           <highlighted/>
+                           <activated/>
+                           <disabled/>
+                        </standard>
+                     </UIAspect>
+                     <UIHotKeys/>
+                  </UIText>
+                  <UILayout name="zoostatus_filler" template="panelwell">
+                     <UIRegion x="22" y="98" w="597" h="459" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIAspect>
+                        <default image="">
+                           <BFRect x="0" y="0" w="597" h="459"/>
+                        </default>
+                     </UIAspect>
+                  </UILayout>
+                  <UILayout name="optional header template" template="header">
+                     <UIRegion x="24" y="143" w="593" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <UIAspect>
+                        <default/>
+                     </UIAspect>
+                  </UILayout>
+                  <UIToggleSet name="zoo status tabs" rows="1" columns="-1">
+                     <UIRegion x="175" y="22" w="335" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <children>
+                        <UIToggleButton name="zoo info tab" toggle="1" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:info_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_zooinfo.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:info_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="0" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="balance sheet tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:balance_sheet_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_finance.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="balance sheet tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:balance_sheet_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="0" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="balance sheet tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="graphs tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:graphs_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_graphs.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="graphs tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:graphs_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="graphs tabs">
+                                 <child msg="UI_REPRESS"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="graphtype line">
+                                 <child msg="UI_REPRESS"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="0" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="graphs tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="awards tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:awards_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_awards.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="awards tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:awards_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="0" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="awards tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="building list tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:building_list_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_buildprofit.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="building list tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:building_list_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="0" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="building list tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="donations tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:donations_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_donations.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated sound="uitab">
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="donations summary layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:donations_summary_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="565" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="donations summary layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="optional header template">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                        <UIToggleButton name="zoofame tab" toggle="0" sticky="1">
+                           <UIRegion x="0" y="0" w="48" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:zoo_fame_tab"/>
+                           <UIAspect string="">
+                              <default image="ui/zooinfo/tab_survey.dds" sound="">
+                                 <BFRect x="0" y="0" w="-1" h="-1"/>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </standard>
+                              <alternate>
+                                 <normal>
+                                    <BFRect x="72" y="0" w="48" h="64"/>
+                                 </normal>
+                                 <highlighted>
+                                    <BFRect x="8" y="64" w="48" h="64"/>
+                                 </highlighted>
+                                 <activated>
+                                    <BFRect x="8" y="0" w="48" h="64"/>
+                                 </activated>
+                                 <disabled>
+                                    <BFRect x="72" y="64" w="48" h="64"/>
+                                 </disabled>
+                              </alternate>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <on>
+                              <event msg="UI_SETCURSOR" data="BFString" string="wait.cur"/>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo fame tab layout">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo info tab title">
+                                 <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_tab_label"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SET_SRC_RECT" data="BFRect" x="0" y="565" w="597" h="459"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo fame tab layout">
+                                 <child msg="UI_REPRESS"/>
+                              </event>
+                              <event msg="UI_SETCURSOR"/>
+                           </on>
+                           <off>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoostatus_filler">
+                                 <child msg="UI_SHOW"/>
+                              </event>
+                              <event msg="UI_CHILD" data="UIChildData" name="zoo fame tab layout">
+                                 <child msg="UI_HIDE"/>
+                              </event>
+                           </off>
+                        </UIToggleButton>
+                     </children>
+                  </UIToggleSet>
+                  <UILayout name="zoo info tab layout">
+                     <UIRegion x="30" y="58" w="597" h="579" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="normal"/>
+                     <UIAspect>
+                        <default/>
+                     </UIAspect>
+                     <children>
+                        <UIText name="zoo info tab label">
+                           <UIRegion x="0" y="15" w="300" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:info_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="25" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout name="zoo name layout">
+                           <UIRegion x="0" y="30" w="450" h="50" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                           <children>
+                              <UIText name="zoo name label">
+                                 <UIRegion x="20" y="28" w="150" h="35" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_name_label">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="197" b="78" a="255"/>
+                                       </BFFont>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                              </UIText>
+                              <UITextEdit name="userstring_zooname" template="textedit" cursor="edit.cur" maxlength="32">
+                                 <UIRegion x="178" y="25" w="250" h="25" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default>
+                                       <BFFont x="3" y="3">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFFont>
+                                             <BFColor r="254" g="219" b="89" a="255"/>
+                                          </BFFont>
+                                       </normal>
+                                       <highlighted image="">
+                                          <BFFont>
+                                             <BFColor r="255" g="255" b="201" a="255"/>
+                                          </BFFont>
+                                       </highlighted>
+                                       <activated image="">
+                                          <BFFont>
+                                             <BFColor r="255" g="255" b="0" a="255"/>
+                                          </BFFont>
+                                       </activated>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_name"/>
+                                 <textchanged>
+                                    <event msg="UI_SELF">
+                                       <event msg="UI_COPY_TEXT" data="BFString" string="zooname"/>
+                                    </event>
+                                 </textchanged>
+                              </UITextEdit>
+                           </children>
+                        </UILayout>
+                        <UILayout name="set admission prices layout">
+                           <UIRegion x="340" y="360" w="450" h="200" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                           <children>
+                              <UIText name="admission_prices_label">
+                                 <UIRegion x="0" y="0" w="250" h="20" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:admission_prices_label">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="197" b="78" a="255"/>
+                                       </BFFont>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UILayout name="Admission Price Display background" template="displayfield">
+                                 <UIRegion x="40" y="68" w="150" h="35" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect>
+                                    <default image=""/>
+                                 </UIAspect>
+                              </UILayout>
+                              <UIText name="Admission Price Index Display">
+                                 <UIRegion x="40" y="70" w="150" h="30" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default>
+                                       <BFFont align="center">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <ZTMoneyText name="Admission Price Display" posformat="entityinfo:posformat" nocents="false" nominus="true">
+                                 <UIRegion x="40" y="85" w="150" h="20" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default>
+                                       <BFFont align="center">
+                                          <BFColor r="0" g="255" b="0" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </ZTMoneyText>
+                              <UILayout name="Admission Price background" template="buttonbar">
+                                 <UIRegion x="0" y="15" w="220" h="52" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect>
+                                    <default image=""/>
+                                 </UIAspect>
+                              </UILayout>
+                              <UIToggleSet name="Admission Price ToggleSet">
+                                 <UIRegion x="0" y="15" w="309" h="256" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <children>
+                                    <UIToggleButton name="Admission Price Free" toggle="0" sticky="1">
+                                       <UIRegion x="0" y="0" w="55" h="55" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="entityinfo:price_free"/>
+                                       <UIAspect string="">
+                                          <default image="ui/infopan/toggle_expense_free.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated sound="uitab">
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="ZT_SET_ADMISSION_PRICE_INDEX" data="BFPoint" x="0"/>
+                                          <event msg="UI_CHILD" data="UIChildData" name="Admission Price Index Display">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="entityinfo:price_free"/>
+                                          </event>
+                                       </on>
+                                    </UIToggleButton>
+                                    <UIToggleButton name="Admission Price Cheap" toggle="1" sticky="1">
+                                       <UIRegion x="55" y="0" w="55" h="55" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:price_low_zs"/>
+                                       <UIAspect string="">
+                                          <default image="ui/infopan/toggle_expense_low.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated sound="uitab">
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="ZT_SET_ADMISSION_PRICE_INDEX" data="BFPoint" x="1"/>
+                                          <event msg="UI_CHILD" data="UIChildData" name="Admission Price Index Display">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="entityinfo:price_low"/>
+                                          </event>
+                                       </on>
+                                    </UIToggleButton>
+                                    <UIToggleButton name="Admission Price Moderate" toggle="0" sticky="1">
+                                       <UIRegion x="110" y="0" w="55" h="55" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:price_med_zs"/>
+                                       <UIAspect string="">
+                                          <default image="ui/infopan/toggle_expense_medium.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated sound="uitab">
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="ZT_SET_ADMISSION_PRICE_INDEX" data="BFPoint" x="2"/>
+                                          <event msg="UI_CHILD" data="UIChildData" name="Admission Price Index Display">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="entityinfo:price_med"/>
+                                          </event>
+                                       </on>
+                                    </UIToggleButton>
+                                    <UIToggleButton name="Admission Price Expensive" toggle="0" sticky="1">
+                                       <UIRegion x="165" y="0" w="55" h="55" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:price_high_zs"/>
+                                       <UIAspect string="">
+                                          <default image="ui/infopan/toggle_expense_high.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated sound="uitab">
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="ZT_SET_ADMISSION_PRICE_INDEX" data="BFPoint" x="3"/>
+                                          <event msg="UI_CHILD" data="UIChildData" name="Admission Price Index Display">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="entityinfo:price_high"/>
+                                          </event>
+                                       </on>
+                                    </UIToggleButton>
+                                 </children>
+                              </UIToggleSet>
+                           </children>
+                        </UILayout>
+                        <UILayout name="open zoo layout">
+                           <UIRegion x="310" y="47" w="512" h="300" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                           <children>
+                              <UILayout name="open zoo background" template="buttonbar">
+                                 <UIRegion x="10" y="45" w="256" h="56" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default image="">
+                                       <BFRect x="0" y="0" w="100" h="24"/>
+                                    </default>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                              </UILayout>
+                              <UILayout name="open display background" template="displayfield">
+                                 <UIRegion x="65" y="57" w="150" h="30" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default image="">
+                                       <BFRect x="0" y="0" w="100" h="24"/>
+                                    </default>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                              </UILayout>
+                              <UIText name="open zoo selection">
+                                 <UIRegion x="50" y="63" w="180" h="20" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:zoo_is_open">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="0" w="180" h="20"/>
+                                       <BFFont align="center"/>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIToggleSet name="zoo open toggle set">
+                                 <UIRegion x="0" y="0" w="512" h="200" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <children>
+                                    <UIToggleButton name="open zoo toggle button" toggle="1" sticky="1">
+                                       <UIRegion x="10" y="41" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:open_zoo"/>
+                                       <UIAspect>
+                                          <default image="ui/zooinfo/button_openzoo.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="UI_CHILD" data="UIChildData" name="open zoo selection">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_is_open"/>
+                                          </event>
+                                          <event msg="ZT_ZOO_OPEN" data="BFPoint" x="1"/>
+                                       </on>
+                                       <off/>
+                                    </UIToggleButton>
+                                    <UIToggleButton name="close zoo toggle button" toggle="0" sticky="1">
+                                       <UIRegion x="208" y="41" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:close_zoo"/>
+                                       <UIAspect>
+                                          <default image="ui/zooinfo/button_closezoo.dds" sound="">
+                                             <BFRect x="0" y="0" w="-1" h="-1"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal>
+                                                <BFRect x="0" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </standard>
+                                          <alternate>
+                                             <normal>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </normal>
+                                             <highlighted>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </highlighted>
+                                             <activated>
+                                                <BFRect x="64" y="0" w="64" h="64"/>
+                                             </activated>
+                                             <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64"/>
+                                             </disabled>
+                                          </alternate>
+                                       </UIAspect>
+                                       <UIHotKeys/>
+                                       <on>
+                                          <event msg="UI_CHILD" data="UIChildData" name="open zoo selection">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_is_closed"/>
+                                          </event>
+                                          <event msg="ZT_ZOO_OPEN" data="BFPoint" x="0"/>
+                                       </on>
+                                       <off/>
+                                    </UIToggleButton>
+                                 </children>
+                              </UIToggleSet>
+                              <UIMultiIcon name="Zoo Gate">
+                                 <UIRegion x="2" y="120" w="271" h="183" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect alwayshit="never">
+                                    <default/>
+                                 </UIAspect>
+                                 <images>
+                                    <image key="zoo00" image="ui\zooinfo\zoo00.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo01" image="ui\zooinfo\zoo01.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo01_5" image="ui\zooinfo\zoo01_5.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo02" image="ui\zooinfo\zoo02.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo02_5" image="ui\zooinfo\zoo02_5.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo03" image="ui\zooinfo\zoo03.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo03_5" image="ui\zooinfo\zoo03_5.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo04" image="ui\zooinfo\zoo04.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo04_5" image="ui\zooinfo\zoo04_5.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                    <image key="zoo05" image="ui\zooinfo\zoo05.dds">
+                                       <BFRect x="0" y="0" w="256" h="256"/>
+                                    </image>
+                                 </images>
+                              </UIMultiIcon>
+                           </children>
+                        </UILayout>
+                        <UIListBox name="econ totals categories" columns="1" rows="-1">
+                           <UIRegion x="0" y="135" w="280" h="350" xalign="min" yalign="min" walign="len" halign="len">
+                              <default/>
+                           </UIRegion>
+                        </UIListBox>
+                        <UIListBox name="econ totals items" columns="1" rows="-1">
+                           <UIRegion x="219" y="135" w="100" h="350" xalign="min" yalign="min" walign="len" halign="len">
+                              <default/>
+                           </UIRegion>
+                        </UIListBox>
+                        <UILayout name="num guest zoo background" template="displayfield">
+                           <UIRegion x="0" y="111" w="210" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="">
+                                 <BFRect x="0" y="0" w="210" h="24"/>
+                              </default>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UILayout>
+                        <UIText name="num guest zoo label">
+                           <UIRegion x="0" y="114" w="210" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:num_guest_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="25" w="210" h="24"/>
+                                 <BFFont align="right" x="-10">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout name="num guest  num background" template="displayfield">
+                           <UIRegion x="219" y="111" w="75" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="">
+                                 <BFRect x="0" y="0" w="100" h="24"/>
+                              </default>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UILayout>
+                        <UIText name="num guest  num">
+                           <UIRegion x="219" y="115" w="75" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="25" w="100" h="24"/>
+                                 <BFFont x="9">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <text format="zoostatus:posformat"/>
+                           <UIHotKeys/>
+                        </UIText>
+                     </children>
+                  </UILayout>
+                  <UILayout name="balance sheet tab layout">
+                     <UIRegion x="30" y="33" w="600" h="550" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <children>
+                        <UIText name="zoo p and l tab label">
+                           <UIRegion x="0" y="40" w="300" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:balance_sheet_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIListBox name="balance sheet categories" columns="1" rows="-1">
+                           <UIRegion x="0" y="137" w="400" h="350" xalign="min" yalign="min" walign="len" halign="len"/>
+                        </UIListBox>
+                        <UIListBox name="balance sheet decorated months" template="listbox" columns="1" rows="-1">
+                           <UIRegion x="217" y="114" w="350" h="400" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <children>
+                              <UIListBox name="balance sheet months" columns="-1" rows="1" autosize="true">
+                                 <UIRegion x="5" y="0" w="100" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                              </UIListBox>
+                              <UIListBox name="balance sheet items" columns="-1" rows="1" autosize="true">
+                                 <UIRegion x="0" y="24" w="100" h="340" xalign="min" yalign="min" walign="len" halign="len"/>
+                              </UIListBox>
+                           </children>
+                        </UIListBox>
+                     </children>
+                  </UILayout>
+                  <UILayout name="graphs tab layout">
+                     <UIRegion x="30" y="58" w="640" h="450" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <children>
+                        <UILayout name="" template="displayfield">
+                           <UIRegion x="10" y="125" w="570" h="315" xalign="min" yalign="min" walign="min" halign="len"/>
+                           <UIAspect>
+                              <default image="">
+                                 <BFRect x="0" y="0" w="597" h="459"/>
+                              </default>
+                           </UIAspect>
+                        </UILayout>
+                        <UIText name="zoo graphs tab label">
+                           <UIRegion x="0" y="15" w="300" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:graphs_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIText name="zoo graphs label">
+                           <UIRegion x="10" y="105" w="300" h="30" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <text format=""/>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIGraph name="graph" template="graphtmpl">
+                           <UIRegion x="0" y="30" w="605" h="420"/>
+                           <UIState active="normal" visible="hidden"/>
+                           <children>
+                              <UIWindow name="graphwindow" template="panel" vscroll="none">
+                                 <UIRegion x="102" y="115" w="465" h="305"/>
+                                 <children>
+                                    <UIListBox name="items" autosize="true" columns="-1" rows="1">
+                                       <UIRegion x="0" y="0" w="470" h="300"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIAspect>
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="80" b="0" a="0"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UIListBox>
+                                    <UIStatic name="linegraph">
+                                       <UIRegion x="0" y="0" w="10000" h="300" xalign="min" yalign="min" walign="len" halign="len"/>
+                                    </UIStatic>
+                                 </children>
+                                 <UILayout name="zoostatus_filler" template="panelwell">
+                                    <UIRegion x="22" y="98" w="597" h="459" xalign="min" yalign="min" walign="len" halign="len"/>
+                                    <UIAspect>
+                                       <default image="">
+                                          <BFRect x="0" y="0" w="597" h="459"/>
+                                       </default>
+                                    </UIAspect>
+                                 </UILayout>
+                              </UIWindow>
+                              <UILayout name="y labels">
+                                 <UIRegion x="-3" y="102" w="100" h="274"/>
+                                 <UIState active="normal" visible="normal"/>
+                              </UILayout>
+                           </children>
+                        </UIGraph>
+                        <UIGraph name="graph_fame" template="graphtmpl2">
+                           <UIRegion x="0" y="30" w="605" h="420"/>
+                           <UIState active="normal" visible="hidden"/>
+                           <children>
+                              <UIWindow name="graphwindow" template="panel" vscroll="none">
+                                 <UIRegion x="102" y="115" w="465" h="305"/>
+                                 <children>
+                                    <UIListBox name="items" autosize="true" columns="-1" rows="1">
+                                       <UIRegion x="0" y="0" w="475" h="300"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIAspect>
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="80" b="0" a="0"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UIListBox>
+                                    <UIStatic name="linegraph">
+                                       <UIRegion x="0" y="0" w="10000" h="300" xalign="min" yalign="min" walign="len" halign="len"/>
+                                    </UIStatic>
+                                 </children>
+                              </UIWindow>
+                              <UILayout name="y labels">
+                                 <UIRegion x="-3" y="102" w="100" h="274"/>
+                                 <UIState active="normal" visible="normal"/>
+                              </UILayout>
+                           </children>
+                        </UIGraph>
+                        <UILayout name="" template="buttonbar">
+                           <UIRegion x="70" y="45" w="268" h="57" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIAspect>
+                              <default image=""/>
+                           </UIAspect>
+                        </UILayout>
+                        <UIToggleSet name="graphs tabs" rows="1" columns="-1">
+                           <UIRegion x="75" y="38" w="380" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <children>
+                              <!-- do not yet have a formula for zoo value
+										<UIToggleButton name="graph value tab" toggle="0" sticky="1">
+											<UIRegion x="0" y="0" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+											<UIState active="normal" visible="normal"/>
+											<UIHelpInfo name="" short="zoostatus:graph_value_tab_stt" long="zoostatus:graph_value_tab_ltt" help=""/>
+											<UIAspect string="">
+												<default image="ui/zooinfo/toggle_value.dds" sound="">
+													<BFRect x="0" y="0" w="-1" h="-1"/>
+													<BFColor r="255" g="255" b="255" a="255"/>
+												</default>
+												<standard>
+													<normal>
+														<BFRect x="0" y="0" w="64" h="64"/>
+													</normal>
+													<highlighted>
+														<BFRect x="0" y="64" w="64" h="64"/>
+													</highlighted>
+													<activated>
+														<BFRect x="64" y="0" w="64" h="64"/>
+													</activated>
+													<disabled>
+														<BFRect x="64" y="64" w="64" h="64"/>
+													</disabled>
+												</standard>
+												<alternate>
+													<normal>
+														<BFRect x="64" y="0" w="64" h="64"/>
+													</normal>
+													<highlighted>
+														<BFRect x="0" y="64" w="64" h="64"/>
+													</highlighted>
+													<activated>
+														<BFRect x="0" y="0" w="64" h="64"/>
+													</activated>
+													<disabled>
+														<BFRect x="64" y="64" w="64" h="64"/>
+													</disabled>
+												</alternate>
+											</UIAspect>
+											<UIHotKeys/>
+											<on>
+												<event msg="ZT_GRAPH_SELECTION" data="BFString" string="value Zoo ui/layout/moneygraphlabel.xml"/>
+											</on>
+										</UIToggleButton>
+									-->
+                              <UIToggleButton name="graph profit tab" toggle="1" sticky="1">
+                                 <UIRegion x="15" y="5" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="zoostatus:graph_profit_tab_stt" long="zoostatus:graph_profit_tab_ltt" help=""/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_profit.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="ZT_GRAPH_SELECTION" data="BFString" string="profit Zoo ui/layout/moneygraphlabel.xml"/>
+                                    <event msg="UI_CHILD" data="UIChildData" name="zoo graphs label">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:monthlyprofit_label"/>
+                                    </event>
+                                 </on>
+                              </UIToggleButton>
+                              <UIToggleButton name="graph donations tab" toggle="0" sticky="1">
+                                 <UIRegion x="15" y="5" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="zoostatus:graph_donations_tab_stt" long="zoostatus:graph_donations_tab_ltt" help=""/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_donations.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="ZT_GRAPH_SELECTION" data="BFString" string="profit donations_income ui/layout/moneygraphlabel.xml"/>
+                                    <event msg="UI_CHILD" data="UIChildData" name="zoo graphs label">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:monthlydonations_label"/>
+                                    </event>
+                                 </on>
+                              </UIToggleButton>
+                              <UIToggleButton name="graph attendance tab" toggle="0" sticky="1">
+                                 <UIRegion x="15" y="5" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="zoostatus:graph_attendance_tab_stt" long="zoostatus:graph_attendance_tab_ltt" help=""/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_attendance.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="ZT_GRAPH_SELECTION" data="BFString" string="totalUsers admissions ui/layout/graphlabel.xml"/>
+                                    <event msg="UI_CHILD" data="UIChildData" name="zoo graphs label">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:monthlyattendance_label"/>
+                                    </event>
+                                 </on>
+                              </UIToggleButton>
+                              <UIToggleButton name="graph fame tab" toggle="0" sticky="1">
+                                 <UIRegion x="15" y="5" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="zoostatus:graph_fame_tab_stt" long="zoostatus:graph_fame_tab_ltt" help=""/>
+                                 <UIAspect string="">
+                                    <default image="ui/zooinfo/toggle_fame.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="ZT_GRAPH_SELECTION" data="BFString" string="fame fame ui/layout/graphlabel.xml"/>
+                                    <event msg="UI_CHILD" data="UIChildData" name="zoo graphs label">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:monthlyfame_label"/>
+                                    </event>
+                                 </on>
+                              </UIToggleButton>
+                              <!-- no zoo members yet
+										<UIToggleButton name="graph members tab" toggle="0" sticky="1">
+											<UIRegion x="0" y="0" w="64" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+											<UIState active="normal" visible="normal"/>
+											<UIHelpInfo name="" short="zoostatus:graph_members_tab_stt" long="zoostatus:graph_members_tab_ltt" help=""/>
+											<UIAspect string="">
+												<default image="ui/zooinfo/toggle_members.dds" sound="">
+													<BFRect x="0" y="0" w="-1" h="-1"/>
+													<BFColor r="255" g="255" b="255" a="255"/>
+												</default>
+												<standard>
+													<normal>
+														<BFRect x="0" y="0" w="64" h="64"/>
+													</normal>
+													<highlighted>
+														<BFRect x="0" y="64" w="64" h="64"/>
+													</highlighted>
+													<activated>
+														<BFRect x="64" y="0" w="64" h="64"/>
+													</activated>
+													<disabled>
+														<BFRect x="64" y="64" w="64" h="64"/>
+													</disabled>
+												</standard>
+												<alternate>
+													<normal>
+														<BFRect x="64" y="0" w="64" h="64"/>
+													</normal>
+													<highlighted>
+														<BFRect x="0" y="64" w="64" h="64"/>
+													</highlighted>
+													<activated>
+														<BFRect x="0" y="0" w="64" h="64"/>
+													</activated>
+													<disabled>
+														<BFRect x="64" y="64" w="64" h="64"/>
+													</disabled>
+												</alternate>
+											</UIAspect>
+											<UIHotKeys/>
+											<on>
+												<event msg="ZT_GRAPH_SELECTION" data="BFString" string="members members ui/layout/graphlabel.xml"/>
+											</on>
+										</UIToggleButton>
+										-->
+                           </children>
+                        </UIToggleSet>
+                        <UILayout name="" template="buttonbar">
+                           <UIRegion x="473" y="47" w="100" h="50" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="hidden"/>
+                           <UIAspect>
+                              <default image=""/>
+                           </UIAspect>
+                        </UILayout>
+                        <UIToggleSet name="graphtype selection" rows="1" columns="-1">
+                           <UIRegion x="480" y="50" w="150" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <children>
+                              <UIToggleButton name="graphtype bar" toggle="0" sticky="1">
+                                 <UIRegion x="0" y="0" w="45" h="45"/>
+                                 <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:graph_toggle_button"/>
+                                 <UIAspect alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_bar.dds">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <on>
+                                    <event msg="ZT_GRAPHTYPE_SELECTION" data="BFString" string="bar"/>
+                                 </on>
+                              </UIToggleButton>
+                              <UIToggleButton name="graphtype line" toggle="1" sticky="1">
+                                 <UIRegion x="0" y="0" w="45" h="45"/>
+                                 <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:line_toggle_button"/>
+                                 <UIAspect alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_line.dds">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <on>
+                                    <event msg="ZT_GRAPHTYPE_SELECTION" data="BFString" string="line"/>
+                                 </on>
+                              </UIToggleButton>
+                           </children>
+                        </UIToggleSet>
+                     </children>
+                  </UILayout>
+                  <UILayout name="awards tab layout">
+                     <UIRegion x="30" y="58" w="590" h="520" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <UIAspect>
+                        <default image=""/>
+                     </UIAspect>
+                     <children>
+                        <UIText name="zoo awards tab label">
+                           <UIRegion x="0" y="15" w="450" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:awards_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIListBox name="ZTAwardPanel" template="panel" columns="1" rows="-1">
+                           <UIRegion x="0" y="43" w="586" h="452" walign="len" halign="len"/>
+                           <children/>
+                        </UIListBox>
+                     </children>
+                  </UILayout>
+                  <UILayout name="building list tab layout">
+                     <UIRegion x="30" y="58" w="600" h="450" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <children>
+                        <UILayout name="" template="displayfield">
+                           <UIRegion x="2" y="125" w="580" h="269" xalign="min" yalign="min" walign="min" halign="len"/>
+                           <UIAspect>
+                              <default image="">
+                                 <BFRect x="0" y="0" w="597" h="459"/>
+                              </default>
+                           </UIAspect>
+                        </UILayout>
+                        <UIText name="zoo building list tab label">
+                           <UIRegion x="0" y="15" w="300" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:building_list_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout>
+                           <UIRegion x="0" y="90" w="600" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <children>
+                              <UIText>
+                                 <UIRegion x="0" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:building_list_name">
+                                    <default>
+                                       <BFFont>
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText>
+                                 <UIRegion x="150" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:building_list_months">
+                                    <default>
+                                       <BFFont align="center">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText>
+                                 <UIRegion x="250" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:building_list_users">
+                                    <default>
+                                       <BFFont align="center">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText>
+                                 <UIRegion x="400" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:building_list_profit">
+                                    <default>
+                                       <BFFont>
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText>
+                                 <UIRegion x="500" y="0" w="120" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIAspect locid="zoostatus:building_list_average_profit">
+                                    <default>
+                                       <BFFont>
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                           </children>
+                        </UILayout>
+                        <UIListBox name="buildings list" template="panel" columns="1" rows="-1">
+                           <UIRegion x="5" y="126" w="572" h="267" xalign="min" yalign="min" halign="len" walign="len"/>
+                        </UIListBox>
+                     </children>
+                  </UILayout>
+                  <UILayout name="donations summary layout">
+                     <UIRegion x="30" y="58" w="600" h="550" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <children>
+                        <UILayout name="" template="displayfield">
+                           <UIRegion x="2" y="125" w="580" h="269" xalign="min" yalign="min" walign="min" halign="len"/>
+                           <UIAspect>
+                              <default image="">
+                                 <BFRect x="0" y="0" w="597" h="459"/>
+                              </default>
+                           </UIAspect>
+                        </UILayout>
+                        <UILayout name="" template="displayfield">
+                           <UIRegion x="2" y="410" w="580" h="85" xalign="min" yalign="min" walign="min" halign="len"/>
+                           <UIAspect>
+                              <default image="">
+                                 <BFRect x="0" y="0" w="597" h="459"/>
+                              </default>
+                           </UIAspect>
+                        </UILayout>
+                        <UIText name="donation species tab label">
+                           <UIRegion x="0" y="15" w="300" h="100" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:donations_summary_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIToggleSet name="donation tabs" rows="1" columns="-1">
+                           <UIRegion x="75" y="35" w="380" h="64" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <children>
+                              <UIToggleButton name="summary layout tabs" toggle="1" sticky="1">
+                                 <UIRegion x="15" y="5" w="50" h="50" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:donations_summary_filter_button"/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_profit.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="UI_CHILD" data="UIChildData" name="summary layout">
+                                       <child msg="UI_SHOW"/>
+                                    </event>
+                                 </on>
+                                 <off>
+                                    <event msg="UI_CHILD" data="UIChildData" name="summary layout">
+                                       <child msg="UI_HIDE"/>
+                                    </event>
+                                 </off>
+                              </UIToggleButton>
+                              <UIToggleButton name="donation species tab" toggle="0" sticky="1">
+                                 <UIRegion x="15" y="5" w="50" h="50" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:donations_species_filter_button"/>
+                                 <UIAspect string="" alwayshit="true">
+                                    <default image="ui/zooinfo/toggle_donations.dds" sound="">
+                                       <BFRect x="0" y="0" w="-1" h="-1"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal>
+                                          <BFRect x="0" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="0" y="64" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </standard>
+                                    <alternate>
+                                       <normal>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </normal>
+                                       <highlighted>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </highlighted>
+                                       <activated>
+                                          <BFRect x="64" y="0" w="64" h="64"/>
+                                       </activated>
+                                       <disabled>
+                                          <BFRect x="64" y="64" w="64" h="64"/>
+                                       </disabled>
+                                    </alternate>
+                                 </UIAspect>
+                                 <UIHotKeys/>
+                                 <on>
+                                    <event msg="UI_CHILD" data="UIChildData" name="donation species layout">
+                                       <child msg="UI_SHOW"/>
+                                    </event>
+                                 </on>
+                                 <off>
+                                    <event msg="UI_CHILD" data="UIChildData" name="donation species layout">
+                                       <child msg="UI_HIDE"/>
+                                    </event>
+                                 </off>
+                              </UIToggleButton>
+                           </children>
+                        </UIToggleSet>
+                        <UILayout name="summary layout">
+                           <UIRegion x="0" y="0" w="600" h="450" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <children>
+                              <UILayout>
+                                 <UIRegion x="0" y="90" w="600" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <children>
+                                    <UIText>
+                                       <UIRegion x="0" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_name">
+                                          <default>
+                                             <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                       <UIState active="normal" visible="normal"/>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="150" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_months">
+                                          <default>
+                                             <BFFont align="center">
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="250" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_users">
+                                          <default>
+                                             <BFFont align="center">
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="400" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_profit">
+                                          <default>
+                                             <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="490" y="0" w="120" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_average_profit">
+                                          <default>
+                                             <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                 </children>
+                              </UILayout>
+                              <UIListBox name="donation boxes list" template="panel" columns="1" rows="-1">
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIRegion x="5" y="126" w="572" h="267" xalign="min" yalign="min" walign="len" halign="len"/>
+                              </UIListBox>
+                           </children>
+                        </UILayout>
+                        <UILayout name="donation species layout">
+                           <UIRegion x="0" y="0" w="600" h="550" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="hidden"/>
+                           <children>
+                              <UILayout>
+                                 <UIRegion x="0" y="90" w="600" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <children>
+                                    <UIText>
+                                       <UIRegion x="0" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_species_label">
+                                          <default>
+                                             <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="250" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_box_list_users">
+                                          <default>
+                                             <BFFont align="center">
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                    <UIText>
+                                       <UIRegion x="415" y="0" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                       <UIAspect locid="zoostatus:donation_species_amount_donate_label">
+                                          <default>
+                                             <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255"/>
+                                             </BFFont>
+                                          </default>
+                                       </UIAspect>
+                                    </UIText>
+                                 </children>
+                              </UILayout>
+                              <UIListBox name="donations by species list" template="panel" columns="1" rows="-1">
+                                 <UIRegion x="5" y="126" w="580" h="267" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <children/>
+                              </UIListBox>
+                           </children>
+                        </UILayout>
+                        <UILayout>
+                           <UIRegion x="0" y="400" w="600" h="150" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <children>
+                              <UIText name="donation education num label">
+                                 <UIRegion x="10" y="15" w="200" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_education_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText name="educationNumber">
+                                 <UIRegion x="220" y="15" w="60" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                                 <text format="zoostatus:donation_education_number_format"/>
+                              </UIText>
+                              <UIText name="donation education amount label">
+                                 <UIRegion x="300" y="15" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_education_amount_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <ZTMoneyText name="educationAmount" posformat="buyinfo:posformat" nocents="true" nominus="true">
+                                 <UIRegion x="460" y="15" w="120" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect>
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="248" b="178" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </ZTMoneyText>
+                              <UIText name="donation allspecies num label">
+                                 <UIRegion x="10" y="45" w="200" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_allspecies_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText name="allSpeciesNumber">
+                                 <UIRegion x="220" y="45" w="60" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                                 <text format="zoostatus:donation_allspecies_number_format"/>
+                              </UIText>
+                              <UIText name="donation allspecies amount label">
+                                 <UIRegion x="300" y="45" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_allspecies_amount_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <ZTMoneyText name="allSpeciesAmount" posformat="buyinfo:posformat" nocents="true" nominus="true">
+                                 <UIRegion x="460" y="45" w="120" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect>
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="248" b="178" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </ZTMoneyText>
+                              <UIText name="donation combined num label">
+                                 <UIRegion x="10" y="75" w="200" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_combined_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <UIText name="combinedNumber">
+                                 <UIRegion x="220" y="75" w="60" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="">
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                                 <text format="zoostatus:donation_combined_number_format"/>
+                              </UIText>
+                              <UIText name="donation combined amount label">
+                                 <UIRegion x="300" y="75" w="150" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:donation_combined_amount_label">
+                                    <default>
+                                       <BFFont align="right">
+                                          <BFColor r="255" g="255" b="255" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </UIText>
+                              <ZTMoneyText name="combinedAmount" posformat="buyinfo:posformat" nocents="true" nominus="true">
+                                 <UIRegion x="460" y="75" w="120" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect>
+                                    <default>
+                                       <BFFont align="left">
+                                          <BFColor r="255" g="248" b="178" a="255"/>
+                                       </BFFont>
+                                    </default>
+                                 </UIAspect>
+                              </ZTMoneyText>
+                           </children>
+                        </UILayout>
+                     </children>
+                  </UILayout>
+                  <UILayout name="zoo fame tab layout">
+                     <UIRegion x="30" y="58" w="580" h="500" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="hidden"/>
+                     <UIAspect>
+                        <default image="">
+                           <BFColor r="0" g="100" b="200" a="255"/>
+                        </default>
+                     </UIAspect>
+                     <children>
+                        <UIText name="zoo fame tab label">
+                           <UIRegion x="0" y="15" w="300" h="25" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:zoo_fame_tab_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UIText name="zoo_fame_animal_label">
+                           <UIRegion x="0" y="50" w="300" h="25" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:zoo_fame_animal_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout name="animal quantity" template="displayfield">
+                           <UIRegion x="25" y="75" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                 </children>
+                              </UILayout>
+                              <UIHoverButton name="zoo_fame_num_animals_label">
+                                 <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_fame_num_animals_label" alwayshit="true">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="center"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_fame_bar_format"/>
+                                 <UIHotKeys/>
+                                 <enter>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_num_animals_ltt"/>
+                                    </event>
+                                 </enter>
+                                 <leave>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                    </event>
+                                 </leave>
+                              </UIHoverButton>
+                           </children>
+                        </UILayout>
+                        <UILayout name="animal variety" template="displayfield">
+                           <UIRegion x="25" y="105" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                 </children>
+                              </UILayout>
+                              <UIHoverButton name="zoo_fame_animal_variety_label">
+                                 <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_fame_animal_variety_label" alwayshit="true">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="center"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_fame_bar_format"/>
+                                 <UIHotKeys/>
+                                 <enter>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_animal_variety_ltt"/>
+                                    </event>
+                                 </enter>
+                                 <leave>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                    </event>
+                                 </leave>
+                              </UIHoverButton>
+                           </children>
+                        </UILayout>
+                        <UILayout name="animal happiness" template="displayfield">
+                           <UIRegion x="25" y="135" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                 </children>
+                              </UILayout>
+                              <UIHoverButton name="zoo_fame_animal_happiness_label">
+                                 <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_fame_animal_happiness_label" alwayshit="true">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="center"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_fame_bar_format"/>
+                                 <UIHotKeys/>
+                                 <enter>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_animal_happiness_ltt"/>
+                                    </event>
+                                 </enter>
+                                 <leave>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                    </event>
+                                 </leave>
+                              </UIHoverButton>
+                           </children>
+                        </UILayout>
+                        <UIText name="zoo_fame_guest_label">
+                           <UIRegion x="0" y="175" w="300" h="25" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:zoo_fame_guest_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont align="left">
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout name="guest education" template="displayfield">
+                           <UIRegion x="25" y="200" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                    <UIHoverButton name="zoo_fame_guest_educated_by_animals">
+                                       <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIAspect locid="zoostatus:zoo_fame_guest_educated_by_animals" alwayshit="true">
+                                          <default image="" sound="">
+                                             <BFRect x="0" y="20" w="200" h="40"/>
+                                             <BFFont align="center"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal/>
+                                             <highlighted/>
+                                             <activated/>
+                                             <disabled/>
+                                          </standard>
+                                       </UIAspect>
+                                       <text format="zoostatus:zoo_fame_bar_format"/>
+                                       <UIHotKeys/>
+                                       <enter>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_guest_educated_by_animals_ltt"/>
+                                          </event>
+                                       </enter>
+                                       <leave>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                          </event>
+                                       </leave>
+                                    </UIHoverButton>
+                                 </children>
+                              </UILayout>
+                           </children>
+                        </UILayout>
+                        <UILayout name="guest entertainment" template="displayfield">
+                           <UIRegion x="25" y="230" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                    <UIHoverButton name="zoo_fame_guest_entertained_by_animals">
+                                       <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIAspect locid="zoostatus:zoo_fame_guest_entertained_by_animals" alwayshit="true">
+                                          <default image="" sound="">
+                                             <BFRect x="0" y="20" w="200" h="40"/>
+                                             <BFFont align="center"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal/>
+                                             <highlighted/>
+                                             <activated/>
+                                             <disabled/>
+                                          </standard>
+                                       </UIAspect>
+                                       <text format="zoostatus:zoo_fame_bar_format"/>
+                                       <UIHotKeys/>
+                                       <enter>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_guest_entertained_by_animals_ltt"/>
+                                          </event>
+                                       </enter>
+                                       <leave>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                          </event>
+                                       </leave>
+                                    </UIHoverButton>
+                                 </children>
+                              </UILayout>
+                           </children>
+                        </UILayout>
+                        <UILayout name="guest happiness" template="displayfield">
+                           <UIRegion x="25" y="260" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                 </children>
+                              </UILayout>
+                              <UIHoverButton name="zoo_fame_guest_average_happiness_label">
+                                 <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_fame_guest_average_happiness_label" alwayshit="true">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="center"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_fame_bar_format"/>
+                                 <UIHotKeys/>
+                                 <enter>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_guest_average_happiness_ltt"/>
+                                    </event>
+                                 </enter>
+                                 <leave>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                    </event>
+                                 </leave>
+                              </UIHoverButton>
+                           </children>
+                        </UILayout>
+                        <UIText name="zoo_fame_zoo_label">
+                           <UIRegion x="0" y="300" w="300" h="25" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="zoostatus:zoo_fame_zoo_label">
+                              <default image="" sound="">
+                                 <BFRect x="0" y="20" w="200" h="40"/>
+                                 <BFFont>
+                                    <BFColor r="255" g="197" b="78" a="255"/>
+                                 </BFFont>
+                                 <BFColor r="255" g="255" b="255" a="255"/>
+                              </default>
+                              <standard>
+                                 <normal/>
+                                 <highlighted/>
+                                 <activated/>
+                                 <disabled/>
+                              </standard>
+                           </UIAspect>
+                           <UIHotKeys/>
+                        </UIText>
+                        <UILayout name="award bonus" template="displayfield">
+                           <UIRegion x="25" y="325" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                    <UIHoverButton name="zoo_fame_awards_label">
+                                       <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                       <UIState active="normal" visible="normal"/>
+                                       <UIAspect locid="zoostatus:zoo_fame_awards_label" alwayshit="true">
+                                          <default image="" sound="">
+                                             <BFRect x="0" y="20" w="200" h="40"/>
+                                             <BFFont align="center"/>
+                                             <BFColor r="255" g="255" b="255" a="255"/>
+                                          </default>
+                                          <standard>
+                                             <normal/>
+                                             <highlighted/>
+                                             <activated/>
+                                             <disabled/>
+                                          </standard>
+                                       </UIAspect>
+                                       <text format="zoostatus:zoo_fame_bar_format"/>
+                                       <UIHotKeys/>
+                                       <enter>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_awards_ltt"/>
+                                          </event>
+                                       </enter>
+                                       <leave>
+                                          <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                             <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                          </event>
+                                       </leave>
+                                    </UIHoverButton>
+                                 </children>
+                              </UILayout>
+                           </children>
+                        </UILayout>
+                        <UILayout name="release to wild bonus" template="displayfield">
+                           <UIRegion x="25" y="355" w="525" h="24" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect locid="">
+                              <default image="" sound=""/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <children>
+                              <UILayout name="bar container">
+                                 <UIRegion x="2" y="2" w="-2" h="-2" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <children>
+                                    <UILayout name="bar">
+                                       <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="% min" halign="max"/>
+                                       <UIAspect alwayshit="never">
+                                          <default image="ui/shared/white1x1.dds">
+                                             <BFColor r="0" g="255" b="0" a="150"/>
+                                          </default>
+                                       </UIAspect>
+                                    </UILayout>
+                                 </children>
+                              </UILayout>
+                              <UIHoverButton name="zoo_fame_animal_release_wild_label">
+                                 <UIRegion x="0" y="3" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max"/>
+                                 <UIState active="normal" visible="normal"/>
+                                 <UIAspect locid="zoostatus:zoo_fame_animal_release_wild_label" alwayshit="true">
+                                    <default image="" sound="">
+                                       <BFRect x="0" y="20" w="200" h="40"/>
+                                       <BFFont align="center"/>
+                                       <BFColor r="255" g="255" b="255" a="255"/>
+                                    </default>
+                                    <standard>
+                                       <normal/>
+                                       <highlighted/>
+                                       <activated/>
+                                       <disabled/>
+                                    </standard>
+                                 </UIAspect>
+                                 <text format="zoostatus:zoo_fame_bar_format"/>
+                                 <UIHotKeys/>
+                                 <enter>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string="zoostatus:zoo_fame_animal_release_wild_ltt"/>
+                                    </event>
+                                 </enter>
+                                 <leave>
+                                    <event msg="UI_CHILD" data="UIChildData" name="fame description">
+                                       <child msg="UI_SET_LOCID" data="BFString" string=""/>
+                                    </event>
+                                 </leave>
+                              </UIHoverButton>
+                           </children>
+                        </UILayout>
+                        <UILayout name="fame description background" template="blank">
+                           <UIRegion x="0" y="385" w="0" h="103" xalign="min" yalign="min" walign="max" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <text type="multi" format="zoostatus:zoo_fame_bar_format"/>
+                        </UILayout>
+                        <UIText name="fame description">
+                           <UIRegion x="8" y="395" w="550" h="90" xalign="min" yalign="min" walign="len" halign="len"/>
+                           <UIState active="normal" visible="normal"/>
+                           <UIAspect>
+                              <default/>
+                           </UIAspect>
+                           <UIHotKeys/>
+                           <text type="multi" format="zoostatus:zoo_fame_bar_format"/>
+                        </UIText>
+                     </children>
+                  </UILayout>
+                  <UIButton name="close">
+                     <UIRegion x="600" y="-4" w="39" h="39" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIState active="normal" visible="normal"/>
+                     <UIHelpInfo name="" short="" long="" help="" ids="zoostatus:close"/>
+                     <UIAspect string="">
+                        <default image="ui\shared\button_close.dds" sound="">
+                           <BFRect x="0" y="0" w="-1" h="-1"/>
+                           <BFColor r="255" g="255" b="255" a="255"/>
+                        </default>
+                        <standard>
+                           <normal>
+                              <BFRect x="0" y="0" w="64" h="64"/>
+                           </normal>
+                           <highlighted>
+                              <BFRect x="0" y="64" w="64" h="64"/>
+                           </highlighted>
+                           <activated sound="">
+                              <BFRect x="64" y="0" w="64" h="64"/>
+                           </activated>
+                           <disabled>
+                              <BFRect x="64" y="64" w="64" h="64"/>
+                           </disabled>
+                        </standard>
+                     </UIAspect>
+                     <UIHotKeys/>
+                     <activate>
+                        <event msg="UI_CHILD" data="UIChildData" name="zoo status layout">
+                           <child msg="UI_HIDE"/>
+                        </event>
+                        <event msg="UI_CHILD" data="UIChildData" name="Camera Set">
+                           <child msg="UI_SHOW"/>
+                        </event>
+                        <event msg="ZT_SET_SELECTED_ENTITY"/>
+                     </activate>
+                  </UIButton>
+               </children>
+            </UILayout>
+            <UILayout>
+               <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len"/>
+               <UIAspect>
+                  <default/>
+               </UIAspect>
+               <children>
+                  <UILayout name="keeper hand">
+                     <UIRegion x="200" y="72" w="25" h="13" xalign="min" yalign="min" walign="len" halign="len"/>
+                     <UIAspect alwayshit="true">
+                        <default image="ui\fx\decor\staff_keeper.dds">
+                           <BFRect x="231" y="0" w="25" h="13"/>
+                        </default>
+                     </UIAspect>
+                  </UILayout>
+               </children>
+            </UILayout>
+         </children>
+      </ZTZooStatusComponent>
+   </children>
+</UILayout>

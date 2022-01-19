@@ -1,0 +1,809 @@
+<BFM modelname="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F.nif">
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Attacked_2Stand.bf" animName="Attacked_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Attacked_Idle.bf" animName="Attacked_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_2Stand.bf" animName="ClimbFence_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_Down.bf" animName="ClimbFence_Down" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_Over.bf" animName="ClimbFence_Over" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_OverHigh.bf" animName="ClimbFence_OverHigh" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_OverHigh_Narrow.bf" animName="ClimbFence_OverHigh_Narrow" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_OverHigh_Wide.bf" animName="ClimbFence_OverHigh_Wide" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_Over_Narrow.bf" animName="ClimbFence_Over_Narrow" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_Over_Wide.bf" animName="ClimbFence_Over_Wide" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_ClimbFence_Up.bf" animName="ClimbFence_Up" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_2Sit.bf" animName="Climb_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_2Stand.bf" animName="Climb_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_2Walk.bf" animName="Climb_2Walk" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_Down.bf" animName="Climb_Down" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_Idle.bf" animName="Climb_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_LookLeft.bf" animName="Climb_LookLeft" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_LookRight.bf" animName="Climb_LookRight" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_PickFruit.bf" animName="Climb_PickFruit" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_Scratch.bf" animName="Climb_Scratch" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_Turn180Right.bf" animName="Climb_Turn180Right" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Climb_Up.bf" animName="Climb_Up" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Drink_2Stand.bf" animName="Drink_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Drink_Idle.bf" animName="Drink_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Drown_2Stand.bf" animName="Drown_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Drown_Idle.bf" animName="Drown_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_EarInspection_2Sit.bf" animName="EarInspection_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_EarInspection_Idle.bf" animName="EarInspection_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Eat_2Sit.bf" animName="Eat_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Eat_Idle.bf" animName="Eat_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_FeedBaby_2SitBaby.bf" animName="FeedBaby_2SitBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_FeedBaby_Idle.bf" animName="FeedBaby_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_GroomBaby_2SitBaby.bf" animName="GroomBaby_2SitBaby" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_GroomBaby_Idle.bf" animName="GroomBaby_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_GroomOther_2Stand.bf" animName="GroomOther_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_GroomOther_Idle.bf" animName="GroomOther_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_LieBack_2Sit.bf" animName="LieBack_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_LieBack_2SleepBack.bf" animName="LieBack_2SleepBack" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_LieBack_A.bf" animName="LieBack_A" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_LieBack_B.bf" animName="LieBack_B" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_LieBack_Idle.bf" animName="LieBack_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_2Sit.bf" animName="Lie_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_2Sleep.bf" animName="Lie_2Sleep" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_2Stand.bf" animName="Lie_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_A.bf" animName="Lie_A" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_B.bf" animName="Lie_B" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Lie_Idle.bf" animName="Lie_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_PawInspection_2Sit.bf" animName="PawInspection_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_PawInspection_Idle.bf" animName="PawInspection_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Pee_2Stand.bf" animName="Pee_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Pee_Idle.bf" animName="Pee_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Poop_2Stand.bf" animName="Poop_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Poop_Idle.bf" animName="Poop_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_2StandBaby.bf" animName="RunBaby_2StandBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_2WalkBaby.bf" animName="RunBaby_2WalkBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_Ahead.bf" animName="RunBaby_Ahead" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_TurnLeftA.bf" animName="RunBaby_TurnLeftA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_TurnLeftB.bf" animName="RunBaby_TurnLeftB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_TurnRightA.bf" animName="RunBaby_TurnRightA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_RunBaby_TurnRightB.bf" animName="RunBaby_TurnRightB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_2Stand.bf" animName="Run_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_2StandWithPrey.bf" animName="Run_2StandWithPrey" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_2Walk.bf" animName="Run_2Walk" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_Ahead.bf" animName="Run_Ahead" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_TurnLeftA.bf" animName="Run_TurnLeftA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_TurnLeftB.bf" animName="Run_TurnLeftB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_TurnRightA.bf" animName="Run_TurnRightA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Run_TurnRightB.bf" animName="Run_TurnRightB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Secondary_HeadLook.bf" animName="Secondary_HeadLook" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Secondary_TailA.bf" animName="Secondary_TailA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitBaby_2FeedBaby.bf" animName="SitBaby_2FeedBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitBaby_2GroomBaby.bf" animName="SitBaby_2GroomBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitBaby_2Sit.bf" animName="SitBaby_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitBaby_2Sunbathe.bf" animName="SitBaby_2Sunbathe" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitBaby_Idle.bf" animName="SitBaby_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitGroom_2Sit.bf" animName="SitGroom_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitGroom_Idle.bf" animName="SitGroom_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitRubWrist_2Sit.bf" animName="SitRubWrist_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitRubWrist_Idle.bf" animName="SitRubWrist_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitTailCurl_2Sit.bf" animName="SitTailCurl_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitTailCurl_Idle.bf" animName="SitTailCurl_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitWipeTail_2Sit.bf" animName="SitWipeTail_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SitWipeTail_Idle.bf" animName="SitWipeTail_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Climb.bf" animName="Sit_2Climb" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Climb_Down.bf" animName="Sit_2Climb_Down" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2EarInspection.bf" animName="Sit_2EarInspection" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Eat.bf" animName="Sit_2Eat" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Lie.bf" animName="Sit_2Lie" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2LieBack.bf" animName="Sit_2LieBack" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2PawInspection.bf" animName="Sit_2PawInspection" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2SitBaby.bf" animName="Sit_2SitBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2SitGroom.bf" animName="Sit_2SitGroom" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2SitRubWrist.bf" animName="Sit_2SitRubWrist" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2SitTailCurl.bf" animName="Sit_2SitTailCurl" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2SitWipeTail.bf" animName="Sit_2SitWipeTail" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Stand.bf" animName="Sit_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2StandBi.bf" animName="Sit_2StandBi" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_2Sunbathe.bf" animName="Sit_2Sunbathe" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_Idle.bf" animName="Sit_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_Nervous.bf" animName="Sit_Nervous" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sit_Ponder.bf" animName="Sit_Ponder" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SleepBack_2LieBack.bf" animName="SleepBack_2LieBack" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_SleepBack_Idle.bf" animName="SleepBack_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sleep_2Lie.bf" animName="Sleep_2Lie" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sleep_Idle.bf" animName="Sleep_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_2RunBaby.bf" animName="StandBaby_2RunBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_2Stand.bf" animName="StandBaby_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_2WalkBaby.bf" animName="StandBaby_2WalkBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_Idle.bf" animName="StandBaby_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_RepulsionCall.bf" animName="StandBaby_RepulsionCall" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_TurnLeft90.bf" animName="StandBaby_TurnLeft90" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBaby_TurnRight90.bf" animName="StandBaby_TurnRight90" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBiObject_2StandBi.bf" animName="StandBiObject_2StandBi" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBiObject_Idle.bf" animName="StandBiObject_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_2Sit.bf" animName="StandBi_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_2Stand.bf" animName="StandBi_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_2StandBiObject.bf" animName="StandBi_2StandBiObject" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_Idle.bf" animName="StandBi_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_Nervous.bf" animName="StandBi_Nervous" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_Ponder.bf" animName="StandBi_Ponder" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_TurnLeftA.bf" animName="StandBi_TurnLeftA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandBi_TurnRightA.bf" animName="StandBi_TurnRightA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandEat_2Stand.bf" animName="StandEat_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandEat_A.bf" animName="StandEat_A" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandEat_Idle.bf" animName="StandEat_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandPointTail_2Stand.bf" animName="StandPointTail_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_StandPointTail_Idle.bf" animName="StandPointTail_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Attacked.bf" animName="Stand_2Attacked" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Climb.bf" animName="Stand_2Climb" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2ClimbFence.bf" animName="Stand_2ClimbFence" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Drink.bf" animName="Stand_2Drink" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Drown.bf" animName="Stand_2Drown" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2GroomOther.bf" animName="Stand_2GroomOther" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Lie.bf" animName="Stand_2Lie" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Pee.bf" animName="Stand_2Pee" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Poop.bf" animName="Stand_2Poop" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Run.bf" animName="Stand_2Run" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Sit.bf" animName="Stand_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2StandBaby.bf" animName="Stand_2StandBaby" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2StandBi.bf" animName="Stand_2StandBi" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2StandEat.bf" animName="Stand_2StandEat" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2StandPointTail.bf" animName="Stand_2StandPointTail" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_2Walk.bf" animName="Stand_2Walk" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_AlarmCall.bf" animName="Stand_AlarmCall" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_AttackGuest.bf" animName="Stand_AttackGuest" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_BatObject.bf" animName="Stand_BatObject" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_ContactCall.bf" animName="Stand_ContactCall" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_FlickTail.bf" animName="Stand_FlickTail" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_Idle.bf" animName="Stand_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_Jump.bf" animName="Stand_Jump" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_MarkScent.bf" animName="Stand_MarkScent" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_Nervous.bf" animName="Stand_Nervous" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_Ponder.bf" animName="Stand_Ponder" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_RepulsionCall.bf" animName="Stand_RepulsionCall" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_ShakeTail.bf" animName="Stand_ShakeTail" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_TerritorialCall.bf" animName="Stand_TerritorialCall" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_TurnLeft90.bf" animName="Stand_TurnLeft90" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Stand_TurnRight90.bf" animName="Stand_TurnRight90" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sunbathe_2Sit.bf" animName="Sunbathe_2Sit" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Sunbathe_Idle.bf" animName="Sunbathe_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_2RunBaby.bf" animName="WalkBaby_2RunBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_2StandBaby.bf" animName="WalkBaby_2StandBaby" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_Ahead.bf" animName="WalkBaby_Ahead" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_TurnLeftA.bf" animName="WalkBaby_TurnLeftA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_TurnLeftB.bf" animName="WalkBaby_TurnLeftB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_TurnRightA.bf" animName="WalkBaby_TurnRightA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_WalkBaby_TurnRightB.bf" animName="WalkBaby_TurnRightB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_2Climb.bf" animName="Walk_2Climb" debug="false" animSpeed="1.000000" explicitUseOnly="true" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_2Run.bf" animName="Walk_2Run" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_2Stand.bf" animName="Walk_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_Ahead.bf" animName="Walk_Ahead" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_TurnLeftA.bf" animName="Walk_TurnLeftA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_TurnLeftB.bf" animName="Walk_TurnLeftB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_TurnRightA.bf" animName="Walk_TurnRightA" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\LemurRingtailed\LemurRingtailed_Adult_F_Walk_TurnRightB.bf" animName="Walk_TurnRightB" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+</BFM>
+<Graph name="LemurRingtailed_Adult_F" version="1">
+	<node name="Attacked">
+		<table>
+			<Attacked_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Attacked_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Climb">
+		<table>
+			<Climb_Down />
+			<Climb_Idle />
+			<Climb_LookLeft />
+			<Climb_LookRight />
+			<Climb_PickFruit />
+			<Climb_Scratch />
+			<Climb_Turn180Right />
+			<Climb_Up />
+		</table>
+		<edge name="Sit">
+			<table>
+				<Climb_2Sit />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<Climb_2Stand />
+			</table>
+		</edge>
+		<edge name="Walk">
+			<table>
+				<Climb_2Walk />
+			</table>
+		</edge>
+	</node>
+	<node name="ClimbFence">
+		<table>
+			<ClimbFence_Down />
+			<ClimbFence_Over />
+			<ClimbFence_Over_Narrow />
+			<ClimbFence_Over_Wide />
+			<ClimbFence_OverHigh />
+			<ClimbFence_OverHigh_Narrow />
+			<ClimbFence_OverHigh_Wide />
+			<ClimbFence_Up />
+		</table>
+		<edge name="Stand">
+			<table>
+				<ClimbFence_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Drink">
+		<table>
+			<Drink_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Drink_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Drown">
+		<table>
+			<Drown_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Drown_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="EarInspection">
+		<table>
+			<EarInspection_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<EarInspection_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="Eat">
+		<table>
+			<Eat_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<Eat_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="FeedBaby">
+		<table>
+			<FeedBaby_Idle />
+		</table>
+		<edge name="SitBaby">
+			<table>
+				<FeedBaby_2SitBaby />
+			</table>
+		</edge>
+	</node>
+	<node name="GroomBaby">
+		<table>
+			<GroomBaby_Idle />
+		</table>
+		<edge name="SitBaby">
+			<table>
+				<GroomBaby_2SitBaby />
+			</table>
+		</edge>
+	</node>
+	<node name="GroomOther">
+		<table>
+			<GroomOther_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<GroomOther_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Lie">
+		<table>
+			<Lie_A />
+			<Lie_B />
+			<Lie_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<Lie_2Sit />
+			</table>
+		</edge>
+		<edge name="Sleep">
+			<table>
+				<Lie_2Sleep />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<Lie_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="LieBack">
+		<table>
+			<LieBack_A />
+			<LieBack_B />
+			<LieBack_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<LieBack_2Sit />
+			</table>
+		</edge>
+		<edge name="SleepBack">
+			<table>
+				<LieBack_2SleepBack />
+			</table>
+		</edge>
+	</node>
+	<node name="PawInspection">
+		<table>
+			<PawInspection_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<PawInspection_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="Pee">
+		<table>
+			<Pee_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Pee_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Poop">
+		<table>
+			<Poop_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Poop_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Run">
+		<table>
+			<Run_Ahead />
+			<Run_TurnLeftA />
+			<Run_TurnLeftB />
+			<Run_TurnRightA />
+			<Run_TurnRightB />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Run_2Stand />
+			</table>
+		</edge>
+		<edge name="Walk">
+			<table>
+				<Run_2Walk />
+			</table>
+		</edge>
+	</node>
+	<node name="RunBaby">
+		<table>
+			<RunBaby_Ahead />
+			<RunBaby_TurnLeftA />
+			<RunBaby_TurnLeftB />
+			<RunBaby_TurnRightA />
+			<RunBaby_TurnRightB />
+		</table>
+		<edge name="StandBaby">
+			<table>
+				<RunBaby_2StandBaby />
+			</table>
+		</edge>
+		<edge name="WalkBaby">
+			<table>
+				<RunBaby_2WalkBaby />
+			</table>
+		</edge>
+	</node>
+	<node name="Secondary">
+		<table>
+			<Secondary_HeadLook />
+			<Secondary_TailA />
+		</table>
+	</node>
+	<node name="Sit">
+		<table>
+			<Sit_Idle />
+			<Sit_Nervous />
+			<Sit_Ponder />
+		</table>
+		<edge name="Climb">
+			<table>
+				<Sit_2Climb />
+				<Sit_2Climb_Down />
+			</table>
+		</edge>
+		<edge name="EarInspection">
+			<table>
+				<Sit_2EarInspection />
+			</table>
+		</edge>
+		<edge name="Eat">
+			<table>
+				<Sit_2Eat />
+			</table>
+		</edge>
+		<edge name="Lie">
+			<table>
+				<Sit_2Lie />
+			</table>
+		</edge>
+		<edge name="LieBack">
+			<table>
+				<Sit_2LieBack />
+			</table>
+		</edge>
+		<edge name="PawInspection">
+			<table>
+				<Sit_2PawInspection />
+			</table>
+		</edge>
+		<edge name="SitBaby">
+			<table>
+				<Sit_2SitBaby />
+			</table>
+		</edge>
+		<edge name="SitGroom">
+			<table>
+				<Sit_2SitGroom />
+			</table>
+		</edge>
+		<edge name="SitRubWrist">
+			<table>
+				<Sit_2SitRubWrist />
+			</table>
+		</edge>
+		<edge name="SitTailCurl">
+			<table>
+				<Sit_2SitTailCurl />
+			</table>
+		</edge>
+		<edge name="SitWipeTail">
+			<table>
+				<Sit_2SitWipeTail />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<Sit_2Stand />
+			</table>
+		</edge>
+		<edge name="StandBi">
+			<table>
+				<Sit_2StandBi />
+			</table>
+		</edge>
+		<edge name="Sunbathe">
+			<table>
+				<Sit_2Sunbathe />
+			</table>
+		</edge>
+	</node>
+	<node name="SitBaby">
+		<table>
+			<SitBaby_Idle />
+		</table>
+		<edge name="FeedBaby">
+			<table>
+				<SitBaby_2FeedBaby />
+			</table>
+		</edge>
+		<edge name="GroomBaby">
+			<table>
+				<SitBaby_2GroomBaby />
+			</table>
+		</edge>
+		<edge name="Sit">
+			<table>
+				<SitBaby_2Sit />
+			</table>
+		</edge>
+		<edge name="Sunbathe">
+			<table>
+				<SitBaby_2Sunbathe />
+			</table>
+		</edge>
+	</node>
+	<node name="SitGroom">
+		<table>
+			<SitGroom_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<SitGroom_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="SitRubWrist">
+		<table>
+			<SitRubWrist_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<SitRubWrist_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="SitTailCurl">
+		<table>
+			<SitTailCurl_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<SitTailCurl_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="SitWipeTail">
+		<table>
+			<SitWipeTail_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<SitWipeTail_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="Sleep">
+		<table>
+			<Sleep_Idle />
+		</table>
+		<edge name="Lie">
+			<table>
+				<Sleep_2Lie />
+			</table>
+		</edge>
+	</node>
+	<node name="SleepBack">
+		<table>
+			<SleepBack_Idle />
+		</table>
+		<edge name="LieBack">
+			<table>
+				<SleepBack_2LieBack />
+			</table>
+		</edge>
+	</node>
+	<node name="Stand">
+		<table>
+			<Stand_AlarmCall />
+			<Stand_AttackGuest />
+			<Stand_BatObject />
+			<Stand_ContactCall />
+			<Stand_FlickTail />
+			<Stand_Idle />
+			<Stand_Jump />
+			<Stand_MarkScent />
+			<Stand_Nervous />
+			<Stand_Ponder />
+			<Stand_RepulsionCall />
+			<Stand_ShakeTail />
+			<Stand_TerritorialCall />
+			<Stand_TurnLeft90 />
+			<Stand_TurnRight90 />
+		</table>
+		<edge name="Attacked">
+			<table>
+				<Stand_2Attacked />
+			</table>
+		</edge>
+		<edge name="Climb">
+			<table>
+				<Stand_2Climb />
+			</table>
+		</edge>
+		<edge name="ClimbFence">
+			<table>
+				<Stand_2ClimbFence />
+			</table>
+		</edge>
+		<edge name="Drink">
+			<table>
+				<Stand_2Drink />
+			</table>
+		</edge>
+		<edge name="Drown">
+			<table>
+				<Stand_2Drown />
+			</table>
+		</edge>
+		<edge name="GroomOther">
+			<table>
+				<Stand_2GroomOther />
+			</table>
+		</edge>
+		<edge name="Lie">
+			<table>
+				<Stand_2Lie />
+			</table>
+		</edge>
+		<edge name="Pee">
+			<table>
+				<Stand_2Pee />
+			</table>
+		</edge>
+		<edge name="Poop">
+			<table>
+				<Stand_2Poop />
+			</table>
+		</edge>
+		<edge name="Run">
+			<table>
+				<Stand_2Run />
+			</table>
+		</edge>
+		<edge name="Sit">
+			<table>
+				<Stand_2Sit />
+			</table>
+		</edge>
+		<edge name="StandBaby">
+			<table>
+				<Stand_2StandBaby />
+			</table>
+		</edge>
+		<edge name="StandBi">
+			<table>
+				<Stand_2StandBi />
+			</table>
+		</edge>
+		<edge name="StandEat">
+			<table>
+				<Stand_2StandEat />
+			</table>
+		</edge>
+		<edge name="StandPointTail">
+			<table>
+				<Stand_2StandPointTail />
+			</table>
+		</edge>
+		<edge name="Walk">
+			<table>
+				<Stand_2Walk />
+			</table>
+		</edge>
+	</node>
+	<node name="StandBaby">
+		<table>
+			<StandBaby_Idle />
+			<StandBaby_RepulsionCall />
+			<StandBaby_TurnLeft90 />
+			<StandBaby_TurnRight90 />
+		</table>
+		<edge name="RunBaby">
+			<table>
+				<StandBaby_2RunBaby />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<StandBaby_2Stand />
+			</table>
+		</edge>
+		<edge name="WalkBaby">
+			<table>
+				<StandBaby_2WalkBaby />
+			</table>
+		</edge>
+	</node>
+	<node name="StandBi">
+		<table>
+			<StandBi_Idle />
+			<StandBi_Nervous />
+			<StandBi_Ponder />
+			<StandBi_TurnLeftA />
+			<StandBi_TurnRightA />
+		</table>
+		<edge name="Sit">
+			<table>
+				<StandBi_2Sit />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<StandBi_2Stand />
+			</table>
+		</edge>
+		<edge name="StandBiObject">
+			<table>
+				<StandBi_2StandBiObject />
+			</table>
+		</edge>
+	</node>
+	<node name="StandBiObject">
+		<table>
+			<StandBiObject_Idle />
+		</table>
+		<edge name="StandBi">
+			<table>
+				<StandBiObject_2StandBi />
+			</table>
+		</edge>
+	</node>
+	<node name="StandEat">
+		<table>
+			<StandEat_A />
+			<StandEat_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<StandEat_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="StandPointTail">
+		<table>
+			<StandPointTail_Idle />
+		</table>
+		<edge name="Stand">
+			<table>
+				<StandPointTail_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="Sunbathe">
+		<table>
+			<Sunbathe_Idle />
+		</table>
+		<edge name="Sit">
+			<table>
+				<Sunbathe_2Sit />
+			</table>
+		</edge>
+	</node>
+	<node name="Walk">
+		<table>
+			<Walk_Ahead />
+			<Walk_TurnLeftA />
+			<Walk_TurnLeftB />
+			<Walk_TurnRightA />
+			<Walk_TurnRightB />
+		</table>
+		<edge name="Climb">
+			<table>
+				<Walk_2Climb />
+			</table>
+		</edge>
+		<edge name="Run">
+			<table>
+				<Walk_2Run />
+			</table>
+		</edge>
+		<edge name="Stand">
+			<table>
+				<Walk_2Stand />
+			</table>
+		</edge>
+	</node>
+	<node name="WalkBaby">
+		<table>
+			<WalkBaby_Ahead />
+			<WalkBaby_TurnLeftA />
+			<WalkBaby_TurnLeftB />
+			<WalkBaby_TurnRightA />
+			<WalkBaby_TurnRightB />
+		</table>
+		<edge name="RunBaby">
+			<table>
+				<WalkBaby_2RunBaby />
+			</table>
+		</edge>
+		<edge name="StandBaby">
+			<table>
+				<WalkBaby_2StandBaby />
+			</table>
+		</edge>
+	</node>
+</Graph>

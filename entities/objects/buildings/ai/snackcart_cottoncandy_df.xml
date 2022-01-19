@@ -1,0 +1,78 @@
+<BFTypedBinder binderType="snackcart_cottoncandy_df">
+   <types>
+      <entity>
+         <building>
+            <snackcart>
+               <snackcart_cottoncandy>
+                  <snackcart_cottoncandy_df/>
+               </snackcart_cottoncandy>
+            </snackcart>
+         </building>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\buildings\Snackcart\snackcart_cottoncandy_df_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:snackcart_cottoncandy"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="snackcart_cottoncandy_df"/>
+         </on>
+      </UIToggleButton>
+      <UIToggleButton template="researchentity">
+         <UIAspect>
+            <default image="entities\objects\buildings\Snackcart\snackcart_cottoncandy_df_icon.dds"/>
+         </UIAspect>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="snackcart_cottoncandy_df"/>
+         </on>
+      </UIToggleButton>      
+      <UIButton name="overviewicon">
+         <UIAspect>
+            <default image="ui/zoomap/icon_dessert.dds"/>
+         </UIAspect>
+      </UIButton>
+      <BFAIEntityDataShared s_uisort="kd" s_ItemsSold="CottonCandy" b_CommerceBuilding="true" b_DonationAcceptor="false" s_Zoopedia="zoopedia:zoopedia_cottoncandy:entry" f_researchUnlockTime="60" f_researchCost="200" f_FameReq="20"/>
+      <ZTTriggeredEventsComponent>
+         <Buy_Item>
+            <nonbroadcast>
+               <event msg="BFSND_PLAY_FROM_ENTITY" data="BFString" string="cash_register"/>
+            </nonbroadcast>
+         </Buy_Item>
+      </ZTTriggeredEventsComponent>
+      <ZTItemFilter>
+      	<Include_OR b_CottonCandy="true"/>
+      </ZTItemFilter>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/buildings/Snackcart/snackcart_mainobj_df.nif"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="Umbrella">
+         <instance>
+            <BFPhysObj>
+               <BFSceneGraphComponent modelfile="entities/objects/buildings/Snackcart/umbrella_purple.nif"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+            <BFBinder>
+               <instance>
+                  <ZTEconomyComponent cost="100" mergeKey="name">
+                     <ZTTransaction name="build" costType="parent" type="debit" category="construction"/>
+                     <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+                     <ZTTransaction name="upkeep" cost="10" period="monthly" type="debit" category="upkeep"/>
+                     <ZTTransaction name="Buy_Item" costIndex="1" costChoice="3 6 9" type="debit" category="concessions_food_drink" nextTransaction="add_user"/>
+                  </ZTEconomyComponent>
+               </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

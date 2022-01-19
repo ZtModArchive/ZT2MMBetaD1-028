@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="Pretzel">
+   <types>
+      <entity>
+         <item>
+            <Pretzel/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <BFGDetachInfo>
+         <detachActionTable>
+            <maketrash destination="kill">
+               <createList>
+                  <Trash destination="inventory"/>
+               </createList>
+            </maketrash>
+         </detachActionTable>
+      </BFGDetachInfo>      
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_Pretzel.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:Pretzel"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Pretzel="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/items/Pretzel/Pretzel.nif" scale="1.0" switch="0 36"/>            
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

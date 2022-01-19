@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="Sub">
+   <types>
+      <entity>
+         <item>
+            <Sub/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <BFGDetachInfo>
+         <detachActionTable>
+            <maketrash destination="kill">
+               <createList>
+                  <Trash destination="inventory"/>
+               </createList>
+            </maketrash>
+         </detachActionTable>
+      </BFGDetachInfo>      
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_Sub.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:Sub"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Sub="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/items/Sub/Sub.nif" scale="1.0" switch="0 36"/>            
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

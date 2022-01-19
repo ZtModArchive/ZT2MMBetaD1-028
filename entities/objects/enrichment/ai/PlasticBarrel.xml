@@ -1,0 +1,87 @@
+<BFTypedBinder binderType="PlasticBarrel">
+   <types>
+      <entity>
+         <enrichment>
+            <toy>
+               <PlasticBarrel/>
+            </toy>
+         </enrichment>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1">
+         <physObjParenting>
+            <parentObj parent="mainObj" child="shadowObj" rottype="use" postype="ignore" attachnode="link"/>
+         </physObjParenting>
+      </BFGEntity>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\enrichment\PlasticBarrel\PlasticBarrel_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:PlasticBarrel"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="PlasticBarrel"/>
+         </on>
+      </UIToggleButton>
+      <UIToggleButton template="researchentity">
+         <UIAspect>
+            <default image="entities\objects\enrichment\PlasticBarrel\PlasticBarrel_icon.dds"/>
+         </UIAspect>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="PlasticBarrel"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared s_uisort="ca" s_Zoopedia="zoopedia:zoopedia_plasticbarrel:entry" f_researchUnlockTime="100" f_researchCost="800" f_FameReq="60"/>
+      <ZTPlacementData waterPlacement="true" moveable="true" randomRotate="false" gridSnap="true" autoFootprint="true" icon3Doffset="0 -0.043408 0.222412" icon3Dscale="1.570467"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="shadowObj">
+         <instance>
+            <BFPhysObj>
+               <BFMovingBlobShadowComponent shadowTexture="world\shadows\blob\square_blob.tga" baseNode="footprint" width="1.5" minLength="1.5" maxLength="3.25" minOffset="0" maxOffset=".5"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFActorComponent actorfile="entities/objects/enrichment/PlasticBarrel/PlasticBarrel.bfm" switch="0 18 72"/>
+               <BFFakePhysicsComponent idleAnim="PlasticBarrel_Idle" moveAnim="PlasticBarrel_Used" escapeAnim="PlasticBarrel_Nudge" slideRate="1.0" maxEscapeTries="5"/>
+               <BFGroundFitComponent heightOffset="0.0" maxTilt="50" floatOnWater="true" waterOffset="-0.5"/>
+               <BFCollisionComponent grid="Bone01"/>
+               <BFGridCollisionComponent/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="Play">
+         <instance>
+            <BFGEntityContainer>
+               <slots>
+                  <BFGEntityContainerSlot enterBehSet="EnterBall" useBehSet="UseBarrel_Whap" exitBehSet="ExitBall" targetNode="Dock_01" capacity="1"/>
+                  <BFGEntityContainerSlot enterBehSet="EnterBall" useBehSet="UseBarrel_Whap" exitBehSet="ExitBall" targetNode="Dock_02" capacity="1"/>
+               </slots>
+            </BFGEntityContainer>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="125">
+               <ZTTransaction name="build" costType="parent" type="debit" category="animal_upkeep"/>
+               <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFAIEntityDataInstance b_Moving="false"/>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFGCollisionTester maxSlope=".01"/>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

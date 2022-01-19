@@ -1,0 +1,33 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="ZookeeperTraining:BeyondStartUpintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="beyondstartup" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="ZookeeperTraining:BeyondStartUpoverview" />
+				<success locid="ZookeeperTraining:BeyondStartUpresult" overview = "ZookeeperTraining:BeyondStartUpSuccessoverview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completedonations" />
+			</success>			
+			<children>
+				<BFScenarioRule name="biomeplacement" hidden = "0" state="0" sticky="true">
+					<info type="primary" locid="ZookeeperTraining:BeyondStartUpgoal">
+						<neutral locid="ZookeeperTraining:BeyondStartUpgoal" />
+						<success locid="ZookeeperTraining:BeyondStartUpgoalOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="evaldonations" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/zookeepertraining.lua" entry="completedonations" />
+					</success>
+				</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>											
+	</children>
+</ZTScenarioMgr>

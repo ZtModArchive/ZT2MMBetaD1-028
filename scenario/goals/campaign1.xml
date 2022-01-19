@@ -1,0 +1,133 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="C1scenariogoals:S1intro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup name="C1Scenariopart1" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="C1scenariogoals:S1overview" />
+				<success locid="C1scenariogoals:S1result" overview="C1scenariogoals:S1overview" />
+				<failure locid="C1scenariogoals:C1failanimaldeath" overview="C1scenariogoals:C1failanimaldeathoverview" />
+			</info>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="completeC1part1" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1part1" />
+			</failure>				
+			<children>
+				<BFScenarioRule name="fulltrashlevel0" state="0" sticky="true">
+					<info type="primary" locid="C1scenariogoals:S1needworkers">
+						<neutral locid="C1scenariogoals:S1needworkers" />
+						<success locid="C1scenariogoals:S1trashempty" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="evaltrashcan" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="complete0" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1part1" />
+					</failure>					
+				</BFScenarioRule>
+				<BFScenarioRule name="dirtyexhibits" state="0" sticky="true">
+					<info type="primary" locid="C1scenariogoals:S1needkeepers">
+						<neutral locid="C1scenariogoals:S1needkeepers" />
+						<success locid="C1scenariogoals:S1exhibitsclean" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="cleanexhibits" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="complete0" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1part1" />
+					</failure>					
+					
+				</BFScenarioRule>
+				<BFScenarioRule name="basicneeds" state="0" sticky="true">
+					<info type="primary" locid="C1scenariogoals:S1meetbasicneeds">
+						<neutral locid="C1scenariogoals:S1meetbasicneeds" />
+						<success locid="C1scenariogoals:S1meetbasicneedsdone" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="animalbasicneeds" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="complete0" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1part1" />
+					</failure>					
+					
+				</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>
+		<BFScenarioGroup name="C1Scenariopart2" hidden="1" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success locid="C1scenariogoals:S2result" overview="C1scenariogoals:C1youwin"/>
+				<neutral overview="C1scenariogoals:S2overview" />
+				<failure locid="C1scenariogoals:C1failanimaldeath" overview="C1scenariogoals:C1failanimaldeathoverview" />
+			</info>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="C1S1finalwin" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1" />
+			</failure>			
+			<children>
+				<BFScenarioRule name="donationboxes" state="0" sticky="true">
+					<info type="primary" locid="C1scenariogoals:S2donationbox">
+						<neutral locid="C1scenariogoals:S2donationbox" />
+						<success locid="C1scenariogoals:S2havebox" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="needdonationboxes" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="complete0" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1" />
+					</failure>					
+				</BFScenarioRule>
+				<BFScenarioRule name="adoptnewanimal" state="0" sticky="false">
+					<info type="primary" locid="C1scenariogoals:S2adoptanimal">
+						<neutral locid="C1scenariogoals:S2adoptanimal" />
+						<success locid="C1scenariogoals:S2havenewanimal" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="adoptnewanimal" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="conditionalcomplete" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1" />
+					</failure>					
+				</BFScenarioRule>
+				<BFScenarioRule name="animalshelter" state="0" sticky="true">
+					<info type="primary" locid="C1scenariogoals:S2meetprivacy">
+						<neutral locid="C1scenariogoals:S2meetprivacy" />
+						<success locid="C1scenariogoals:S2meetprivacydone" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="shelterneedmet" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="complete0unlock" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="failC1" />
+					</failure>					
+					
+				</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>
+	</children>
+</ZTScenarioMgr>

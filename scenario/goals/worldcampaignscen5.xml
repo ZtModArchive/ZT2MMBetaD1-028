@@ -1,0 +1,129 @@
+<ZTScenarioMgr interval="10" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="TheWorld:TheWorldsBiomesintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="biomesneeded" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<neutral overview="TheWorld:TheWorldsBiomesoverview" />
+				<success locid="TheWorld:TheWorldsBiomesresult" overview = "TheWorld:TheWorldsBiomesSuccessoverview"/>
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completeworldcampaignscen5" />
+			</success>			
+			<children>
+				<BFScenarioRule name="alpine" hidden = "0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesAlpine">
+						<neutral locid="TheWorld:TheWorldsBiomesAlpine" />
+						<success locid="TheWorld:TheWorldsBiomesAlpineOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalalpine" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completealpine" />
+					</success>
+				</BFScenarioRule>					
+				<BFScenarioRule name="boreal" hidden = "0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesBorealForest">
+						<neutral locid="TheWorld:TheWorldsBiomesBorealForest" />
+						<success locid="TheWorld:TheWorldsBiomesBorealForestOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalborealforest" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completeborealforest" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioRule name="desert" hidden = "0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesDesert">
+						<neutral locid="TheWorld:TheWorldsBiomesDesert" />
+						<success locid="TheWorld:TheWorldsBiomesDesertOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evaldesert" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completedesert" />
+					</success>
+				</BFScenarioRule>				
+				<BFScenarioRule name="savannah" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesSavannah">
+						<neutral locid="TheWorld:TheWorldsBiomesSavannah" />
+						<success locid="TheWorld:TheWorldsBiomesSavannahOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalsavannah" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completesavannah" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioRule name="scrub" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesScrub">
+						<neutral locid="TheWorld:TheWorldsBiomesScrub" />
+						<success locid="TheWorld:TheWorldsBiomesScrubOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalscrub" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completescrub" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioRule name="temperate" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesTemperateForest">
+						<neutral locid="TheWorld:TheWorldsBiomesTemperateForest" />
+						<success locid="TheWorld:TheWorldsBiomesTemperateForestOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evaltemperateforest" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completetemperateforest" />
+					</success>
+				</BFScenarioRule>
+				<BFScenarioRule name="tropical" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesTropicalRainforest">
+						<neutral locid="TheWorld:TheWorldsBiomesTropicalRainforest" />
+						<success locid="TheWorld:TheWorldsBiomesTropicalRainforestOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evaltropicalrainforest" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completetropicalrainforest" />
+					</success>
+				</BFScenarioRule>					
+				<BFScenarioRule name="tundra" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorld:TheWorldsBiomesTundra">
+						<neutral locid="TheWorld:TheWorldsBiomesTundra"  />
+						<success locid="TheWorld:TheWorldsBiomesTundraOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evaltundra" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completetundra" />
+					</success>							
+				</BFScenarioRule>
+				<BFScenarioRule name="wetlands" hidden="0" state="0" sticky="false">
+					<info type="primary" locid="TheWorldsBiomes:TheWorldsBiomesWetlands">
+						<neutral locid="TheWorld:TheWorldsBiomesWetlands"  />
+						<success locid="TheWorld:TheWorldsBiomesWetlandsOK" />
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="evalwetlands" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/worldcampaign.lua" entry="completewetlands" />
+					</success>							
+				</BFScenarioRule>					
+			</children>
+		</BFScenarioGroup>
+	</children>
+</ZTScenarioMgr>

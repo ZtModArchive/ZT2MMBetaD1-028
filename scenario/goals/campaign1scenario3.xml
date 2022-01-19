@@ -1,0 +1,67 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="C1scenariogoals:S4intro"/>
+	<success locid = "C1scenariogoals:S4result"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostatescenario3" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="setinitialzoostatescenario3" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup name="foodandillness" state="0" chain="false" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success locid="C1scenariogoals:S4result" overview="C1scenariogoals:S4overview" />
+				<neutral overview="C1scenariogoals:S4overview" />
+			</info>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="completeC1scen3part1" />
+			</success>			
+			<children>
+				<BFScenarioRule name="foodneeds" state="0" sticky="true">
+					<info type="primary">
+						<neutral locid="C1scenariogoals:S4foodgoalshort"/>
+						<success locid="C1scenariogoals:S4foodgoalshortsuccess"/>	
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="foodneedmet" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="showprimarygoals" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="scen3failure" />
+					</failure>
+				</BFScenarioRule>
+				<BFScenarioRule name="sickneeds" state="0" sticky="true">
+					<info type="primary">
+						<neutral locid="C1scenariogoals:S4sickgoalshort" />
+						<success locid="C1scenariogoals:S4sickgoalshortsuccess" />	
+					</info>
+					<evaluate>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="sickneedmet" />
+					</evaluate>
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="showprimarygoals" />
+					</success>
+					<failure>
+						<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="scen3failure" />
+					</failure>
+				</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>
+		<BFScenarioRule name="fame" hidden="1" state="0" sticky="true">
+			<info type="primary">
+				<neutral locid="C1scenariogoals:S4famegoalshort" overview="C1scenariogoals:S4halfwaysuccess"/>
+				<success locid="C1scenariogoals:S4famegoalshortsuccess" overview="C1scenariogoals:S4success" />	
+			</info>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="finishcampaign" />
+			</success>
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="gainzoofame" />
+			</evaluate>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/campaign1.lua" entry="scen3failure" />
+			</failure>
+		</BFScenarioRule>
+	</children>
+</ZTScenarioMgr>

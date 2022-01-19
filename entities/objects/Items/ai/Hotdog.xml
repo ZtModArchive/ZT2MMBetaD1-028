@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="Hotdog">
+   <types>
+      <entity>
+         <item>
+            <Hotdog/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <BFGDetachInfo>
+         <detachActionTable>
+            <maketrash destination="kill">
+               <createList>
+                  <Trash destination="inventory"/>
+               </createList>
+            </maketrash>
+         </detachActionTable>
+      </BFGDetachInfo>      
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI/infopan/icon_Hotdog.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:Hotdog"/>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Hotdog="true"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/items/Hotdog/Hotdog.nif" scale="1.0" switch="0 36"/>            
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+   </binder>
+</BFTypedBinder>

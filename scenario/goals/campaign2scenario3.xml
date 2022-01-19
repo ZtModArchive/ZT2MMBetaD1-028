@@ -1,0 +1,155 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="SmugglingRing:SmugglingRingintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="false">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="setinitialzoostatesmuggle" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup hidden ="0" name="rescueandrelease" state="0" chain="true" allsuccess="true" sticky="true">
+			<info type="primary">
+				<!-- <neutral overview="SmugglingRing:SmugglingRingoverview" /> -->
+				<!-- <success locid="SmugglingRing:SmugglingRingresult" overview = "SmugglingRingPart2Successoverview"/> -->
+				<failure locid="SmugglingRing:SmugglingRingAnimalUnhappy" overview = "SmugglingRingFailureoverview"/>						
+			</info>	
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completecamp2scen3" />
+			</success>			
+			<children>
+			<BFScenarioGroup hidden ="0" name="placeanimals" state="0" chain="true" allsuccess="true" sticky="true">
+				<info type="primary">
+					<neutral overview="SmugglingRing:SmugglingRingoverview" />
+					<success locid="SmugglingRing:SmugglingRingNeedPointsDone" overview="SmugglingRing:SmugglingRingPart1Successoverview" />
+					<failure locid="SmugglingRing:SmugglingRingAnimalUnhappy" overview="SmugglingRing:SmugglingRingFailureoverview" />						
+				</info>					
+				<failure>
+					<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failcamp2scen3" />
+				</failure>					
+					<children>
+					<BFScenarioRule name="redkangaroo" hidden = "0" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingRedKangaroo">
+							<neutral locid="SmugglingRing:SmugglingRingRedKangaroo" />
+							<success locid="SmugglingRing:SmugglingRingRedKangarooOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalkangaroo" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completekangaroo" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>					
+					<BFScenarioRule name="bengaltiger" hidden = "1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingBengalTiger">
+							<neutral locid="SmugglingRing:SmugglingRingBengalTiger" />
+							<success locid="SmugglingRing:SmugglingRingBengalTigerOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalbengaltiger" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completebengaltiger" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>
+					<BFScenarioRule name="grizzlybear" hidden = "1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingGrizzlyBear">
+							<neutral locid="SmugglingRing:SmugglingRingGrizzlyBear" />
+							<success locid="SmugglingRing:SmugglingRingGrizzlyBearOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalgrizzlybear" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completegrizzlybear" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>				
+					<BFScenarioRule name="gorilla" hidden="1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingGorilla">
+							<neutral locid="SmugglingRing:SmugglingRingGorilla" />
+							<success locid="SmugglingRing:SmugglingRingGorillaOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalgorilla" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completegorilla" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>
+					<BFScenarioRule name="rhino" hidden="1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingRhino">
+							<neutral locid="SmugglingRing:SmugglingRingRhino" />
+							<success locid="SmugglingRing:SmugglingRingRhinoOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalrhino" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completerhino" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>
+					<BFScenarioRule name="elephant" hidden="1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingElephant">
+							<neutral locid="SmugglingRing:SmugglingRingElephant" />
+							<success locid="SmugglingRing:SmugglingRingElephantOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalelephant" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completeelephant" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>
+					<BFScenarioRule name="snowleopard" hidden="1" state="0" sticky="true">
+						<info type="primary" locid="SmugglingRing:SmugglingRingSnowLeopard">
+							<neutral locid="SmugglingRing:SmugglingRingSnowLeopard" />
+							<success locid="SmugglingRing:SmugglingRingSnowLeopardOK" />
+							<failure locid="SmugglingRing:SmugglingRingFailureoverview" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalsnowleopard" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completesnowleopard" />
+						</success>
+						<failure>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failmeetenvironment" />
+						</failure>
+					</BFScenarioRule>					
+				</children>
+			</BFScenarioGroup>
+			<BFScenarioRule name="letemgo" hidden="1" state="0" sticky="true">
+				<info type="primary" locid="SmugglingRing:SmugglingRingaccomodatechimps">
+					<neutral locid="SmugglingRing:SmugglingRingMeedAdvancedNeeds" overview = "SmugglingRing:SmugglingRingPart2overview" />
+					<success locid="SmugglingRing:SmugglingRingMeedAdvancedNeedsDone" overview = "SmugglingRingPart2Successoverview"/>
+				</info>
+				<evaluate>
+					<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalreleasesmuggledanimals" />
+				</evaluate>					
+			</BFScenarioRule>
+		</children>
+		</BFScenarioGroup>
+	</children>
+</ZTScenarioMgr>

@@ -1,0 +1,83 @@
+<ZTScenarioMgr interval="2" name="mgr" state="0" chain="true" allsuccess="true" sticky="true" optional="false">
+	<info locid="CruelConditions:Cruelintro"/>
+	<children>
+		<BFScenarioRule hidden="1" name="setinitialzoostate" state="0" sticky="true">
+			<evaluate>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="setinitialzoostate" />
+			</evaluate>
+		</BFScenarioRule>
+		<BFScenarioGroup name="Cruelconditions" state="0" chain="true" allsuccess="true" sticky="true">
+			<info type="primary">
+				<success locid="CruelConditions:Cruelresult" overview = "finishCruelscenariooverview"/>
+				<failure locid="CruelConditions:failedCruelscenario" />
+			</info>
+			<success>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completecamp2scen2" />
+			</success>
+			<failure>
+				<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="failcamp2scen2" />
+			</failure>			
+			<children>
+				<BFScenarioGroup hidden ="0" name="zebrasandlions" state="0" chain="false" allsuccess="true" sticky="true">
+					<info type="primary">
+						<neutral overview="CruelConditions:Crueloverview" />
+						<success overview="CruelConditions:Crueloverview" />
+					</info>					
+					<success>
+						<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="completezebrasandlions" />
+					</success>					
+					<children>							
+					<BFScenarioRule name="adoptzebras" state="0" sticky="true">
+						<info type="primary" locid="CruelConditions:Cruelaccomodatezebras">
+							<neutral locid="CruelConditions:Cruelaccomodatezebras" />
+							<success locid="CruelConditions:finishCruelaccomodatezebras" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalcratedzebras" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="showprimarygoals" />
+						</success>
+					</BFScenarioRule>
+					<BFScenarioRule name="adoptlions" state="0" sticky="true">
+						<info type="primary" locid="CruelConditions:Cruelaccomodatelions">
+							<neutral locid="CruelConditions:Cruelaccomodatelions" />
+							<success locid="CruelConditions:finishCruelaccomodatelions" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalcratedlions" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="showprimarygoals" />
+						</success>
+					</BFScenarioRule>				
+					<BFScenarioRule name="meetcruelneeds" hidden="0" state="0" sticky="true">
+						<info type="primary" locid="CruelConditions:Cruelmeetneeds">
+							<neutral locid="CruelConditions:Cruelmeetneeds" />
+							<success locid="CruelConditions:finishCruelmeetneeds" />
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalmeetgroupsbasicneeds" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="showprimarygoals" />
+						</success>
+					</BFScenarioRule>
+				</children>
+				</BFScenarioGroup>
+					<BFScenarioRule name="adoptchimps" hidden="1" state="0" sticky="true">
+						<info type="primary" locid="CruelConditions:Cruelaccomodatechimps">
+							<neutral locid="CruelConditions:Cruelaccomodatechimps" overview = "CruelConditions:Cruelsuccessoverview" />
+							<success locid="CruelConditions:finishCruelaccomodatechimps" overview = "CruelConditions:finishCruelscenariooverview"/>
+						</info>
+						<evaluate>
+							<BFScenarioScriptAction script="scenario/scripts/campaign2.lua" entry="evalcratedchimps" />
+						</evaluate>
+						<success>
+							<BFScenarioScriptAction script="scenario/scripts/ui.lua" entry="completeshowoverview()" />
+						</success>							
+					</BFScenarioRule>
+			</children>
+		</BFScenarioGroup>
+	</children>
+</ZTScenarioMgr>

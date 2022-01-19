@@ -1,0 +1,48 @@
+<ZT2Strings>
+   <alert>
+      <sttformat>
+         <font name="arial" size="10">%text%</font>
+      </sttformat>
+      <lttformat>
+         <font name="arial" size="10">%text%</font>
+      </lttformat>
+      <save_game_message>
+         <font name="arial" size="20">
+            <b>Game Saved</b>
+         </font>
+      </save_game_message>
+      <alert>
+         <font name="arial" size="16">
+            <color r="255" g="197" b="78">
+               <b>%text%</b>
+            </color>
+         </font>
+      </alert>
+      <save_failed>Out of hard drive space. Unable to save game.</save_failed>
+      <photo_save_failed>Out of hard drive space. Unable to save photo.</photo_save_failed>
+      <download_save_failed>Out of hard drive space. Unable to complete download.</download_save_failed>
+      <invalid_name_profile>Profile names must contain at least one letter or number, and cannot be Windows® reserved words.</invalid_name_profile>
+      <invalid_name_save>File names must contain at least one letter or number, and cannot be Windows® reserved words.</invalid_name_save>
+      <profile_exists>That profile already exists.  Please choose a different name.</profile_exists>
+      <profile_problem>There was a problem creating that profile.  Please try a different name.</profile_problem>
+      <save_failed_readonly>File is read-only. Unable to save game.</save_failed_readonly>
+      <load_failed>File is corrupted or otherwise unreadable.  Unable to load game.</load_failed>
+   </alert>
+   <error>
+      <startup_error_title>Zoo Tycoon 2 Startup Error</startup_error_title>
+      <init_config_info_failed>Error in call to InitConfigInformation</init_config_info_failed>
+      <d3d_create_failed>Failed to create Direct3D Object</d3d_create_failed>
+      <init_video_card_info_failed>Error in call to Config_InitVideoCardInfo</init_video_card_info_failed>
+      <enumerate_adapter_modes_failed>Failed to enumerate graphics adapter modes</enumerate_adapter_modes_failed>
+      <slow_processor>You need at least a 733 MHz processor for Zoo Tycoon 2 to run properly.  (%s MHz detected)</slow_processor>
+      <low_system_memory>You need at least %1s MB of system memory to run Zoo Tycoon 2.  (%2s MB detected)</low_system_memory>
+      <low_video_memory>You need at least %1s MB of video memory to run Zoo Tycoon 2.  (%2s MB detected)</low_video_memory>
+      <unsupported_graphics_adapter>Zoo Tycoon 2 does not support the %s graphics card.</unsupported_graphics_adapter>
+      <prototype_graphics_adapter>The %s graphics card is a prototype card and may cause problems with Zoo Tycoon 2.</prototype_graphics_adapter>
+      <invalid_graphics_driver>Your graphics driver is not valid for your operating system.  Please contact your graphics card vendor for an updated driver.</invalid_graphics_driver>
+      <old_graphics_driver>Your graphics driver may be too old to run Zoo Tycoon 2.  Please contact your graphics card vendor for an updated driver.</old_graphics_driver>
+      <invalid_sound_driver>Your sound driver is not valid for your operating system.  Please contact your sound card vendor for an updated driver.</invalid_sound_driver>
+      <old_sound_driver>Your sound driver may be too old to run Zoo Tycoon 2.  Please contact your sound card vendor for an updated driver.</old_sound_driver>
+      <renderer_create_failed>Zoo Tycoon 2 was unable to create a graphics renderer.  Please contact your graphics card vendor to make sure you have the latest driver.</renderer_create_failed>
+   </error>
+</ZT2Strings>
